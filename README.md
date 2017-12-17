@@ -19,18 +19,21 @@ npm install
 ## 활용방법
 - 모든 코드 연습은 [유닛 테스트 단위](https://ko.wikipedia.org/wiki/%EC%9C%A0%EB%8B%9B_%ED%85%8C%EC%8A%A4%ED%8A%B8)로 진행합니다.
 
+## 타입스크립트 컴파일 방법
+```bash
+// 기본 명령어
+npm run build
+```
+루트에 built 폴더를 통해 JavaScript로 컴파일된 결과물을 볼 수 있습니다.
+
 ## 테스트
 ```bash
 src=현재 작업중인 폴더명 npm run test
-```
-src 폴더내에서 테스트 파일을 작성 후 위의 명령어 입력시 테스트 결과가 출력됩니다.
 
----
-
-예를 들어 src/chapter1 에서 작업 중일 경우의 명령어는 아래와 같습니다.
-```bash
+// src/chapter1 에서 작업 중일 경우
 src=chapter1 npm run test
 ```
+src 폴더내에서 테스트 파일을 작성 후 위의 명령어 입력시 테스트 결과가 출력됩니다.
 
 ## 폴더 구조
 ```bash

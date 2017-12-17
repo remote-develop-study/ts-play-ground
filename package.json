@@ -6,7 +6,9 @@
   "version": "1.0.0",
   "description": "타입스크립트 스터디의 코드 활용 공간입니다.",
   "scripts": {
-    "test": "jest src/$src/** || src --config jest.config.js"
+    "build": "tsc",
+    "test": "jest src/$src/** || src --config jest.config.js",
+    "alltest": "jest --config jest.config.js"
   },
   "repository": {
     "type": "git",
@@ -18,11 +20,11 @@
   },
   "homepage": "https://github.com/typescript-study/play-ground#readme",
   "dependencies": {
-    "jest": "^21.2.1",
-    "ts-jest": "^21.2.4",
     "typescript": "^2.6.2"
   },
   "devDependencies": {
-    "@types/jest": "^21.1.8"
+    "@types/jest": "^21.1.8",
+    "jest": "^21.2.1",
+    "ts-jest": "^21.2.4"
   }
 }
