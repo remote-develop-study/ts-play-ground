@@ -24,7 +24,7 @@ npm install
 // 기본 명령어
 npm run build
 ```
-루트에 built 폴더를 통해 JavaScript로 컴파일된 결과물을 볼 수 있습니다.
+루트의 built 폴더를 통해 JavaScript로 컴파일된 결과물을 볼 수 있습니다.
 
 ## 테스트
 ```bash
