@@ -33,16 +33,16 @@ src=chapter1 npm run test
 ## 폴더 구조
 ```bash
 ├── node_modules              # Node Packages 모듈
-├── src                       # 소스폴더
+├── src                       # 소스코드
 │   ├── chapter1              # 버전 또는 진도별로 폴더명을 설정합니다(기준을 정할 예정)
 │       ├── 파일명.spec.ts     # 테스트 케이스를 만들어 코드를 테스트합니다. 
 │       └── 파일명.ts          # 테스트할 코드를 만듭니다.
 │   ├── chapter2              # 버전 또는 진도별로 폴더명을 설정합니다(기준을 정할 예정)
 │   ├── chapter3              # 버전 또는 진도별로 폴더명을 설정합니다(기준을 정할 예정)
 ├── .gitignore                # 프로젝트내에 버전관리 무시 목록
-├── jest.config.json          # Package 설정파일
-├── package.json              # Package 설정파일
-├── package.json              # Package 설정파일
+├── jest.config.json          # 테스트 라이브러리 jest 설정파일
+├── package-lock.json         # NodeJS 의존성 관리
+├── package.json              # 프로젝트 설정 및 NodeJS 의존성 관리
 ├── README.md                 # 설명 및 가이드
 └── tsconfig.json             # TypeScript 컴파일 옵션 설정
 ```
