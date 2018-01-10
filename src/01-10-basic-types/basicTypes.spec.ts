@@ -32,6 +32,8 @@ describe('타입스크립트 스터디 1월 10일 스프린트 기본 타입', f
   enum Color { Red = 1, Green, Blue }
 
   it('Red는 1이므로 Green은 2가 나와야한다', function () {
-    expect(testEnum(Color)).toBe(2);
+    expect(testEnum(Color.Red)).toBe(1);
+    expect(testEnum(Color.Green)).toBe(2);
+    expect(testEnum(Color.Blue)).toBe(3);
   })
 });
