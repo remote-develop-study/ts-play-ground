@@ -28,10 +28,10 @@ npm run build
 
 ## 테스트
 ```bash
-src=현재 작업중인 폴더명 npm run test
+npm run test `작업 중인 파일명`
 
-// src/chapter1 에서 작업 중일 경우
-src=chapter1 npm run test
+// src/chapter1/oop.spec.ts 케이스 작업 중일 경우
+npm run test `oop`
 ```
 src 폴더내에서 테스트 파일을 작성 후 위의 명령어 입력시 테스트 결과가 출력됩니다.
 

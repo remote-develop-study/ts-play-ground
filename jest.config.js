@@ -1,5 +1,4 @@
 module.exports = {
-  "bail": true,
   "verbose": true,
   "testMatch": [
     "**/src/**/?(*.)(spec).ts?(x)"
