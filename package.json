@@ -23,8 +23,8 @@
     "typescript": "^2.6.2"
   },
   "devDependencies": {
-    "@types/jest": "^21.1.8",
-    "jest": "^21.2.1",
-    "ts-jest": "^21.2.4"
+    "@types/jest": "^22.0.1",
+    "jest": "^22.0.4",
+    "ts-jest": "^22.0.1"
   }
 }
