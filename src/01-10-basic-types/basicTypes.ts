@@ -18,8 +18,6 @@ export function testTuple(tupl: any[]): string {
   return tupl.join(' ');
 }
 
-enum Color { Red = 1, Green, Blue }
-
 export function testEnum(c: Color): number {
   return c;
 }
