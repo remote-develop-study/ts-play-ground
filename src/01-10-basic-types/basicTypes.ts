@@ -1,5 +1,5 @@
 export function makeString(message:string, year:number):string {
-  return message +' '+ year + '년 반가워';
+  return `${message} ${year}년 반가워`;
 }
 
 export function sum() {
