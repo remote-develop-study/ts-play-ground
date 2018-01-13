@@ -1,6 +1,6 @@
-export function makeString() {
+export function makeString(str:string,num:number) {
 
-  return;
+  return(str + '' + num + ' 반가워');
 }
 
 export function sum() {
