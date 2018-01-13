@@ -1,5 +1,5 @@
 export function makeString() {
-
+  let test='test';
   return;
 }
 
