@@ -32,8 +32,6 @@ describe('타입스크립트 스터디 1월 10일 스프린트 기본 타입', f
   enum Color { Red = 1, Green, Blue }
 
   it('Red는 1이므로 Green은 2가 나와야한다', function () {
-    // 객체를 반환했을때 기대값이 2라는건 ???
-    // ennumName[속성명] 인건지 ?
     expect(testEnum(Color.Green)).toBe(2);
   })
 });
