@@ -12,14 +12,14 @@ export function inverseBool(value : boolean) {
   return(!value);
 }
 
-export function sumOfAll() {
-  return;
+export function sumOfAll(arr: number[]) {
+  return arr.reduce((num1, num2) => num1 + num2 );
 }
 
-export function testTuple() {
-  return;
+export function testTuple(a:any) {
+  return a.join('').toString();
 }
 
-export function testEnum() {
-  return;
+export function testEnum(a:number) {
+  return a;
 }
