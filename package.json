@@ -7,8 +7,7 @@
   "description": "타입스크립트 스터디의 코드 활용 공간입니다.",
   "scripts": {
     "build": "tsc",
-    "test": "jest src/$src/** || src --config jest.config.js",
-    "alltest": "jest --config jest.config.js"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -24,7 +23,7 @@
   },
   "devDependencies": {
     "@types/jest": "^22.0.1",
-    "jest": "^22.0.4",
+    "jest": "^22.0.6",
     "ts-jest": "^22.0.1"
   }
 }
