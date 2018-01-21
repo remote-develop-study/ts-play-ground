@@ -4,8 +4,11 @@ export function makeString(word:string,num:number) {
   //파라미터의 자료형 비교. typescript 에서 비교는 ===, 
 
 export function sum(num1:number , num2:number) {
-  // return(() ? a + b : '두개의 숫자를 넣어주세요';
-  
+  if(!num1 && !num2){
+  let sum = num1 + num2;
+  return '두개의 숫자를 넣어주세요';
+  }
+  return sum;
 }
 
 export function inverseBool(value : boolean) {
@@ -20,6 +23,8 @@ export function testTuple(a:any) {
   return a.join('').toString();
 }
 
-export function testEnum(a:number) {
-  return a;
+// enum Color{Red = 1, Green, Bule}
+export function testEnum(color:Color) {
+  let colorName :string = Color[2];
+  return colorName;
 }
