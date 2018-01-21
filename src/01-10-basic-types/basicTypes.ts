@@ -14,7 +14,7 @@ export function sumOfAll(numArray: number[]): number {
   return numArray.reduce((a, b) => a + b, 0);
 }
 
-export function testTuple(tupl: any[]): string {
+export function testTuple(tupl: [string, boolean, number]): string {
   return tupl.join(' ');
 }
 
