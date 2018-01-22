@@ -4,7 +4,7 @@
  */
 export function blockScope() {
   var a = 40, b = 20;
-  if () {
+  if (true) {
     var c = a + b;
   }
   return c;
@@ -12,7 +12,14 @@ export function blockScope() {
 
 // 스코프 문제
 export function makeLoop() {
+  return;
+}
 
+interface obj {
+  color: string[],
+  number: number[],
+  goods: string,
+  age: number[]
 }
 
 export function objDestructuring() {
@@ -34,4 +41,9 @@ export function objChangeText() {
 //배열의 2번째 값을 리턴하시오.
 export function secondsVal() {
   return;
+
+}
+
+export function abc(a: number, b: number) {
+  return a + b;
 }
