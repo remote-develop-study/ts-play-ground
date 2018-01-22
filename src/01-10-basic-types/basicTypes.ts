@@ -27,15 +27,7 @@ export function sumOfAll(numbers: Array<number>) {
 }
 
 export function testTuple(arr: [string, boolean, number]) {
-  let result = ''
-  
-  arr.map(v => {
-    result += `${v} `
-  })
-  
-  result = result.trim();
-
-  return result;
+  return arr.join(' ');
 }
 
 export function testEnum(color: Color) {
