@@ -22,28 +22,23 @@ interface obj {
   age: number[]
 }
 
-export function objDestructuring() {
+export function getColorByIndex() {
   return;
 }
 
-export function objInArraySum() {
+export function getSumOfNumArray() {
   return;
 }
 
-export function objArrayDestructuringLargest() {
+export function getOldestAge() {
   return;
 }
 
-export function objChangeText() {
+export function getChangedText() {
   return;
 }
 
 //배열의 2번째 값을 리턴하시오.
-export function secondsVal() {
+export function getSecondValueOfArray() {
   return;
-
-}
-
-export function abc(a: number, b: number) {
-  return a + b;
 }
