@@ -1,4 +1,4 @@
-import {makeLoop, blockScope, objDestructuring, objArrayDestructuringLargest, objInArraySum, objChangeText, secondsVal} from './variableDeslarations';
+import {makeLoop, blockScope, objDestructuring, objArrayDestructuringLargest, objInArraySum, objChangeText, secondsVal} from './variableDeclarations';
 
 describe('타입스크립트 스터디 1월 10일 스프린트 기본 타입', function () {
   it('블록스코프 문제입니다. a = 20,b = 40입니다. 매개변수로 불린값을 넣어 트루일때 c = a + b입니다. 에러를 수정해서 c를 리턴해주세요'), function () {
