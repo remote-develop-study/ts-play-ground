@@ -7,7 +7,6 @@ export function makeString(a: string, b: number) {
   }
 
   return '거절한다';
-}
 
 export function sum(a: number, b: number) {
   if (a && b) {

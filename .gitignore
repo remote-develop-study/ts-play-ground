@@ -12,6 +12,11 @@
 .idea/**/workspace.xml
 .idea/**/tasks.xml
 .idea/dictionaries
+.idea/modules.xml
+.idea/play-ground.iml
+.idea/vcs.xml
+.idea/*.xml
+.idea/
 
 # Sensitive or high-churn files:
 .idea/**/dataSources/
@@ -217,6 +222,7 @@ $RECYCLE.BIN/
 *.msi
 *.msm
 *.msp
+*.xml
 
 # Windows shortcuts
 *.lnk
