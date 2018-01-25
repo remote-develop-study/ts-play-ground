@@ -1,7 +1,3 @@
-/**
- * 블록스코프 문제
- * var를 let으로 대체하여 호이스팅의 문제점을 let으로 어떻게 해결하는지가 문제입니다
- */
 export function blockScope(flag: boolean): number | undefined {
   let a = 40, b = 20
   if (flag) {
@@ -11,7 +7,6 @@ export function blockScope(flag: boolean): number | undefined {
   return undefined
 }
 
-// 스코프 문제
 export function makeLoop(): number {
   let result: string = ""
   for (let i = 0; i < 5; i++) {
@@ -27,27 +22,22 @@ interface obj {
   age: number[]
 }
 
-export function getColorByIndex(obj: obj, idx: number): string {
-  const { color } = obj
+export function getColorByIndex({ color }: obj, idx: number): string {
   return (idx >= 0 && idx < color.length) ? color[idx] : "index out of range"
 }
 
-export function getSumOfNumArray(obj: obj): number {
-  const { number } = obj
+export function getSumOfNumArray({ number }: obj): number {
   return number.reduce((sum, x) => sum + x, 0)
 }
 
-export function getOldestAge(obj: obj): number {
-  const { age } = obj
+export function getOldestAge({ age }: obj): number {
   return age.reduce((max, x) => max > x ? max : x)
 }
 
-export function getChangedText(obj: obj): string {
-  const { goods } = obj
+export function getChangedText({ goods }: obj): string {
   return goods.replace("Air", "Pro")
 }
 
-//배열의 2번째 값을 리턴하시오.
-export function getSecondValueOfArray(arr: number[]): number {
-  return arr[1]
+export function getSecondValueOfArray([, a]: number[]): number {
+  return a
 }
