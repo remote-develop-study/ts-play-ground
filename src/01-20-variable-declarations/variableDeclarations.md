@@ -1,4 +1,4 @@
-# 1월 20일 변수 선언
+# 1월 28일 변수 선언 문제 풀이
 
 ## 번역
 - [DeepDive](https://typescript-study.gitbooks.io/typescript-deep-dive-korea)  
