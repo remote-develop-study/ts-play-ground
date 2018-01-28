@@ -12,7 +12,7 @@ export function sum(num1:number , num2:number) {
 }
 
 export function inverseBool(value : boolean) {
-  return(!value);
+  return !value;
 }
 
 export function sumOfAll(arr: number[]) {
@@ -24,7 +24,6 @@ export function testTuple(a:any) {
 }
 
 // enum Color{Red = 1, Green, Bule}
-export function testEnum(color:Color) {
-  let colorName :string = Color[2];
-  return colorName;
+export function testEnum(color:number) {
+  return color;
 }
