@@ -14,7 +14,7 @@ export function sumOfAll(obj: number[]) {
   return obj.reduce((num1, num2) => num1 + num2);
 }
 
-export function testTuple(obj: any) {
+export function testTuple(obj: [string, boolean, number]) {
   return obj.join(' ').toString();
 }
 

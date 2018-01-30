@@ -1,35 +1,43 @@
-import { makeString, sum, inverseBool, sumOfAll, testTuple, testEnum } from './variableDeclarations';
+import { makeLoop, blockScope, getColorByIndex, getSumOfNumArray, getOldestAge, getChangedText, getSecondValueOfArray } from './variableDeclarations';
 
 describe('타입스크립트 스터디 1월 10일 스프린트 기본 타입', function () {
-  it('첫번째로 인자로 문자열 안녕 두번째로 인자로 숫자형 2018을 넣어 테스트를 돌립니다', function () {
-    expect(makeString('안녕', 2018)).toBe('안녕 2018년 반가워');
+  it('매개변수로 boolean 값을 넣어 true일때 c를 반환하고 false일때 undefined를 반환합니다. 에러를 수정해주세요', function () {
+    expect(blockScope(true)).toBe(60)
+    expect(blockScope(false)).toBe(undefined)
   })
-
-  it('맞지 않는 타입의 파라미터를 넣었을 때 경고를 `거절한다`라는 반환값을 돌려줍니다', function () {
-    expect(makeString('안녕', '2018')).toBe('거절한다');
+  it('for문으로 문자열 1을 5번 리턴하여 문자열 11111 이 나오도록 해주세요', function () {
+    expect(makeLoop('1')).toBe('11111')
   })
-  //
-  it('1 + 1의 값을 받아 순수 함수로 더 하여 2를 반환한다', function () {
-    expect(sum(1, 1)).toBe(2);
+  interface obj {
+    color: string[],
+    number: number[],
+    goods: string,
+    age: number[]
+  }
+  let obj: obj = {
+    color: ["red", "blue", "green", "pink", "white"],
+    number: [1, 3, 5, 7],
+    goods: "MacBook Air",
+    age: [60, 3, 5, 15, 30, 6]
+  }
+  it('객체와 index를 받아 destructuring 하여 해당 index의 값을 반환하는 함수를 만드세요', function () {
+    expect(getColorByIndex(obj, 0)).toBe("red")
+    expect(getColorByIndex(obj, 1)).toBe("blue")
+    expect(getColorByIndex(obj, 2)).toBe("green")
+    expect(getColorByIndex(obj, 3)).toBe("pink")
+    expect(getColorByIndex(obj, 4)).toBe("white")
+    expect(getColorByIndex(obj, 5)).toBe("index out of range")
   })
-  //
-  it('매개변수가 없을 때는 `두개의 숫자를 넣어주세요`를 반환한다', function () {
-    expect(sum()).toBe('두개의 숫자를 넣어주세요');
+  it('객체를 받아 number를 destructuring 하여 number의 총합을 리턴해주세요', function () {
+    expect(getSumOfNumArray(obj)).toBe(16)
   })
-  //
-  it('true를 넣으면 false를 false를 넣으면 true를 반환한다', function () {
-    expect(inverseBool(true)).toBe(false);
+  it('객체를 받아 age를 destructuring 하여 age의 가장 큰 수를 리턴해주세요', function () {
+    expect(getOldestAge(obj)).toBe(60)
   })
-  //
-  it('숫자로된 배열의 요소를 모두 더하여 반환한다', function () {
-    expect(sumOfAll([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])).toBe(55);
+  it('객체를 받아 goods를 destructuring 하여 goods의 값을 MacBook Pro로 바꿔주세요', function () {
+    expect(getChangedText(obj)).toBe('MacBook Pro')
   })
-  it('튜플 타입을 활용하여 입력한대로를 그대로 반환합니다', function () {
-    expect(testTuple(['가', false, 123])).toBe('가 false 123');
-  })
-  enum Color { Red = 1, Green, Blue }
-
-  it('Red는 1이므로 Green은 2가 나와야한다', function () {
-    expect(testEnum(Color.Green)).toBe(2);
+  it('배열을 받아 destructuring 하여 배열의 3을 리턴해주세요', function () {
+    expect(getSecondValueOfArray(obj, 1)).toBe(3)
   })
 });
