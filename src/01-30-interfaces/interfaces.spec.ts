@@ -1,7 +1,12 @@
-import { getUserId, IUser, getUserJob, sortUser, IHuman, getName, getBorned } from './interfaces'
+import { SquareFunc, squarefunc, getUserId, IUser, getUserJob, sortUser, IHuman, getName, getBorned } from './interfaces'
 import { } from 'jest'
 
 describe('타입스크립트 스터디 1월 30일 스프린트 인터페이스', () => {
+  describe('num(number)를 인자로 받는 함수 SquareFunc를 작성합니다', () => {
+    it('Squarefunc를 구현하는 squarefunc 함수를 작성합니다', () => {
+      expect(squarefunc(20)).toBe(20*20)
+    })
+  })
   describe('id(문자열)와 pw(문자열) 속성을 가지는 IUser 인터페이스를 작성합니다.', () => {
     it('IUser Interface를 만족하는 객체를 받아서 id를 반환하는 함수를 작성합니다.', () => {
       expect(getUserId({ id: 'dev', pw: 'abc' })).toBe('dev')

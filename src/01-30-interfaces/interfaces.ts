@@ -1,3 +1,11 @@
+interface SquareFunc {
+  
+}
+
+const squarefunc = () => {
+  
+}
+
 interface IUser {
   
 }
@@ -11,24 +19,32 @@ const getUserJob = () => {
 }
 
 interface ISortUser {
+  
+}
+
+const sortUser = () => {
 
 }
 
-const sortUser = () =>
-
 interface IHuman {
-  
+
 }
 
 class Human {
+
+}
+
+const getName = () => {
+
+}
+const getBorned = () => {
   
 }
 
-const getName = () => 
-const getBorned = () => 
-
 
 export {
+  SquareFunc,
+  squarefunc,
   IUser,
   getUserId,
   getUserJob,
