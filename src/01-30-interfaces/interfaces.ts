@@ -1,13 +1,14 @@
 interface SquareFunc {
-  
+  squarefunc():number;
 }
 
-const squarefunc = () => {
+const squarefunc = (num:number) => {
   
 }
 
 interface IUser {
-  
+  id:string;
+  pw:string;
 }
 
 const getUserId = () => {
@@ -15,7 +16,6 @@ const getUserId = () => {
 }
 
 const getUserJob = () => {
-  
 }
 
 interface ISortUser {
