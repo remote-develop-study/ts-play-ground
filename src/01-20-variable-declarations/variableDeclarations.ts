@@ -43,16 +43,18 @@ export function getSumOfNumArray({number}:obj) {
 //최대값 찾기
 export function getOldestAge({age}:obj) {
   // var maxNum = age.reduce
-  return;
+  var num = age.sort();
+  return num[0];
 }
 
 // 배열값 바꾸기
 export function getChangedText({goods}:obj) {
-  // let change = {};
-  return;
+  var str = goods;
+  return str.replace('Air','Pro');
 }
 
 //배열의 2번째 값을 리턴하시오.
-export function getSecondValueOfArray() {
-  return;
+export function getSecondValueOfArray({number}:obj) {
+  var array = number[1];
+  return array;
 }
