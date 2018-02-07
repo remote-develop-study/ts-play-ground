@@ -1,9 +1,9 @@
 interface SquareFunc {
-  squarefunc():number;
+  squarefunc(num:number):number;
 }
 
 const squarefunc = (num:number) => {
-
+  return num*num;
 }
 
 interface IUser {
@@ -23,6 +23,7 @@ const getUserJob = (id:IUser,pw:IUser,job?:IUser) => {
 
 interface ISortUser {
   
+  
 }
 
 const sortUser = () => {
@@ -30,11 +31,16 @@ const sortUser = () => {
 }
 
 interface IHuman {
-
+name:string;
+borned:number;
+getAge():number;
 }
 
-class Human {
+class Human implements IHuman{
+  name:string;
+  borned:number;
 
+  
 }
 
 const getName = () => {
