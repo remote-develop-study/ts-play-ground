@@ -1,6 +1,9 @@
 # 2월 10일 클래스
 
-
+## References 
+현석님이 보내주셨습니다. 
+- Typesciprt Classes
+    1. https://www.tutorialspoint.com/typescript/typescript_classes.htm
 ## 번역
 - [DeepDive](https://typescript-study.github.io/pages/Classes.html)
 
