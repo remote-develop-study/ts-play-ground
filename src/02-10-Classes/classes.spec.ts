@@ -27,7 +27,7 @@ describe('타입 스크립트 스터디 2월 10일 스프린트 클래스', () =
   })
   describe('abstract class에 Login 가상 함수를 작성합니다.',()=>{
     it('그 함수를 Connection 함수에서 출력합니다.',()=>{
-      expect('완료').toBe('접속 완료')
+      expect('접속').toBe('접속 완료')
     })
   })
 
