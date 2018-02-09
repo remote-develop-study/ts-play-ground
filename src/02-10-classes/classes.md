@@ -5,7 +5,7 @@
 - Typesciprt Classes
     1. https://www.tutorialspoint.com/typescript/typescript_classes.htm
 ## 번역
-- [DeepDive](https://typescript-study.github.io/pages/Classes.html)
+- [Handbook](https://typescript-study.github.io/pages/Classes.html)
 
 
 ## 문제 풀이
