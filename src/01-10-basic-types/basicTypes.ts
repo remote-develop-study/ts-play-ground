@@ -21,3 +21,4 @@ export function testTuple(obj: [string, boolean, number]) {
 export function testEnum(str: number) {
   return str;
 }
+
