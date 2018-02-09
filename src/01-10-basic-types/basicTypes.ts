@@ -1,7 +1,13 @@
+<<<<<<< HEAD
 
 export function makeString(word:string,num:number) {
   return(typeof word === 'string' && typeof num === 'number') ? '${word} ${년 반가워}' : '거절한다';
   //파라미터의 자료형 비교. typescript 에서 비교는 ===, 
+=======
+export function makeString() {
+  return;
+}
+>>>>>>> 7f940a972c23d1dc7737436a9c2f2e6e6ae0a559
 
 export function sum(num1:number , num2:number) {
   if(!num1 && !num2){
