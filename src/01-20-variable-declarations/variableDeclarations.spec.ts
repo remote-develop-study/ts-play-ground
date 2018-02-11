@@ -6,8 +6,8 @@ describe('타입스크립트 스터디 1월 10일 스프린트 기본 타입', f
     expect(blockScope(true)).toBe(60)
     expect(blockScope(false)).toBe(undefined)
   })
-  it('for문을 이용해 1을 5번 리턴하고, 그 값을 하나의 integer로 변환하여 리턴하세요', function () {
-    expect(makeLoop()).toBe(11111)
+  it('for문으로 문자열 1을 5번 리턴하여 문자열 11111 이 나오도록 해주세요', function () {
+    expect(makeLoop()).toBe('11111')
   })
   interface obj {
     color: string[],
@@ -41,4 +41,4 @@ describe('타입스크립트 스터디 1월 10일 스프린트 기본 타입', f
   it('배열을 받아 destructuring 하여 배열의 3을 리턴해주세요', function () {
     expect(getSecondValueOfArray(obj.number)).toBe(3)
   })
-})
+});
