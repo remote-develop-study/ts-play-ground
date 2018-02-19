@@ -5,11 +5,16 @@ class Charactor {
     this.account = act;
   }
   protected skill: string;
+<<<<<<< HEAD
 
   Fishing(skill:string, mana:number) {
     // let skillName = '낚시';
     // let manaNum = 15
     return (skill +':' +mana +'소모')
+=======
+  Fishing() {
+   브런치 적용됬는지 확인중
+>>>>>>> 67920d38941a4f407af03994c662919ac1771fab
   }
   sit(skill:string, mana:number) {
     return (skill + ':' + mana + '소모')
