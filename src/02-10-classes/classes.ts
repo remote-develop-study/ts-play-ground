@@ -1,29 +1,38 @@
 class Charactor {
-
-  protected skill: string;
-  Fishing() {
-
+  account:string;
+  constructor( mana:number, act:string ){
+    // 여기 이상
+    this.account = act;
   }
-  sit() {
+  protected skill: string;
 
+  Fishing(skill:string, mana:number) {
+    // let skillName = '낚시';
+    // let manaNum = 15
+    return (skill +':' +mana +'소모')
+  }
+  sit(skill:string, mana:number) {
+    return (skill + ':' + mana + '소모')
   }
 
 }
 
 class Human extends Charactor {
   readonly job: string = "warrior";
-  bash() {
-
+  bash(mana:number, skill:string) {
+    let count = 20;
+    return (skill +count  + mana)
   }
 }
 
 class Elf extends Charactor {
-  shoot() {
-
+  shoot(mana:number, skill:string) {
+    let count = 20;
+    return (skill + count + mana)
   }
 }
 class Change extends Human {
-
+ 
 }
 
 let passcode = "MyUnit"
