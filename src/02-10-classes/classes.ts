@@ -2,7 +2,7 @@ class Charactor {
 
   protected skill: string;
   Fishing() {
-
+   브런치 적용됬는지 확인중
   }
   sit() {
 
