@@ -18,8 +18,8 @@ class Charactor {
   }
   sit(skill:string, mana:number) {
     return (skill + ':' + mana + '소모')
+    test코드입니다. 
   }
-
 }
 
 class Human extends Charactor {
