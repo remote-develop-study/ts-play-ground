@@ -224,4 +224,7 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
+# yarn package manager
+yarn.lock
+
 # End of https://www.gitignore.io/api/node,macos,windows,intellij,sublimetext,visualstudiocode

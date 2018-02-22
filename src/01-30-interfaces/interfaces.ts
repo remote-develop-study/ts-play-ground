@@ -1,72 +1,23 @@
-interface SquareFunc {
-  (num: number): number
-}
+interface SquareFunc {}
 
-const squarefunc = (num: number) => {
-  return num*num
-}
+const squarefunc = () => {};
 
-interface IUser {
-  id: string,
-  pw: string,
-  job?: string
-}
+interface IUser {}
 
-const getUserId = (user: IUser) => {
-  return user.id
-}
+const getUserId = () => {};
 
-const getUserJob = (user: IUser) => {
-  return user.job || '백수'
-}
+const getUserJob = () => {};
 
-interface ISortUser {
-  (user: IUser): Array<IUser>
-}
+interface ISortUser {}
 
-const sortUser = (user: Array<IUser>) => {
-  user.sort((a, b) => {
+const sortUser = () => {};
 
-    if (a.id.toUpperCase() > b.id.toUpperCase()) {
-      return 1;
-    }
+interface IHuman {}
 
-    if (a.id.toUpperCase() < b.id.toUpperCase()) {
-      return -1;
-    }
-    
-    return 0;
-  })
-  return user
-}
+class Human {}
 
-interface IHuman {
-  name: string,
-  borned: number,
-  getAge(): number,
-}
-
-class Human implements IHuman {
-  name: string;
-  borned: number;
-
-  constructor(name: string, borned: number) {
-    this.name = name;
-    this.borned = borned;
-  }
-
-  getAge(): number {
-    return (new Date().getFullYear()) - this.borned;
-  }
-}
-
-const getName = (human: IHuman) => {
-  return human.name
-}
-const getBorned = (human: IHuman) => {
-  return human.borned
-}
-
+const getName = () => {};
+const getBorned = () => {};
 
 export {
   SquareFunc,
@@ -79,4 +30,4 @@ export {
   IHuman,
   getName,
   getBorned
-}
+};
