@@ -5,7 +5,8 @@ class Charactor {
     this.account = act;
   }
   protected skill: string;
-<<<<<<< HEAD
+<<<<<<< HEAD    
+
 
   Fishing(skill:string, mana:number) {
     // let skillName = '낚시';

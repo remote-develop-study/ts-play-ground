@@ -1,6 +1,5 @@
 interface SquareFunc {
-<<<<<<< HEAD
-  squarefunc(num:number):number;
+  (num:number):number;
 }
 
 const squarefunc = (num:number) => {
@@ -13,6 +12,8 @@ interface IUser {
   job?:string;
 }
 
+
+// 여기서부터 수정하기
 const getUserId = (id:IUser,pw:IUser) => {
   let user = {id : 'dev',pw: 'abc'}
   return user.pw;
@@ -20,37 +21,9 @@ const getUserId = (id:IUser,pw:IUser) => {
 
 // ???
 const getUserJob = (id:IUser,pw:IUser,job?:IUser) => {
-}
-
-interface ISortUser {
   
-  
-=======
-  (num: number): number
 }
 
-const squarefunc = (num: number) => {
-  return num*num
-}
-
-interface IUser {
-  id: string,
-  pw: string,
-  job?: string
-}
-
-const getUserId = (user: IUser) => {
-  return user.id
-}
-
-const getUserJob = (user: IUser) => {
-  return user.job || '백수'
-}
-
-interface ISortUser {
-  (user: IUser): Array<IUser>
->>>>>>> 7f940a972c23d1dc7737436a9c2f2e6e6ae0a559
-}
 
 const sortUser = (user: Array<IUser>) => {
   user.sort((a, b) => {
@@ -69,33 +42,19 @@ const sortUser = (user: Array<IUser>) => {
 }
 
 interface IHuman {
-<<<<<<< HEAD
 name:string;
 borned:number;
 getAge():number;
 }
 
+//완
 class Human implements IHuman{
   name:string;
   borned:number;
-
-  
-}
-=======
-  name: string,
-  borned: number,
-  getAge(): number,
-}
-
-class Human implements IHuman {
-  name: string;
-  borned: number;
-
-  constructor(name: string, borned: number) {
+  constructor(name: string, borned:number){
     this.name = name;
     this.borned = borned;
   }
->>>>>>> 7f940a972c23d1dc7737436a9c2f2e6e6ae0a559
 
   getAge(): number {
     return (new Date().getFullYear()) - this.borned;
