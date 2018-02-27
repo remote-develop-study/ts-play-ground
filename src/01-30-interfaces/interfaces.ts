@@ -28,9 +28,6 @@ const getUserJob = ( job?: IUser) => {
 const sortUser = (user: Array<IUser>) => {
   user.sort((a, b) => {
 
-    if (a.id.toUpperCase() > b.id.toUpperCase()) {
-      return 1;
-    }
 
     if (a.id.toUpperCase() < b.id.toUpperCase()) {
       return -1;
@@ -51,6 +48,7 @@ interface IHuman {
 class Human implements IHuman {
   name: string;
   borned: number;
+
   constructor(name: string, borned: number) {
     this.name = name;
     this.borned = borned;
@@ -68,16 +66,15 @@ const getBorned = (human: IHuman) => {
   return human.borned
 }
 
-
 export {
   SquareFunc,
   squarefunc,
   IUser,
   getUserId,
   getUserJob,
-  ISortUser,
+  // ISortUser,
   sortUser,
   IHuman,
   getName,
   getBorned
-}
+};
