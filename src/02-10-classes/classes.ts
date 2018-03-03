@@ -1,44 +1,35 @@
+// 캐릭터 클랙스 생성
 class Charactor {
-  account:string;
-  constructor( mana:number, act:string ){
-    // 여기 이상
-    this.account = act;
+  private account: string;
+  constructor(account: string, skill: string, mana: number) {
+    this.account = account;
   }
-  protected skill: string;
-<<<<<<< HEAD    
 
-
-  Fishing(skill:string, mana:number) {
-    // let skillName = '낚시';
-    // let manaNum = 15
-    return (skill +':' +mana +'소모')
-=======
-  Fishing() {
-   브런치 적용됬는지 확인중
->>>>>>> 67920d38941a4f407af03994c662919ac1771fab
-  }
-  sit(skill:string, mana:number) {
+  // 생성자로부터 값을 받아 리턴
+  Fishing(skill: string, mana: number) {
     return (skill + ':' + mana + '소모')
-    test코드입니다. 
+  }
+  sit(skill: string, mana: number) {
+    return (skill + ':' + mana + '소모')
   }
 }
 
 class Human extends Charactor {
   readonly job: string = "warrior";
-  bash(mana:number, skill:string) {
+  bash(mana: number, skill: string) {
     let count = 20;
-    return (skill +count  + mana)
+    return (skill + count + mana)
   }
 }
 
 class Elf extends Charactor {
-  shoot(mana:number, skill:string) {
+  shoot(mana: number, skill: string) {
     let count = 20;
     return (skill + count + mana)
   }
 }
 class Change extends Human {
- 
+
 }
 
 let passcode = "MyUnit"
