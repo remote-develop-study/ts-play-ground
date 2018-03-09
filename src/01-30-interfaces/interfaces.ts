@@ -1,16 +1,10 @@
-interface SquareFunc {
-  (num: number): number
-}
+interface SquareFunc {}
 
 const squarefunc: SquareFunc = (num) => {
   return num * num
 }
 
-interface IUser {
-  id: string,
-  pw: string,
-  job?: string
-}
+interface IUser {}
 
 const getUserId = ({ id }: IUser) => {
   return id
@@ -28,11 +22,8 @@ const sortUser: ISortUser = (users) => {
   return users.sort((a, b) => a.id > b.id ? 1 : -1)
 }
 
-interface IHuman {
-  name: string,
-  borned: number,
-  getAge(): number,
-}
+const getName = () => {};
+const getBorned = () => {};
 
 class Human implements IHuman {
   name: string;
@@ -67,4 +58,4 @@ export {
   IHuman,
   getName,
   getBorned
-}
+};
