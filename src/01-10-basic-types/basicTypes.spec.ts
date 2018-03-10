@@ -1,4 +1,5 @@
 import { makeString, sum, inverseBool, sumOfAll, testTuple, testEnum } from './basicTypes';
+import { } from 'jest'
 
 describe('타입스크립트 스터디 1월 10일 스프린트 기본 타입', function () {
   it('첫번째로 인자로 문자열 안녕 두번째로 인자로 숫자형 2018을 넣어 테스트를 돌립니다', function () {

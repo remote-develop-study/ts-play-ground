@@ -1,4 +1,5 @@
 import { makeLoop, blockScope, getColorByIndex, getSumOfNumArray, getOldestAge, getChangedText, getSecondValueOfArray } from './variableDeclarations';
+import { } from 'jest'
 
 describe('타입스크립트 스터디 1월 20일 스프린트 기본 타입', function () {
   it('매개변수로 boolean 값을 넣어 true일때 c를 반환하고 false일때 undefined를 반환합니다. 에러를 수정해주세요', function () {

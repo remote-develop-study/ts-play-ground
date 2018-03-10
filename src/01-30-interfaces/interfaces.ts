@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 interface SquareFunc {
   (num: number): number
 }
@@ -54,6 +55,29 @@ const getBorned = (human: IHuman) => {
   return human.borned
 }
 
+=======
+interface SquareFunc {}
+
+const squarefunc = () => {};
+
+interface IUser {}
+
+const getUserId = () => {};
+
+const getUserJob = () => {};
+
+interface ISortUser {}
+
+const sortUser = () => {};
+
+interface IHuman {}
+
+class Human {}
+
+const getName = () => {};
+const getBorned = () => {};
+
+>>>>>>> 798ce5b6d2a735b670845b144fe73e6bf7c8eef6
 export {
   SquareFunc,
   squarefunc,
@@ -64,4 +88,4 @@ export {
   IHuman,
   getName,
   getBorned
-}
+};
