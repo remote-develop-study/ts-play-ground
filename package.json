@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/typescript-study/play-ground#readme",
   "dependencies": {
+    "fs": "0.0.1-security",
     "typescript": "^2.6.2"
   },
   "devDependencies": {
