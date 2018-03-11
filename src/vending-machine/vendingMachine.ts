@@ -3,7 +3,6 @@ const drinks = [
   {
     name : 'name1',
     price : '1000',
-
   }
 ]
 // coin = 동전
@@ -18,7 +17,6 @@ class VendingMachine {
     // 객체로 했을시
     // this.drinks = drinks;
   }
-  // 2. VendingMachine 내부에서 함수를 하는 것과 -
 // 동전을 넣었을시. 음료 가격 비교?
   coinInsert(coin: number) {
     this.drink1 = 1000;
@@ -26,11 +24,5 @@ class VendingMachine {
     let coinResult = coin - this.drink1;
     return coin > this.drink1 ? '거스름돈'+coinResult :  '잔액이 부족'+coinResult;
   }
-}
-
-// 2. - 외부에서 하는 것
-class coinInsert extends VendingMachine{
-  
-  
 }
 
