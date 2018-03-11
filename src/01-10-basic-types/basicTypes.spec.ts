@@ -1,4 +1,5 @@
 import { makeString, sum, inverseBool, sumOfAll, testTuple, testEnum } from './basicTypes';
+import { } from 'jest'
 
 describe('타입스크립트 스터디 1월 10일 스프린트 기본 타입', function () {
   it('첫번째로 인자로 문자열 안녕 두번째로 인자로 숫자형 2018을 넣어 테스트를 돌립니다', function () {
@@ -6,7 +7,7 @@ describe('타입스크립트 스터디 1월 10일 스프린트 기본 타입', f
   })
 
   it('맞지 않는 타입의 파라미터를 넣었을 때 경고를 `거절한다`라는 반환값을 돌려줍니다', function () {
-    expect(makeString('안녕', '2018')).toBe('거절한다');
+    expect(makeString(1, '2018')).toBe('거절한다');
   })
 
   it('1 + 1의 값을 받아 순수 함수로 더 하여 2를 반환한다', function () {
@@ -32,6 +33,6 @@ describe('타입스크립트 스터디 1월 10일 스프린트 기본 타입', f
   enum Color { Red = 1, Green, Blue }
 
   it('Red는 1이므로 Green은 2가 나와야한다', function () {
-    expect(testEnum(Color)).toBe(2);
+    expect(testEnum(Color.Green)).toBe(2);
   })
 });

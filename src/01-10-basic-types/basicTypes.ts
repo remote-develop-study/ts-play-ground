@@ -18,10 +18,10 @@ export function sumOfAll(arr:Array<number>): number {
   })
 }
 
-export function testTuple() {
-  return;
+export function testTuple(a:[string,boolean,number]): string {
+  return a.join(' ');
 }
 
-export function testEnum() {
-  return;
+export function testEnum(color: Color): number {
+  return color;
 }
