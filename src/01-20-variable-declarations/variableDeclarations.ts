@@ -20,6 +20,12 @@ export function makeLoop(): string {
   return result;
 }
 
+interface obj {
+  color: string[],
+  number: number[],
+  goods: string,
+  age: number[]
+}
 let obj: obj = {
   color: ["red", "blue", "green", "pink", "white"],
   number: [1, 3, 5, 7],
