@@ -14,6 +14,7 @@ class Charactor {
   }
 }
 
+
 class Human extends Charactor {
   readonly job: string = "warrior";
   bash(mana: number, skill: string) {
