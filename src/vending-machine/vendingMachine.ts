@@ -14,7 +14,7 @@ class VendingMachine {
     this.greeting();
   }
 
-  greeting() {
+  greeting(): void{
     console.log(
       '구입하려는 음료수를 입력해주세요. 음료수 종류는 아래와 같습니다.',
     );
@@ -24,13 +24,13 @@ class VendingMachine {
     });
   }
 
-  getOrder(drinkName: string) {
+  getOrder(drinkName: string): void {
     let ordered = this.products.filter(value => value.name === drinkName);
     this.orderedDrink.name = ordered[0].name;
     this.orderedDrink.price = ordered[0].price;
   }
 
-  insertCoin(price: number) {
+  insertCoin(price: number): void {
     this.insertedCoin = price;
     if (this.insertedCoin <= this.orderedDrink.price) {
       console.log('금액이 부족합니다 다시 넣어 주세요');
@@ -40,6 +40,6 @@ class VendingMachine {
   }
 }
 
-let vm: VendingMachine = new VendingMachine(drinks);
+let vm = new VendingMachine(drinks);
 vm.getOrder('cola');
 vm.insertCoin(2000);
