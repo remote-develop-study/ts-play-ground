@@ -1,19 +1,22 @@
 class VendingMachine {
-    drinks:object;
-    moneyCase:number;
-    profitCase:number;
-    constructor(drinks:Object,moneyCase:number,profitCase:number) {
-        this.drinks = [];
-        this.moneyCase = 0;
-        this.profitCase = 0; //음료수를 판 금액
+    public drinks:Array<any>;
+    public moneyCase:number;
+    public profitCase:number;
+    public constructor(drinks:Array<object>, moneyCase:number, profitCase:number) {
+        this.drinks = drinks;
+        this.moneyCase = moneyCase;
+        this.profitCase = profitCase; //음료수를 판 금액
+    }
+    public viewDrink():object {
+        return this.drinks;
     }
 
-    giveMoney(money:number) {
+    public giveMoney(money:number):string {
         this.moneyCase = money;
         return `자판기에 ${money}를 넣어, 총 ${this.moneyCase}를 넣으셨습니다.`
     }
 
-    getDrink(drink:string) {
+    public getDrink(drink:string):any {
         let index:number = 0;
         while (index <= this.drinks.length) {
             if (this.moneyCase <= this.drinks[index].price) throw '잔액이 부족하거나 없습니다.';
@@ -28,7 +31,7 @@ class VendingMachine {
         }
     }
 
-    getChange() {
+    public getChange():string {
         const changeMoney = this.moneyCase;
         if (!changeMoney) {
             return `반환될 잔액이 없습니다.`;
@@ -37,7 +40,13 @@ class VendingMachine {
         return `잔액 ${changeMoney}원이 반환 되었습니다.`;
     }
 
-    showSellingMoney() {
+    public showSellingMoney():string {
         return `현재 총 판매금액은 ${this.profitCase}원 입니다.`
     }
 }
+const vItem:Array<object> = [
+    {name:'콜라',price:700,quantity:10},
+    {name:'사이다',price:600,quantity:20}
+];
+const v:object = new VendingMachine(vItem,0,0);
+// v.viewDrink();
