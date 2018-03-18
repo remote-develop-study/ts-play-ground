@@ -1,23 +1,45 @@
 interface SquareFunc {}
 
-const squarefunc = () => {};
+const squarefunc:SquareFunc = (num:number) => {
+  return num * num
+};
 
 interface IUser {}
 
-const getUserId = () => {};
+const getUserId = ({id}: IUser) => {
+  return id;
+};
 
-const getUserJob = () => {};
+const getUserJob = ({job = '백수'}: IUser) => {
+  return job;
+};
 
 interface ISortUser {}
 
-const sortUser = () => {};
+const sortUser:ISortUser = (users) => {
+  return users.sort((a, b) => a.id >  b.id ? 1 : -1)
+};
 
 interface IHuman {}
 
-class Human {}
+class Human implements IHuman{
+  name: string;
+  borned: number;
+  constructor(name: string, borned: number){
+    this.name = name;
+    this.borned = borned;
+  }
+  getAge(){
+    return (new Date().getFullYear()) - this.borned;
+  }
+}
 
-const getName = () => {};
-const getBorned = () => {};
+const getName = ({name}: IHuman) => {
+  return name;
+};
+const getBorned = ({borned}: IHuman) => {
+  return borned;
+};
 
 export {
   SquareFunc,
