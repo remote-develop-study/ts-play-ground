@@ -1,0 +1,94 @@
+@import url(//fonts.googleapis.com/earlyaccess/hanna.css);
+
+* {
+  box-sizing: border-box;
+}
+
+.title {
+  width: 100%;
+  padding: 30px;
+  text-align: center;
+  font-family: 'Hanna', sans-serif;
+  font-size: 32px;
+}
+
+.products {
+  display: flex;
+  width: 85%;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  flex-flow: row wrap;
+  align-content: flex-end;
+}
+.product {
+  justify-content: flex-start;
+  display: inline-block;
+  width: 140px;
+  height: 140px;
+  margin: 10px;
+}
+
+.product span {
+  display: block;
+  padding: 10px;
+  text-align: center;
+  font-family: 'Hanna', sans-serif;
+}
+
+.product-content {
+  position: relative;
+  object-fit: cover;
+  width: 110px;
+  height: 110px;
+  margin: 0 auto;
+  border-radius: 50%;
+  box-shadow: 0px 8px 10px 0px rgba(0, 0, 0, .3), inset 0px 4px 1px 1px white, inset 0px -3px 1px 1px rgba(204,198,197,.5);
+  -webkit-transition: all .1s linear;
+  transition: all .1s linear;
+  background: #eaeaea;
+  background-size: contain;
+  background-position-y: 10%;
+}
+
+.product-content:after{
+  color:#e9e6e4;
+  content: "";
+  display: block;
+  font-size: 30px;
+  height: 30px;
+  text-decoration: none;
+  text-shadow: 0px -1px 1px #bdb5b4, 1px 1px 1px white;
+  position: absolute;
+  width: 30px;
+}
+
+
+.product-content:hover {
+  background-image: -webkit-linear-gradient(top, #fff, #f4f1ee);
+  background-image: linear-gradient(top, #fff, #f4f1ee);
+  color:#0088cc;
+}
+
+.product-content:active{
+  background-image: -webkit-linear-gradient(top, #efedec, #f7f4f4);
+  background-image: linear-gradient(top, #efedec, #f7f4f4);
+  box-shadow: 0 3px 5px 0 rgba(0,0,0,.4), inset 0px -3px 1px 1px rgba(204,198,197,.5);
+}
+
+.product-content:active:after{
+  color:#dbd2d2;
+  text-shadow: 0px -1px 1px #bdb5b4, 0px 1px 1px white;
+}
+
+.product-content img {
+  position: absolute;
+  width: 80%;
+  margin: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
