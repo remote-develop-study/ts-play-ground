@@ -11,7 +11,8 @@
     "module": "commonjs",
     "moduleResolution": "node",
     "noImplicitAny": true,
-    "outDir": "./dist/",
-    "target": "es3"
+    "outDir": "./dist",
+    "target": "es3",
+    "experimentalDecorators": true
   }
 }
