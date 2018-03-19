@@ -1,46 +1,58 @@
 interface Counter {
-  numstring: string;
-  plusButton: HTMLButtonElement;
-  minusButton: HTMLButtonElement;
-}
-
-interface StaticCounter {
-  new(): Counter;
-  currentNumber?: number;
-  countingText: HTMLSpanElement;
-  increase(): void;
+  currentNumber: number;
   decrease(): void;
+  increase(): void;
+  minusButton: HTMLButtonElement;
+  numberText: HTMLSpanElement;
+  plusButton: HTMLButtonElement;
 }
 
-function staticImplements<T>() {
-  return (constructor: T) => {}
-}
-
-@staticImplements<StaticCounter>()
 class MyCounter implements Counter {
-  public static currentNumber: number = 0;
-  public static countingText: HTMLSpanElement;
-  public numstring: string;
+  public currentNumber: number = 0;
+  public numberText: HTMLSpanElement;
   public plusButton: HTMLButtonElement;
   public minusButton: HTMLButtonElement;
 
   constructor() {
-    this.plusButton = document.createElement('button');
-    this.plusButton.innerHTML = '+'
-    this.minusButton = document.createElement('button');
-    this.minusButton.innerHTML = '-'
-    MyCounter.countingText = document.createElement('span');
-    MyCounter.countingText.innerHTML = String(MyCounter.currentNumber);
+    this.prepareButtons();
   }
 
-  public static increase(): void {
-    MyCounter.currentNumber++;
-    MyCounter.countingText.innerHTML = String(MyCounter.currentNumber)
+  private prepareButtons(): void {
+    this.plusButton = this.setButton('PLUS');
+    this.minusButton = this.setButton('MINUS');
+    this.numberText = this.setText();
   }
 
-  public static decrease(): void {
-    MyCounter.currentNumber--;
-    MyCounter.countingText.innerHTML = String(MyCounter.currentNumber)
+  private setButton(role: 'PLUS' | 'MINUS'): HTMLButtonElement {
+    const button: HTMLButtonElement = document.createElement('button');
+    if (role === 'PLUS') {
+      button.innerHTML = '+';
+      button.className = 'plus';
+      button.addEventListener('click', this.increase.bind(this));
+    } else {
+      button.innerHTML = '-';
+      button.className = 'minus';
+      button.addEventListener('click', this.decrease.bind(this));
+    }
+    return button;
+  }
+
+  private setText(): HTMLSpanElement {
+    const numberText: HTMLSpanElement = document.createElement('span');
+    numberText.innerHTML = '0';
+    numberText.className = 'text';
+    return numberText;
+  }
+
+  public increase(): void {
+    console.log(this.currentNumber);
+    this.currentNumber++;
+    this.numberText.innerHTML = String(this.currentNumber);
+  }
+
+  public decrease(): void {
+    this.currentNumber--;
+    this.numberText.innerHTML = String(this.currentNumber);
   }
 }
 
