@@ -46,7 +46,7 @@ class AwesomeVendingMachine implements VendingMachine {
   // 상품 이름을 받아서 상품을 반환
   // 수량 체크, 잔돈 감소, 에러 처리
   public giveProduct(productName: string): Drinks | void {
-    const selected: Drinks = this.getProductByName(productName)!;
+    const selected: Drinks = this.getProductByName(productName)!; // !는 나는 null 또는 undefined가 없습니다의 의미
     const haveProductsInStock: boolean = selected ? selected.quantity > 0 : false;
 
     if (haveProductsInStock) {
