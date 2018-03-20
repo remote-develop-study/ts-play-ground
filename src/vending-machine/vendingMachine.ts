@@ -1,28 +1,34 @@
 // 자판기 
-const drinks = [
-  {
-    name : 'name1',
-    price : '1000',
-  }
-]
+// const drinks = [
+//   {
+//     name : 'name1',
+//     price : '1000',
+//   }
+// ]
+
+
 // coin = 동전
+// drinks.name = 음료이름
+// resultCoin = 거스름 돈
+// drinks.price = 음료가격
 class VendingMachine {
-  coin : number;
-  // drinks:[];
-  drink1:number;
-  // 1. 여기에서 선언을 하려면 생성자에서 선언을 해야되는 것인지
-  constructor(coin:number, drink1:number, drinks:number) {
-    this.coin = coin;
-    this.drink1 = drink1;
-    // 객체로 했을시
-    // this.drinks = drinks;
+  // 여기서 private선언을 하지 않으면 getcoin에서 오류가 난다
+  constructor(private coin: number, private drinks: string) {
   }
-// 동전을 넣었을시. 음료 가격 비교?
-  coinInsert(coin: number) {
-    this.drink1 = 1000;
-    // 넣은 코인과 음료 가격비교
-    let coinResult = coin - this.drink1;
-    return coin > this.drink1 ? '거스름돈'+coinResult :  '잔액이 부족'+coinResult;
+  getcoin(): number {
+    return this.coin;
+  }
+  getdrinks(): string {
+    return this.drinks;
   }
 }
+function coinInsert() {
+  let insert: VendingMachine = new VendingMachine(2000, 'cola')
+  // this.drink1 = 1000;
+  console.log(insert.getcoin() + ", " + )
+  // console.log(insert.)
+  // 넣은 코인과 음료 가격비교
+  return coin > this.drink1 ? '거스름돈' + coinResult : '잔액이 부족' + coinResult;
+}
+
 
