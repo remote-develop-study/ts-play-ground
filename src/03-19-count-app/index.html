@@ -28,16 +28,16 @@
       // javascript로 했을 시
       var minur = document.getElementById('decrement-btn');
       var plusy = document.getElementById('increment-btn');
-      var number = document.getElementById('count-number').innerHTML;
+      var number = document.getElementById('count-number');
+      var numbertext = document.getElementById('count-number').innerHTML;
       
       minur.addEventListener('click', function () {
-        console.log(number);
-        number--;
-        console.log(number);
-        number.innerHTML = number;
+        numbertext--;
+        number.innerHTML = numbertext;
       })
       plusy.addEventListener('click',function(){
-
+        numbertext++;
+        number.innerHTML = numbertext;
       })
     }
   </script>
@@ -47,7 +47,7 @@
   <div id="wrapper">
     <button id="decrement-btn">-</button>
     <span id="count-number">0</span>
-    <button id="increment-btn" onclick="up();">+</button>
+    <button id="increment-btn">+</button>
   </div>
 </body>
 <script src="./count.js"></script>

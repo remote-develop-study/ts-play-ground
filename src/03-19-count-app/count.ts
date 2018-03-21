@@ -1,7 +1,7 @@
 class Changenum {
   constructor(val: number) {
-   val = this.val;
-   this.up = this.up.bind(this);
+    val = this.val;
+    this.up = this.up.bind(this);
   }
   val: number;
   up() {
@@ -14,8 +14,13 @@ class Changenum {
     // return val;
     console.log('-');
   }
-
 }
-class Tas extends Changenum{
+
+function plus(val:number):any{
+  let num:Changenum = new Changenum(val)
+  return num.up();
+}
+
+class Tas extends Changenum {
 
 }

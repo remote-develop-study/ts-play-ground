@@ -25,6 +25,10 @@ var Changenum = /** @class */ (function () {
     };
     return Changenum;
 }());
+function plus(val) {
+    var num = new Changenum(val);
+    return num.up();
+}
 var Tas = /** @class */ (function (_super) {
     __extends(Tas, _super);
     function Tas() {
