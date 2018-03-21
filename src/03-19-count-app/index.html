@@ -1,14 +1,53 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="utf-8" />
   <title>count number</title>
+  <script src="./count.js"></script>
+  <script>
+    if (document.addEventListener) {
+      document.addEventListener("DOMContentLoaded", function () {
+        document.removeEventListener("DOMContentLoaded", arguments.callee, false);
+        domReady();
+      }, false);
+    }
+
+    // Internet Explorer
+    else if (document.attachEvent) {
+      document.attachEvent("onreadystatechange", function () {
+        if (document.readyState === "complete") {
+          document.detachEvent("onreadystatechange", arguments.callee);
+          domReady();
+        }
+      });
+    }
+
+    //DOM이 모두 로드 되었을 때
+    function domReady() {
+      // javascript로 했을 시
+      var minur = document.getElementById('decrement-btn');
+      var plusy = document.getElementById('increment-btn');
+      var number = document.getElementById('count-number').innerHTML;
+      
+      minur.addEventListener('click', function () {
+        console.log(number);
+        number--;
+        console.log(number);
+        number.innerHTML = number;
+      })
+      plusy.addEventListener('click',function(){
+
+      })
+    }
+  </script>
 </head>
+
 <body>
   <div id="wrapper">
     <button id="decrement-btn">-</button>
     <span id="count-number">0</span>
-    <button id="increment-btn">+</button>
+    <button id="increment-btn" onclick="up();">+</button>
   </div>
 </body>
 <script src="./count.js"></script>
