@@ -2,6 +2,7 @@ class Changenum {
   constructor(val: number) {
     val = this.val;
     this.up = this.up.bind(this);
+    // 깃 테스트
   }
   val: number;
   up() {
