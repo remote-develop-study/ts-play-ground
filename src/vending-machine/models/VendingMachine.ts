@@ -1,4 +1,4 @@
-import fs from 'fs'
+// import fs from 'fs'
 
 export interface IVendingMachine<T> {
   type: T
@@ -17,6 +17,6 @@ export class VendingMachine<T> implements IVendingMachine<T> {
   }
 
   initialize(): void {
-
+    console.log('aaaa')
   }
 }

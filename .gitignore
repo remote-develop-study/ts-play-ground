@@ -160,6 +160,9 @@ built/
 
 # dotenv environment variables file
 .env
+.cache
+dist
+build
 
 
 ### SublimeText ###
