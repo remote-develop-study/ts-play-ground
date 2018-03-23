@@ -7,7 +7,7 @@ class Changenum {
   up() {
     // val++;
     // return val;
-    console.log('+');
+    console.log('up');
   }
   down() {
     // val--;
@@ -16,9 +16,10 @@ class Changenum {
   }
 }
 
-function plus(val:number):any{
-  let num:Changenum = new Changenum(val)
-  return num.up();
+function plus():any{
+  // let num:Changenum = new Changenum(val)
+  var b = console.log('aa');
+  // return b;
 }
 
 class Tas extends Changenum {

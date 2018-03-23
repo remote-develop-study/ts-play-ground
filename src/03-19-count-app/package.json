@@ -1,0 +1,11 @@
+{
+  "name": "03-19-count-app",
+  "version": "1.0.0",
+  "description": "자판기는 시작부터 너무 어렵다는 의견이 있어서 정말 마지막으로 초심으로 돌아가 시작합니다.",
+  "main": "count.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
