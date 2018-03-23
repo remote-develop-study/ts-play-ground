@@ -16,7 +16,7 @@ var Changenum = /** @class */ (function () {
     Changenum.prototype.up = function () {
         // val++;
         // return val;
-        console.log('+');
+        console.log('up');
     };
     Changenum.prototype.down = function () {
         // val--;
@@ -25,9 +25,10 @@ var Changenum = /** @class */ (function () {
     };
     return Changenum;
 }());
-function plus(val) {
-    var num = new Changenum(val);
-    return num.up();
+function plus() {
+    // let num:Changenum = new Changenum(val)
+    var b = console.log('aa');
+    // return b;
 }
 var Tas = /** @class */ (function (_super) {
     __extends(Tas, _super);
