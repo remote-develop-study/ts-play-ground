@@ -1,9 +1,9 @@
-export interface dirinksSetting {
+export interface drinksSetting {
   name: string,
   price: number
 }
 
-export const drinks: dirinksSetting[] = [
+export const drinks: drinksSetting[] = [
   {
     name: 'Coke',
     price: 500

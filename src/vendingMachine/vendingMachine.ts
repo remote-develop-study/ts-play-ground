@@ -22,21 +22,21 @@ let inputedMoney:number = 0;
 let selectedProduct:string = '';
 let selectedPrice:number = 0;
 
-function inputMoney(money: number) {
+function inputMoney(money: number):number {
   return inputedMoney = money;
 }
 
-function zeroMoney() {
+function zeroMoney():void {
   if(inputedMoney === 0) {
     throw new Error('금액을 투입하세요.');
   }
 }
-function selectProduct(name: string) {
+function selectProduct(name: string):void {
   zeroMoney();
-  products.map(item => {
+  products.map( item => {
     if(item.name === name) {
       selectedProduct = item.name;
-      return selectedPrice = item.price;
+      selectedPrice = item.price;
     }
   });
   if(selectedProduct === '') {
@@ -54,7 +54,7 @@ function selectProduct(name: string) {
   return;
 }
 
-function getChange() {
+function getChange():void {
   console.log(`${ inputedMoney } 원을 반환`);
   inputedMoney = 0;
   return;

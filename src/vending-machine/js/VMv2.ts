@@ -1,24 +1,25 @@
-import { dirinksSetting, drinks } from './products';
+import { drinksSetting, drinks } from './products';
 
 class Vm {
-  products: Array<dirinksSetting>;
+  products: Array<drinksSetting>;
   insertedCoin: number;
   charge: number;
-  selectedDrink: dirinksSetting;
+  selectedDrink: drinksSetting;
 
-  constructor(public drinks: Array<dirinksSetting>) {
-    this.products = drinks
+  constructor(public drinks: Array<drinksSetting>) {
+    this.products = drinks;
     this.insertedCoin = 0;
     this.charge = 0;
-    this.selectedDrink = { name: '', price: 0};
+    this.selectedDrink = { name: '', price: 0 }
   }
 
-  insertCoin (price: number) {
+  insertCoin (price: number): void {
     this.insertedCoin = price;
     console.log(`${this.insertedCoin}을 입금하였습니다.`);
   }
 
-  selectDrink (drink: string) {
+  selectDrink (drink: string): void {
+    // find method change 하기
     const ordered = this.products.filter(item => {
       return item.name === drink;
     });
@@ -27,7 +28,7 @@ class Vm {
     this.comparePriceMessage();
   }
   
-  comparePriceMessage ():void {
+  comparePriceMessage (): void {
     if(this.selectedDrink.price > this.insertedCoin) {
       console.log(`잔액이 부족합니다.`)
     }else {
@@ -36,11 +37,11 @@ class Vm {
     }
   }
 
-  선택후남은코인 ():void {
+  선택후남은코인 (): void { // updateCoin
     this.insertedCoin = this.insertedCoin - this.selectedDrink.price;
   }
 
-  거스름돈 (): void {
+  거스름돈 (): void { // printChangeMoney
     console.log(`${this.insertedCoin} 가 반환되었습니다.`)
   }
 }

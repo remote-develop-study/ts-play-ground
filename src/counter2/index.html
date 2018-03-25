@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <button onclick="counter.increment()" class="add" type="button">증가</button>
+  <button onclick="counter.decrement()" class="subtract" type="button">감소</button>
+  <span class="result"></span>
+  <script src="./counter.js"></script>
+  <script>
+    const counter = new countUpDown();
+    resultTarget = document.querySelector('.result')
+    resultTarget.innerHTML = counter.count;
+  </script>
+</body>
+</html>
