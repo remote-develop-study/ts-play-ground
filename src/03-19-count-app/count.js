@@ -10,29 +10,34 @@ var __extends = (this && this.__extends) || (function () {
 })();
 var Changenum = /** @class */ (function () {
     function Changenum(val) {
-        val = this.val;
-        // this.up = this.up.bind(this);
+        this.val = val;
     }
     Changenum.prototype.up = function () {
-        // val++;
-        // return val;
-        console.log('up');
+        this.val++;
+        document.getElementById('count-number').innerHTML = this.val.toString();
+        // console.log(`${this.val}`);
     };
     Changenum.prototype.down = function () {
-        // val--;
-        // return val;
-        console.log('-');
+        this.val--;
+        document.getElementById('count-number').innerHTML = this.val.toString();
+        // console.log(`${this.val}`);
     };
     return Changenum;
 }());
+var changenum = new Changenum(0);
+// ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
 var number;
+number = 0;
 function plus() {
-    var b = console.log('플러스');
-    return b;
+    number++;
+    console.log(number);
+    // var a = document.getElementById('count-number').innerText;
+    return number;
 }
 function minur() {
-    var b = console.log('마이너');
-    return b;
+    number--;
+    console.log(number);
+    return number;
 }
 var Tas = /** @class */ (function (_super) {
     __extends(Tas, _super);

@@ -1,32 +1,59 @@
 class Changenum {
-  constructor(val: number) {
-    val = this.val;
-    // this.up = this.up.bind(this);
-  }
   val: number;
-  up() {
-    // val++;
-    // return val;
-    console.log('up');
+  constructor(val: number) {
+    this.val = val;
   }
-  down() {
-    // val--;
-    // return val;
-    console.log('-');
+  up():void {
+    this.val++;
+    document.getElementById('count-number').innerHTML = this.val.toString();
+    // console.log(`${this.val}`);
+  }
+  down():void {
+    this.val--;
+    document.getElementById('count-number').innerHTML = this.val.toString();
+    // console.log(`${this.val}`);
   }
 }
-var number:number;
+let changenum:Changenum = new Changenum(0);
 
-function plus():any{
-  var b = console.log('플러스');
-  return b;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+var number: number;
+number = 0;
+
+function plus(): any {
+  number++;
+  console.log(number);
+  // var a = document.getElementById('count-number').innerText;
+  return number;
 }
-function minur():any{
-  var b = console.log('마이너');
-  return b;
+function minur(): any {
+  number--;
+  console.log(number);
+  return number;
 }
-
-
 class Tas extends Changenum {
 
 }
