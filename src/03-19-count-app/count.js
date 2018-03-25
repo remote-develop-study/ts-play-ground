@@ -11,7 +11,7 @@ var __extends = (this && this.__extends) || (function () {
 var Changenum = /** @class */ (function () {
     function Changenum(val) {
         val = this.val;
-        this.up = this.up.bind(this);
+        // this.up = this.up.bind(this);
     }
     Changenum.prototype.up = function () {
         // val++;
@@ -25,10 +25,14 @@ var Changenum = /** @class */ (function () {
     };
     return Changenum;
 }());
+var number;
 function plus() {
-    // let num:Changenum = new Changenum(val)
-    var b = console.log('aa');
-    // return b;
+    var b = console.log('플러스');
+    return b;
+}
+function minur() {
+    var b = console.log('마이너');
+    return b;
 }
 var Tas = /** @class */ (function (_super) {
     __extends(Tas, _super);

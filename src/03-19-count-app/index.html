@@ -26,10 +26,10 @@
     //DOM이 모두 로드 되었을 때
     function domReady() {
       // javascript로 했을 시
-      // var minur = document.getElementById('decrement-btn');
-      // var plusy = document.getElementById('increment-btn');
-      // var number = document.getElementById('count-number');
-      // var numbertext = document.getElementById('count-number').innerHTML;
+      var minur = document.getElementById('decrement-btn');
+      var plusy = document.getElementById('increment-btn');
+      var number = document.getElementById('count-number');
+      var numbertext = document.getElementById('count-number').innerHTML;
       
       // minur.addEventListener('click', function () {
       //   numbertext--;
@@ -39,15 +39,16 @@
       //   numbertext++;
       //   number.innerHTML = numbertext;
       // })
+
     }
   </script>
 </head>
 
 <body>
   <div id="wrapper">
-    <button id="decrement-btn" onclick="plus()">-</button>
+    <button id="increment-btn" onclick="plus()">+</button>
     <span id="count-number">0</span>
-    <button id="increment-btn">+</button>
+    <button id="decrement-btn" onclick="minur()">-</button>
   </div>
 </body>
 <script src="./count.js"></script>
