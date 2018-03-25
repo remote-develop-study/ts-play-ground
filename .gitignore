@@ -14,7 +14,8 @@
 .idea/vcs.xml
 .idea/*.xml
 .idea/
-
+.cache
+dist
 # Sensitive or high-churn files:
 .idea/**/dataSources/
 .idea/**/dataSources.ids
@@ -223,5 +224,8 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
+
+# yarn package manager
+yarn.lock
 
 # End of https://www.gitignore.io/api/node,macos,windows,intellij,sublimetext,visualstudiocode

@@ -53,4 +53,4 @@ export {
   IHuman,
   getName,
   getBorned
-}
+};
