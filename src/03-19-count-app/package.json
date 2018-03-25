@@ -1,0 +1,21 @@
+{
+  "name": "03-19-count-app",
+  "version": "1.0.0",
+  "description": "## 설명 자판기는 시작부터 너무 어렵다는 의견이 있어서 정말 마지막으로 초심으로 돌아가 시작합니다.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "ts-loader": "^4.1.0",
+    "typescript": "^2.7.2",
+    "typescript-compiler": "^1.4.1-2",
+    "webpack": "^4.2.0",
+    "webpack-cli": "^2.0.12",
+    "webpack-dev-server": "^3.1.1"
+  },
+  "dependencies": {}
+}
