@@ -9,17 +9,17 @@ var __extends = (this && this.__extends) || (function () {
     };
 })();
 var Polygon = /** @class */ (function () {
-    function Polygon(parameters) {
+    function Polygon() {
     }
     return Polygon;
 }());
-// let getArea:Polygon = new Polygon();
 // *---- 원 넓이 구하기
 var Circle = /** @class */ (function (_super) {
     __extends(Circle, _super);
-    function Circle() {
-        var _this = _super !== null && _super.apply(this, arguments) || this;
-        _this.pi = 3.14;
+    function Circle(r) {
+        var _this = _super.call(this) || this;
+        _this.py = 3.14;
+        _this.r = r;
         return _this;
     }
     // get width(){
@@ -31,13 +31,15 @@ var Circle = /** @class */ (function (_super) {
     //     console.log('반지름은 0보다 커야 합니다');
     //   }
     // }
-    Circle.prototype.circleArea = function () {
-        var circleWidth = this.r ^ 2 * this.pi;
+    Circle.prototype.circleArea = function (r) {
+        var circleWidth = this.r ^ 2 * this.py;
         console.log(circleWidth);
+        console.log('aa');
     };
     return Circle;
 }(Polygon));
-var circle = new Circle(10);
+var n = 2;
+var circleArea = new Circle(n);
 // circle.circleArea();
 // if
 // circle
