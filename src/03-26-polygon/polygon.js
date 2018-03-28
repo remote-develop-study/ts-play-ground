@@ -19,6 +19,7 @@ var Circle = /** @class */ (function (_super) {
     function Circle(r) {
         var _this = _super.call(this) || this;
         _this.py = 3.14;
+        _this.r = 2;
         _this.r = r;
         return _this;
     }
@@ -32,14 +33,14 @@ var Circle = /** @class */ (function (_super) {
     //   }
     // }
     Circle.prototype.circleArea = function (r) {
+        console.log('aa');
         var circleWidth = this.r ^ 2 * this.py;
         console.log(circleWidth);
-        console.log('aa');
     };
     return Circle;
 }(Polygon));
-var n = 2;
-var circleArea = new Circle(n);
+// var n=2;
+var circleArea = new Circle(this.r);
 // circle.circleArea();
 // if
 // circle
@@ -63,4 +64,5 @@ var Trapezoid = /** @class */ (function (_super) {
     };
     return Trapezoid;
 }(Polygon));
+// 3. 
 //# sourceMappingURL=polygon.js.map

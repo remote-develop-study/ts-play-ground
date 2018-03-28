@@ -26,7 +26,7 @@ class Polygon {
 // *---- 원 넓이 구하기
 class Circle extends Polygon {
   private py: number = 3.14;
-  private r: number;
+  private r: number = 2;
   constructor(r: number) {
     super();
     this.r = r;
@@ -41,13 +41,14 @@ class Circle extends Polygon {
   //   }
   // }
   circleArea(r:number):void {
+    console.log('aa');
+    
     let circleWidth = this.r ^ 2 * this.py;
     console.log(circleWidth);
-    console.log('aa');
   }
 }
-var n=2;
-let circleArea:Circle = new Circle(n);
+// var n=2;
+let circleArea:Circle = new Circle(this.r);
 // circle.circleArea();
 // if
 // circle
@@ -75,3 +76,4 @@ class Trapezoid extends Polygon {
 }
 
 
+// 3. 
