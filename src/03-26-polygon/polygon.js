@@ -23,15 +23,6 @@ var Circle = /** @class */ (function (_super) {
         _this.r = r;
         return _this;
     }
-    // get width(){
-    //   var width=(this.r*this.r)*this.pi;
-    //   return width;
-    // }
-    // set width(width:number){
-    //   if(width < -1){
-    //     console.log('반지름은 0보다 커야 합니다');
-    //   }
-    // }
     Circle.prototype.circleArea = function (r) {
         console.log('aa');
         var circleWidth = this.r ^ 2 * this.py;
@@ -39,12 +30,7 @@ var Circle = /** @class */ (function (_super) {
     };
     return Circle;
 }(Polygon));
-// var n=2;
 var circleArea = new Circle(this.r);
-// circle.circleArea();
-// if
-// circle
-// *---- 사각형 넓이 구하기
 var Rect = /** @class */ (function (_super) {
     __extends(Rect, _super);
     function Rect() {
@@ -64,5 +50,18 @@ var Trapezoid = /** @class */ (function (_super) {
     };
     return Trapezoid;
 }(Polygon));
-// 3. 
+var Greeter = /** @class */ (function () {
+    function Greeter(num) {
+        this.pi = 3.14;
+        this.num = num;
+    }
+    Greeter.prototype.greet = function () {
+        //  this.pi
+        return this.num * this.num * this.pi;
+    };
+    return Greeter;
+}());
+var greeter;
+greeter = new Greeter(3);
+console.log(greeter.greet());
 //# sourceMappingURL=polygon.js.map

@@ -3,24 +3,7 @@ interface polygon {
 }
 
 class Polygon {
-  // fun:number;
-  // i:number;
-  // py:number = 3.14;
-  // }
-  // getArea(fun:number,i){
-
-  // }
-//   pi:number = 3.14;
-//   r:number;
-//   constructor(r:number){
-//     this.r = r;
-//   }
-//   getArea():void{
-//     console.log(`${this.pi}`);
-//   }
-// }
-// var pi = 3.14;
-// let getArea:Polygon = new Polygon(pi);
+  
 }
 
 // *---- 원 넓이 구하기
@@ -31,15 +14,7 @@ class Circle extends Polygon {
     super();
     this.r = r;
   }
-  // get width(){
-  //   var width=(this.r*this.r)*this.pi;
-  //   return width;
-  // }
-  // set width(width:number){
-  //   if(width < -1){
-  //     console.log('반지름은 0보다 커야 합니다');
-  //   }
-  // }
+  
   circleArea(r:number):void {
     console.log('aa');
     
@@ -47,16 +22,10 @@ class Circle extends Polygon {
     console.log(circleWidth);
   }
 }
-// var n=2;
 let circleArea:Circle = new Circle(this.r);
-// circle.circleArea();
-// if
-// circle
 
-
-
-// *---- 사각형 넓이 구하기
 class Rect extends Polygon {
+  // *---- 사각형 넓이 구하기
   private width: number;
   private height: number;
   rectArea() {
@@ -75,5 +44,19 @@ class Trapezoid extends Polygon {
   }
 }
 
+class Greeter {
+  pi: number = 3.14;
+  num : number;
+  constructor(num: number) {
+      this.num = num;
+  }
+  greet() {
+    //  this.pi
+      return this.num*this.num*this.pi;
+  }
+}
 
-// 3. 
+
+let greeter: Greeter;
+greeter = new Greeter(3);
+console.log(greeter.greet());
