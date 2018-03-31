@@ -1,37 +1,51 @@
 interface polygon {
-
 }
-
 class Polygon {
-  
 }
 
 // *---- 원 넓이 구하기
-class Circle extends Polygon {
-  private py: number = 3.14;
-  private r: number = 2;
-  constructor(r: number) {
+class Circle extends Polygon{
+  pi: number = 3.14;
+  num : number;
+  constructor(num: number) {
     super();
-    this.r = r;
+      this.num = num;
   }
-  
-  circleArea(r:number):void {
-    console.log('aa');
-    
-    let circleWidth = this.r ^ 2 * this.py;
-    console.log(circleWidth);
+  getArea() {
+    //  this.pi
+      return this.num*this.num*this.pi;
   }
 }
-let circleArea:Circle = new Circle(this.r);
+let circle: Circle = new Circle(3);
+console.log('원의 넓이 '+circle.getArea());
 
+// 공식이 여러가지가 있던데...
 class Rect extends Polygon {
-  // *---- 사각형 넓이 구하기
-  private width: number;
-  private height: number;
-  rectArea() {
+  diagonal1: number;
+  diagonal2: number;
+  line1:number;
+  line2:number;
+  line3:number;
+  line4:number;
+  constructor(line1:number,line2:number,line3:number,line4:number){
+    super();
+    // this.diagonal1 = diagonal1;
+    this.line1 = line1;
+    this.line2 = line2;
+    this.line3 = line3;
+    this.line4 = line4
+  }
+  //가로지르는 대각선의 길이를 알 경우
+  // getArea() {
 
+  // }
+  // 4개의 각 변의 길이를 알 경우
+  getArea():number{
+    return (this.line1*this.line2)/2 + (this.line3*this.line4)/2
   }
 }
+let rect: Rect = new Rect(2,2,2,2);
+console.log('사각형의 넓이 '+rect.getArea());
 
 
 // *---- 사다리꼴 넓이 구하기
@@ -39,24 +53,19 @@ class Trapezoid extends Polygon {
   private topBr: number;
   private bottomBr: number;
   private height: number;
-  trapezoidArea() {
+  constructor(topBr:number, bottomBr:number, height:number){
+    super();
+    this.topBr = topBr;
+    this.bottomBr = bottomBr;
+    this.height = height;
+  }
 
+  trapezoidArea():number {
+    return 
   }
 }
-
-class Greeter {
-  pi: number = 3.14;
-  num : number;
-  constructor(num: number) {
-      this.num = num;
-  }
-  greet() {
-    //  this.pi
-      return this.num*this.num*this.pi;
-  }
-}
+let trapezoid: Trapezoid = new Trapezoid(4,4,5);
+console.log('사다리꼴 넓이 '+trapezoid.trapezoidArea());
 
 
-let greeter: Greeter;
-greeter = new Greeter(3);
-console.log(greeter.greet());
+
