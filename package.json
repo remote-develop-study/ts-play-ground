@@ -23,6 +23,9 @@
   },
   "devDependencies": {
     "@types/jest": "^22.0.1",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.6.1",
     "jest": "^22.1.4",
     "ts-jest": "^22.0.1"
   }
