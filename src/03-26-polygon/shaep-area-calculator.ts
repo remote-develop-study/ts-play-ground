@@ -46,7 +46,7 @@ class MyShapeAreaCalculator implements ShapeAreaCalculator {
         const [height, base1, base2] = args
         return this.calculateTrapezoid(height, base1, base2)
       default:
-        return 0;
+        throw new Error("circle, rect, trapezoid의 문자열에 대해서만 연산 가능 합니다.")
     }
   }
 }
