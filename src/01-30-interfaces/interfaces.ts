@@ -25,11 +25,8 @@ interface ISortUser {
 
 const sortUser:ISortUser = (arr) => {
   arr.sort((a,b) => {
-<<<<<<< HEAD
     let result;
-=======
     const result;
->>>>>>> dfe8c2be1b638c5fcc8e61af98ae32cf79dcd255
     return a.id > b.id ? result = a: result =b;
   })
 }
