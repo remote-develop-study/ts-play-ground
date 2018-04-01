@@ -58,6 +58,13 @@ class MyCalculator implements Calculator {
 
 }
 
-// Test
+/** 
+ * (((3+5)*5)/3)/3 = 4.44
+*/
 new MyCalculator(3).add(5).mul(5).div(3).div(3).display() // 4.44
-new MyCalculator(5).add(5).mul(5).div(5).display().allClear().reset(5).add(5).display() // 10.00, 10.00
+
+/** 
+ * ((5+5)*5)/5 = 10.00
+ * 5+5 = 10.000
+*/
+new MyCalculator(5).add(5).mul(5).div(5).display().allClear().reset(5).add(5).display(4) 
