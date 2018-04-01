@@ -12,7 +12,7 @@ class MyCalculator implements Calculator {
   private _current: number;
 
   constructor(public initNumber: number) {
-    this.current = 0
+    this._current = 0
   }
 
   add(a: number): MyCalculator {
