@@ -5,15 +5,15 @@ interface Calculator {
   mul(a: number): void
   display(decimalToDisplay: number): void
   allClear(): void
+  reset(value: number): void
 }
 
 
 class MyCalculator implements Calculator {
-  
   private _current: number;
 
-  constructor(public initNumber: number) {
-    this._current = initNumber
+  constructor(public value: number) {
+    this._current = value
   }
 
   add(a: number): MyCalculator {
@@ -40,6 +40,11 @@ class MyCalculator implements Calculator {
   set current (result: number)  {
     this._current = result
   }
+
+  reset (value: number) {
+    this.current = value
+    return this
+  }
   
   display(decimalToDisplay: number = 2): MyCalculator {
     console.log(this.current.toFixed(decimalToDisplay))
@@ -55,4 +60,4 @@ class MyCalculator implements Calculator {
 
 // Test
 new MyCalculator(3).add(5).mul(5).div(3).div(3).display() // 4.44
-new MyCalculator(5).add(5).mul(5).div(5).display().allClear().add(5).display() // 10.00, 5.00 출력
+new MyCalculator(5).add(5).mul(5).div(5).display().allClear().reset(5).add(5).display() // 10.00, 5.00 출력
