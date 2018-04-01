@@ -45,7 +45,6 @@ class MyCounter implements Counter {
   }
 
   public increase(): void {
-    console.log(this.currentNumber);
     this.currentNumber++;
     this.numberText.innerHTML = String(this.currentNumber);
   }
