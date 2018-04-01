@@ -51,4 +51,4 @@ class MyCalculator implements Calculator {
 }
 
 // Test
-new MyCalculator(3).add(5).mul(5).div(3).div(3).display() //2.777
+new MyCalculator(3).add(5).mul(5).div(3).div(3).display() //4.44
