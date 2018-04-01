@@ -3,7 +3,7 @@ interface Calculator {
   sub(a: number): void
   div(a: number): void
   mul(a: number): void
-  display(): void
+  display(decimalToDisplay: number): void
 }
 
 
@@ -40,8 +40,8 @@ class MyCalculator implements Calculator {
     this._current = result
   }
   
-  display(decimal: number = 2): void {
-    console.log(this.current.toFixed(decimal))
+  display(decimalToDisplay: number = 2): void {
+    console.log(this.current.toFixed(decimalToDisplay))
   }
 
   allClear(): void {
