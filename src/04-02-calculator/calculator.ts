@@ -4,6 +4,7 @@ interface Calculator {
   div(a: number): void
   mul(a: number): void
   display(decimalToDisplay: number): void
+  allClear(): void
 }
 
 
@@ -40,15 +41,18 @@ class MyCalculator implements Calculator {
     this._current = result
   }
   
-  display(decimalToDisplay: number = 2): void {
+  display(decimalToDisplay: number = 2): MyCalculator {
     console.log(this.current.toFixed(decimalToDisplay))
+    return this
   }
 
-  allClear(): void {
+  allClear(): MyCalculator {
     this.current = 0
+    return this
   }
 
 }
 
 // Test
 new MyCalculator(3).add(5).mul(5).div(3).div(3).display() //4.44
+new MyCalculator(5).add(5).mul(5).div(5).display().allClear().add(5).display()
