@@ -25,7 +25,7 @@ describe('파라미터를 체크하는 다각형의 넓이 함수',function(){
     expect(calculateCircle(-1)).toBe("반지름은 0보다 커야 합니다.");
   })
   
-});
+});-
 
 describe('모든 넓이 값을 얻을 수 있는 getArea 함수',function(){
   it('원의 넓이 값 출력',function(){
