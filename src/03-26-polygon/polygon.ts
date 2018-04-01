@@ -11,13 +11,14 @@ export function trapezoid(below: number, upper: number, height: number): number{
     return (below + upper) * height/2
 }
 
-export function calculateCircle(radius){
-    if(typeof radius == String ) {
-        return '숫자형타입만 계산이 가능합니다.'
-    }
 
-    if(radius == undefined) {
+export function calculateCircle(radius: number): string | void{
+    if(radius === undefined) {
         return '최소 한가지 값이 필요합니다.'
+    }
+    
+    if(typeof(radius) === "string") {
+        return '숫자형타입만 계산이 가능합니다.'
     }
 
     if(radius < 0) {
@@ -25,17 +26,19 @@ export function calculateCircle(radius){
     }
 }
 
-export function getArea(fcname: string, param1: number, param2: number, param3: number){
-    console.log(fcname);
+//param1,2,3 스프레드 연산자로 대체하기
+export function getArea(fcname: string, ...param:number[]){
     switch(fcname){
         case 'circle':
-            return circle(param1);
-            break;
+            const [radius] = param
+            return circle(radius);
         case 'rect':
-            return rect(param1, param2);
-            break;
+            const [horizontal,vertical ] = param;
+            return rect(horizontal, vertical);
         case 'trapezoid':
-            return trapezoid(param1, param2, param3);
-            break;
+            const [below,upper,height] = param;
+            return trapezoid(below, upper, height);
+        default:
+         return "circle, rect, trapezoid만 사용 가능합니다."
     }
 }
