@@ -1,23 +1,54 @@
-interface SquareFunc {}
+interface SquareFunc {
+    (num: number):number
+}
 
-const squarefunc = () => {};
+const squarefunc:SquareFunc = (num) => num * num;
 
-interface IUser {}
+interface IUser {
+    id: string,
+    pw: string,
+    job?: string
+}
 
-const getUserId = () => {};
+const getUserId:IUser = (user:IUser):string => user.id;
 
-const getUserJob = () => {};
+const getUserJob:IUser = (user:IUser):string => {
+  if(!user.job){
+    return user.job = '백수';
+  }
+  return user.job;
+}
 
-interface ISortUser {}
+interface ISortUser {
+  (arr: Array<IUser>): Array<IUser>
+}
 
-const sortUser = () => {};
+const sortUser:ISortUser = (arr) => {
+  arr.sort((a,b) => {
+    let result;
+    return a.id > b.id ? result = a: result =b;
+  })
+}
 
-interface IHuman {}
+interface IHuman {
+    name: string,
+    borned: number,
+    getAge(): void
+}
 
-class Human {}
+class Human implements IHuman{
+  name: string;
+  borned: number;
+  constructor(name:string, borned:number){
+    this.name = name;
+    this.borned = borned;
+  }
+  getAge() {}
+}
 
-const getName = () => {};
-const getBorned = () => {};
+const getName = ({name}:Human):string => name;
+const getBorned = ({borned}:Human):number => borned;
+
 
 export {
   SquareFunc,
@@ -30,4 +61,4 @@ export {
   IHuman,
   getName,
   getBorned
-};
+}

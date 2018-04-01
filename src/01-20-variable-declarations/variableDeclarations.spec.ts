@@ -1,5 +1,4 @@
 import { makeLoop, blockScope, getColorByIndex, getSumOfNumArray, getOldestAge, getChangedText, getSecondValueOfArray } from './variableDeclarations';
-import { } from 'jest'
 
 describe('타입스크립트 스터디 1월 10일 스프린트 기본 타입', function () {
   it('매개변수로 boolean 값을 넣어 true일때 c를 반환하고 false일때 undefined를 반환합니다. 에러를 수정해주세요', function () {
@@ -7,7 +6,7 @@ describe('타입스크립트 스터디 1월 10일 스프린트 기본 타입', f
     expect(blockScope(false)).toBe(undefined)
   })
   it('for문으로 문자열 1을 5번 리턴하여 문자열 11111 이 나오도록 해주세요', function () {
-    expect(makeLoop()).toBe('11111')
+    expect(makeLoop('1')).toBe('11111')
   })
   interface obj {
     color: string[],
@@ -39,6 +38,6 @@ describe('타입스크립트 스터디 1월 10일 스프린트 기본 타입', f
     expect(getChangedText(obj)).toBe('MacBook Pro')
   })
   it('배열을 받아 destructuring 하여 배열의 3을 리턴해주세요', function () {
-    expect(getSecondValueOfArray(obj.number)).toBe(3)
+    expect(getSecondValueOfArray(obj, 1)).toBe(3)
   })
 });

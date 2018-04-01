@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+  "allowSyntheticDefaultImports": true,
+  "experimentalDecorators": true,
+  "emitDecoratorMetadata": true,
+  "outDir": "./dist",
+  "noImplicitAny": true,
+  "module": "es6",
+  "target": "es5",
+  "jsx": "react",
+  "locale": "ko",
+  "lib": [ "dom", "es5", "es2015", "es2015.promise" ],
+  "moduleResolution": "node",
+  "noImplicitReturns": true,
+  "pretty": true,
+  "sourceMap": true,
+  "strict": true,
+  "allowJs": true
+  },
+  "include": [
+    "./src/**/*.ts"
+  ],
+  "exclude": [
+    "/dist"
+  ]
+}
