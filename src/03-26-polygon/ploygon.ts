@@ -1,7 +1,7 @@
-const pi: number = 3.14;//편의상 소수점 2자리
+const PI: number = (Math.floor(Math.PI) * 100) / 100;//편의상 소수점 2자리
 
 function circle (width:number):number {
-    return (width * 2) * pi;
+    return (width * 2) * PI;
 }
 
 function rect (width:number, height:number):number {
@@ -12,4 +12,4 @@ function trapezoid (topWidth:number, bottomWidth:number, height:number):number {
     return (topWidth + bottomWidth) * height / 2;
 }
 
-export { pi, circle, rect, trapezoid}
+export {circle, rect, trapezoid}
