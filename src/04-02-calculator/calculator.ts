@@ -60,4 +60,4 @@ class MyCalculator implements Calculator {
 
 // Test
 new MyCalculator(3).add(5).mul(5).div(3).div(3).display() // 4.44
-new MyCalculator(5).add(5).mul(5).div(5).display().allClear().reset(5).add(5).display() // 10.00, 5.00 출력
+new MyCalculator(5).add(5).mul(5).div(5).display().allClear().reset(5).add(5).display() // 10.00, 10.00
