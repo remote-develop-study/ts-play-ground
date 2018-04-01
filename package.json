@@ -18,15 +18,24 @@
     "url": "https://github.com/typescript-study/play-ground/issues"
   },
   "homepage": "https://github.com/typescript-study/play-ground#readme",
-  "dependencies": {
-    "typescript": "^2.6.2"
-  },
+  "dependencies": {},
   "devDependencies": {
+<<<<<<< HEAD
     "@types/jest": "^22.0.1",
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.4",
     "babel-preset-env": "^1.6.1",
     "jest": "^22.1.4",
     "ts-jest": "^22.0.1"
+=======
+    "@types/jest": "^22.2.0",
+    "jest": "^22.4.2",
+    "ts-jest": "^22.4.1",
+    "ts-loader": "^4.1.0",
+    "typescript": "^2.7.2",
+    "webpack": "^4.1.1",
+    "webpack-cli": "^2.0.12",
+    "webpack-dev-server": "^3.1.1"
+>>>>>>> 1c4712afd3e4fe4f1a9f68fbb02782dba9ff0a4a
   }
 }
