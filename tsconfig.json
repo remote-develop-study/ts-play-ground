@@ -4,7 +4,7 @@
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
     "locale": "ko",
-    "lib": [ "dom", "es5", "es2015", "es2015.promise" ],
+    "lib": [ "dom", "es5", "es6", "es2015" ],
     "module": "commonjs",
     "moduleResolution": "node",
     "noImplicitReturns": true,
