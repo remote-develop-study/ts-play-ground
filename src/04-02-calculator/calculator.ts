@@ -1,11 +1,11 @@
 interface Calculator {
-  add(a: number): void
-  sub(a: number): void
-  div(a: number): void
-  mul(a: number): void
-  display(decimalToDisplay: number): void
-  allClear(): void
-  reset(value: number): void
+  add(a: number): Calculator
+  sub(a: number): Calculator
+  div(a: number): Calculator
+  mul(a: number): Calculator
+  display(decimalToDisplay?: number): Calculator
+  allClear(): Calculator
+  reset(value: number): Calculator
 }
 
 
@@ -16,19 +16,19 @@ class MyCalculator implements Calculator {
     this._current = value
   }
 
-  add(a: number): MyCalculator {
+  add(a: number): Calculator {
     this.current += a
     return this
   }
-  sub(a: number): MyCalculator {
+  sub(a: number): Calculator {
     this.current -= a
     return this
   }
-  div(a: number): MyCalculator {
+  div(a: number): Calculator {
     this.current /= a
     return this
   }
-  mul(a: number): MyCalculator {
+  mul(a: number): Calculator {
     this.current *= a
     return this
   }
@@ -41,17 +41,17 @@ class MyCalculator implements Calculator {
     this._current = result
   }
 
-  reset (value: number) {
+  reset (value: number): Calculator {
     this.current = value
     return this
   }
   
-  display(decimalToDisplay: number = 2): MyCalculator {
+  display(decimalToDisplay: number = 2): Calculator {
     console.log(this.current.toFixed(decimalToDisplay))
     return this
   }
 
-  allClear(): MyCalculator {
+  allClear(): Calculator {
     this.current = 0
     return this
   }
@@ -61,7 +61,7 @@ class MyCalculator implements Calculator {
 /** 
  * (((3+5)*5)/3)/3 = 4.44
 */
-new MyCalculator(3).add(5).mul(5).div(3).div(3).display() // 4.44
+new MyCalculator(3).add(5).mul(5).div(3).div(3).display()
 
 /** 
  * ((5+5)*5)/5 = 10.00
