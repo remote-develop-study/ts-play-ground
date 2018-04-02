@@ -3,68 +3,72 @@ interface Calculator {
   sub(a: number): Calculator
   div(a: number): Calculator
   mul(a: number): Calculator
-  display(decimalToDisplay?: number): Calculator
+  done(decimalToDisplay?: number): Calculator
   allClear(): Calculator
   reset(value: number): Calculator
 }
 
 
 class MyCalculator implements Calculator {
-  private _current: number;
+  private _initValue: number;
+  private _expr: string;
 
   constructor(public value: number) {
-    this._current = value
+    this._initValue = value
+    this._expr = ''
   }
 
   add(a: number): Calculator {
-    this.current += a
+    this.expr += `+${a.toString()}`
     return this
   }
   sub(a: number): Calculator {
-    this.current -= a
+    this.expr += `-${a.toString()}`
     return this
   }
   div(a: number): Calculator {
-    this.current /= a
+    this.expr += `/${a.toString()}`
     return this
   }
   mul(a: number): Calculator {
-    this.current *= a
+    this.expr += `*${a.toString()}`
     return this
   }
 
-  get current (): number {
-    return this._current
+  done(decimalToDisplay: number = 2): Calculator {
+    console.log(eval(this._initValue + this.expr).toFixed(decimalToDisplay))
+    return this
   }
 
-  set current (result: number)  {
-    this._current = result
+  get expr (): string {
+    return this._expr
+  }
+
+  set expr (result: string)  {
+    this._expr = result
   }
 
   reset (value: number): Calculator {
-    this.current = value
-    return this
-  }
-  
-  display(decimalToDisplay: number = 2): Calculator {
-    console.log(this.current.toFixed(decimalToDisplay))
+    this._initValue = value
     return this
   }
 
   allClear(): Calculator {
-    this.current = 0
+    this._initValue = 0
+    this.expr = ''
     return this
   }
 
 }
 
 /** 
- * (((3+5)*5)/3)/3 = 4.44
+ * 3+5*5/3/3
+ * (5*5/3/3)+3 = 5.78
 */
-new MyCalculator(3).add(5).mul(5).div(3).div(3).display()
+new MyCalculator(3).add(5).mul(5).div(3).div(3).done()
 
 /** 
- * ((5+5)*5)/5 = 10.00
+ * 5+5*5/5 = 10.00
  * 5+5 = 10.000
 */
-new MyCalculator(5).add(5).mul(5).div(5).display().allClear().reset(5).add(5).display(4) 
+new MyCalculator(5).add(5).mul(5).div(5).done().allClear().reset(5).add(5).done(4) 
