@@ -24,7 +24,7 @@ export function trapezoid(a: number, b: number, h: number) {
 
 function getArea(type:string, num1:number, num2:number, num3:number) {
   // 2번문제의 타입체크가하기
-
+  
   // 3번문제 공통으로 묶기?
   if(type == "circle"){
     circle(3);

@@ -34,4 +34,3 @@ function getArea(type, num1, num2, num3) {
         trapezoid(2, 4, 5);
     }
 }
-//# sourceMappingURL=polygon.js.map
