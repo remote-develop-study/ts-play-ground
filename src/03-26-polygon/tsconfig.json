@@ -1,0 +1,15 @@
+{
+	"compilerOptions": {
+		"outDir": "./dist/",
+		"baseUrl": "./src",
+		"sourceMap": true,
+		"module": "commonjs",
+		"target": "es2016",
+		"removeComments": true,
+		"paths": {
+			"@components/*": [
+				"src/components/*"
+			]
+		}
+	}
+}

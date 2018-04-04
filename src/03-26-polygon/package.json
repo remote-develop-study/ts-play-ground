@@ -1,0 +1,16 @@
+{
+  "name": "03-26-polygon",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "parcel serve src/index.html"
+  },
+  "dependencies": {
+    "bootstrap": "^4.0.0"
+  },
+  "devDependencies": {
+    "node-sass": "^4.8.3",
+    "typescript": "^2.7.2"
+  }
+}
