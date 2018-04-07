@@ -12,4 +12,4 @@ function trapezoid (topWidth:number, bottomWidth:number, height:number):number {
     return (topWidth + bottomWidth) * height / 2;
 }
 
-export {circle, rect, trapezoid}
+export { circle, rect, trapezoid }
