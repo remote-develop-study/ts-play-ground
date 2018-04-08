@@ -54,26 +54,26 @@
 // console.log(Calc.prototype.minur(2));
 
 interface Tuper {
+  res:number;
   sum(a: number[]): number;
   minur(a: number[]): number;
   multi(a: number[]): number;
   div(a: number[]): number;
-  reset(a:number[]):number;
-  a:number[];
-  res:number;
 }
-let res = 0;
-let a:number[];
 
-function sum(...a: number[]): Tuper {
+// 스프레드 연산자를 사용한 배열을 사용하는데 인터페이스에서 선언하는 방법????
+let sum:Tuper;
+sum = function (...a: number[]): number {
+  let res = 0;
   for (let i = 0; i < arguments.length; i++) {
     res += arguments[i];
   }
-  console.log('더하기 '+res);
-  return this;
+  // console.log('더하기 '+res);
+  return res;
 }
 
 function minur(...a: number[]): Tuper {
+  let res = 0;
   for (let i = 0; i < arguments.length; i++) {
     res -= arguments[i];
   }
@@ -82,6 +82,7 @@ function minur(...a: number[]): Tuper {
 }
 
 function multi(...a: number[]): Tuper {
+  let res = 0;
   for (let i = 0; i < arguments.length; i++) {
     res *= arguments[i];
   }
@@ -90,6 +91,7 @@ function multi(...a: number[]): Tuper {
 }
 
 function div(...a: number[]): Tuper {
+  let res = 0;
   for (let i = 0; i < arguments.length; i++) {
     res /= arguments[i];
   }
@@ -100,8 +102,8 @@ function div(...a: number[]): Tuper {
 // function reset(...a:number[]):Tuper{
 //   return this.a;
 // }
-
-console.log(sum(1,2,3));  //6
+// new Tuper().sum(1).minur(2)
+// console.log(sum(1,2,3));  //6
 console.log(minur(1)); //6-1 = 5
 console.log(multi(2));  //5*2 = 10
 console.log(div(2)); //10/2 = 5
