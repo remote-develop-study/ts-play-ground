@@ -1,4 +1,5 @@
 "use strict";
+// 클래스로 해보려다 안됫던거
 // interface Calculator {
 //   sum(num: number);
 //   minur(num: number);
