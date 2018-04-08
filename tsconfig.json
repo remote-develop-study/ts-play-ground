@@ -5,7 +5,7 @@
     "emitDecoratorMetadata": true,
     "locale": "ko",
     "lib": [ "dom", "es5", "es2015", "es2015.promise" ],
-    "module": "es2015",
+    "module": "CommonJS",
     "moduleResolution": "node",
     "noImplicitReturns": true,
     "outDir": "./built/",

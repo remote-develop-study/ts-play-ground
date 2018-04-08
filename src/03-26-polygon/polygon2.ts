@@ -1,6 +1,6 @@
-import {validateIsExist, validateMinusNbumer} from './polygon'
-const pai:number = 3.14
-const getArea = function (name:string, x: number, y: number, z: number) {
+import {validateIsExist, validateMinusNbumer} from './polygon1'
+const pai:number = 3.14;
+const getArea = function (name:string, x: number, y: number, z: number):number | void {
   if(name === 'circle') {
     return x * x * pai;
   }

@@ -1,26 +1,28 @@
-// import isExist from './validate/isExitst'
-// import minusNumber from './validate/minusNumber'
+"use strict";
+exports.__esModule = true;
+var isExitst_1 = require("./validate/isExitst");
+var minusNumber_1 = require("./validate/minusNumber");
 var getArea = function (name, x, y, z) {
     var pai = 3.14;
     if (name === 'circle') {
-        // isExist(x)
-        // minusNumber(x)
+        isExitst_1["default"](x);
+        minusNumber_1["default"](x);
         return x * x * pai;
     }
     if (name === 'rect') {
-        // isExist(x)
-        // isExist(y)
-        // minusNumber(x)
-        // minusNumber(y)
+        isExitst_1["default"](x);
+        isExitst_1["default"](y);
+        minusNumber_1["default"](x);
+        minusNumber_1["default"](y);
         return x * y;
     }
     if (name === 'trapezoidArea') {
-        // isExist(x)
-        // isExist(y)
-        // isExist(z)
-        // minusNumber(x)
-        // minusNumber(y)
-        // minusNumber(z)
+        isExitst_1["default"](x);
+        isExitst_1["default"](y);
+        isExitst_1["default"](z);
+        minusNumber_1["default"](x);
+        minusNumber_1["default"](y);
+        minusNumber_1["default"](z);
         return (x + y) * z / 2;
     }
 };
