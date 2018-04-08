@@ -1,4 +1,4 @@
-import ArithmeticOperation from './Caculator';
+import ArithmeticOperation from './Operator';
 import { } from 'jest'
 
 describe('두항의 연산자 테스트', function () {
