@@ -54,7 +54,7 @@
 // console.log(Calc.prototype.minur(2));
 
 interface Tuper {
-  res:number;
+  (a:number):number;
   sum(a: number[]): number;
   minur(a: number[]): number;
   multi(a: number[]): number;
@@ -68,7 +68,7 @@ sum = function (...a: number[]): number {
   for (let i = 0; i < arguments.length; i++) {
     res += arguments[i];
   }
-  // console.log('더하기 '+res);
+  console.log('더하기 '+res);
   return res;
 }
 
@@ -107,3 +107,10 @@ function div(...a: number[]): Tuper {
 console.log(minur(1)); //6-1 = 5
 console.log(multi(2));  //5*2 = 10
 console.log(div(2)); //10/2 = 5
+
+
+interface StringArray {
+    [index: number]: string;
+}
+let myArray: StringArray;
+myArray = ["Bob", "Fred"];

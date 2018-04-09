@@ -18,7 +18,7 @@ sum = function () {
     for (var i = 0; i < arguments.length; i++) {
         res += arguments[i];
     }
-    // console.log('더하기 '+res);
+    console.log('더하기 ' + res);
     return res;
 };
 function minur() {
@@ -65,3 +65,5 @@ function div() {
 console.log(minur(1)); //6-1 = 5
 console.log(multi(2)); //5*2 = 10
 console.log(div(2)); //10/2 = 5
+var myArray;
+myArray = ["Bob", "Fred"];
