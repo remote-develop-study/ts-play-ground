@@ -8,7 +8,7 @@
 
 ### 1. 순서
 
-basicType => convertTS => es6AndTs => interface
+basicType => convertTS => es6AndTS => interface
 
 ### 2. 설명
 
@@ -16,6 +16,6 @@ basicType => convertTS => es6AndTs => interface
 
 **- convertTS**: 빠짐없이 타입을 달고 Type Aliases의 사용법을 익힙니다
 
-**- es6AndTs**: TS에서 주로 사용되는 ES6의 스펙들을 다시 복습합니다
+**- es6AndTS**: TS에서 주로 사용되는 ES6의 스펙들을 다시 복습합니다
 
 **- interface**: 인터페이스에 대한 이해도를 높이기 위해 다양한 상황에 대응해서 인터페이스를 구현해봅니다
