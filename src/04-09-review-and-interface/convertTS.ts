@@ -6,10 +6,13 @@ let bankAccount = {
   }
 };
 
-let myself = {
+let mySelf = {
   name: "Max",
   bankAccount: bankAccount,
   hobbies: ["Sports", "Cooking"]
 };
 
-myself.bankAccount.deposit(3000);
+export {
+  bankAccount,
+  mySelf
+}
