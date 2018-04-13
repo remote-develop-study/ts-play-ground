@@ -11,3 +11,11 @@
 basicType => convertTS => es6AndTs => interface
 
 ### 2. 설명
+
+**- basicType**: 주로 사용하지 않았던 타입들에 대해 복습하고 적용해봅니다
+
+**- convertTS**: 빠짐없이 타입을 달고 Type Aliases의 사용법을 익힙니다
+
+**- es6AndTs**: TS에서 주로 사용되는 ES6의 스펙들을 다시 복습합니다
+
+**- es6AndTs**: 인터페이스에 대한 이해도를 높이기 위해 다양한 상황에 대응해서 인터페이스를 구현해봅니다
