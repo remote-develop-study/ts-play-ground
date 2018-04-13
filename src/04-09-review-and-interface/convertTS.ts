@@ -3,16 +3,14 @@ let bankAccount = {
   money: 2000,
   deposit(value) {
     this.money += value;
+  },
+  getBalance: function() {
+    return this.money;
   }
 };
 
-let mySelf = {
+export const mySelf = {
   name: "Max",
   bankAccount: bankAccount,
   hobbies: ["Sports", "Cooking"]
 };
-
-export {
-  bankAccount,
-  mySelf
-}
