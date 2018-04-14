@@ -32,6 +32,7 @@
   },
   "private": true,
   "workspaces": [
-    "src/03-19-count-app"
+    "src/03-19-count-app",
+    "src/04-09-calculator-v2"
   ]
 }

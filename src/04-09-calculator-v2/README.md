@@ -1,31 +1,21 @@
-# 계산기
-## 설명
-`콘솔` 기반이든 `브라우저` 기반이든 상관없습니다.
+# 04-09-calculator-v2
 
-계산기의 완성도는 떨어져도 되며 재차 반복된 계산기와 인터페이스이기때문에 코드에 인터페이스를 모두 녹여내야합니다.
+> TS calculator with Vuejs
 
->인터페이스 허들을 못넘기면 이후의  스터디는 진도를 전혀 따라오지 못하시게됩니다. 필히 러닝커브를 이겨내도록 합시다! (책, 동영상, 번역 문서 각종 자료를 다 활용합시다)
+## Build Setup
 
-## 요구사항 `(필수)`
+``` bash
+# install dependencies
+npm install
 
-### 1. 총 네 가지 연산
-더하기, 빼기, 곱하기, 나누기
+# serve with hot reload at localhost:8080
+npm run dev
 
-### 2. 인터페이스 사용 (필수 무조건 필수)
-계산기를 잘 만드는 것도 중요하지만
-TypeScript의 `인터페이스를 이해하고 사용`하는게 목적입니다.
+# build for production with minification
+npm run build
 
-> 기존의 계산기에 밑의 인터페이스 기법을 모두 사용해주세요
+# build for production and view the bundle analyzer report
+npm run build --report
+```
 
-1. Optional Properties
-2. Readonly properties
-3. Excess Property Checks
-4. Function Types
-5. Indexable Types
-6. Class Types
-7. Extending Interfaces
-
-## 선택사항
-1. Webpack 설정
-2. 브라우저 렌더링
-3. 프레임워크 및 라이브러리 사용
+For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
