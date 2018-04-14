@@ -9,7 +9,7 @@ let bankAccount = {
   }
 };
 
-export const mySelf = {
+export const mySelf:object = {
   name: "Max",
   bankAccount: bankAccount,
   hobbies: ["Sports", "Cooking"]
