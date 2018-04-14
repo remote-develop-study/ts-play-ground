@@ -1,9 +1,7 @@
 // 100% TS & ES6로 전환 (타입도 빠짐없이 달아주세요)
 
 // 1. 화살표 함수로 바꿔주세요
-var double = function(value) {
-  return value * 2;
-};
+var double = (value) => value*2;
 
 // 2. Default Parameters를 사용해주세요
 var greet = function(name) {

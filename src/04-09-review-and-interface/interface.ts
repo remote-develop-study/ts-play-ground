@@ -1,9 +1,16 @@
 // Optional Properties & Readonly properties & Excess Property Checks
+interface IPerson{
+  firstLang:string;
+  lastLang:string;
+  age:number;
+  sayHi:string;
+}
+
 const employee: IPerson = {
   firstLang: "JavaScript",
   lastLang: "TypeScript",
-  age: 22
-  sayHi: function(): string {
+  age: 22,
+  sayHi: function (): string {
     return "Hello";
   }
 };
@@ -21,14 +28,14 @@ function Person() {
 }
 
 // Class Types
-class Car { 
-  engine:string; 
+class Car {
+  engine: string;
 
-  constructor(engine:string) { 
-    this.engine = engine 
-  }  
+  constructor(engine: string) {
+    this.engine = engine
+  }
 
-  disp():void { 
-    console.log("Engine is  :   "+this.engine) 
-  } 
+  disp(): void {
+    console.log("Engine is  :   " + this.engine)
+  }
 }
