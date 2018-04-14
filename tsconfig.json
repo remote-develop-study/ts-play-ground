@@ -14,8 +14,11 @@
     "strict": true,
     "target": "es5"
   },
+  "types": [
+    "jest"
+  ],
   "include": [
-    "./src/03-26-polygon/*.ts"
+    "./src/04-09-review-and-interface/*.ts"
   ],
   "exclude": [
     "dist",
