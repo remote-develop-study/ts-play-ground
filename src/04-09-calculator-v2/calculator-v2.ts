@@ -25,11 +25,11 @@ interface Calculator {
   display: CalcDisplay;
 }
 
-class AwesomeCalculator implements Calculator {
-  constructor() {
+// class AwesomeCalculator implements Calculator {
+//   constructor() {
     
-  }
-}
+//   }
+// }
 
 
 /**
