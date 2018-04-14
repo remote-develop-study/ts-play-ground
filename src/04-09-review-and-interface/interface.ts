@@ -1,17 +1,13 @@
-// Optional Properties & Readonly properties & Excess Property Checks
-interface IPerson{
-  firstLang:string;
-  lastLang:string;
-  age:number;
-}
+import { IPerson, IArray, IFunction, IClass, Drivable } from './interfaceModules';
 
+// Optional Properties & Readonly properties & Excess Property Checks 사용해서 달기
 const employee: IPerson = {
-  firstLang: "JavaScript",
-  lastLang: "TypeScript",
+  firstLang: 'JavaScript',
+  lastLang: 'TypeScript',
   age: 22,
-  sayHi: function (): string {
-    return "Hello";
-  }
+  sayHi: function(): string {
+    return 'Hello';
+  },
 };
 
 // Indexable Types 사용해서 달기
@@ -24,6 +20,7 @@ function Person(): IFunction {
   setInterval(() => {
     this.age++;
   }, 1000);
+  return this.age;
 }
 
 // Class Types

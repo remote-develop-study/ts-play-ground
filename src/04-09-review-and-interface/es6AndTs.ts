@@ -1,10 +1,10 @@
 // 100% TS & ES6로 전환 (타입도 빠짐없이 달아주세요)
 
 // 1. 화살표 함수로 바꿔주세요
-var double = (value) => value*2;
+var double = (value:any) => value*2;
 
 // 2. Default Parameters를 사용해주세요
-var greet = function(name) {
+var greet = function(name:any) {
   if (name === undefined) {
     name = 'Max';
   }
@@ -28,7 +28,7 @@ const testResults = function(arr: number[]) {
 };
 
 // 6. 더 짧게 만들어주세요 (Destructuring Objects)
-const scientist = function(obj): Object {
+const scientist = function(obj:any): Object {
   var firstName = obj.firstName;
   var experience = obj.experience;
 

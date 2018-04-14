@@ -2,10 +2,24 @@
  * 인터페이스를 모두 달아주세요
  */
 
-interface IPerson {}
-interface IArray {}
-interface IFunction {}
-interface IClass {}
+interface IPerson {
+  firstLang: string;
+  lastLang: string;
+  age: number;
+  sayHi(): string;
+}
+interface IArray {
+//  arr: string[];
+}
+interface IFunction { 
+  // age:number;
+}
+class name {
+    
+}
+interface IClass {
+  engine:string;
+ }
 
 interface Drivable {
   // 주행을 시작합니다

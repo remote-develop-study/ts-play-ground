@@ -2,7 +2,7 @@
 
 let bankAccount = {
   money: 2000,
-  deposit(value) {
+  deposit(value:any) {
     this.money += value;
   },
   getBalance: function () {
