@@ -1,18 +1,22 @@
-// Optional Properties & Readonly properties & Excess Property Checks
+/**
+ * 인터페이스를 모두 달아주세요
+ */
+
+// Optional Properties & Readonly properties & Excess Property Checks 사용해서 달기
 const employee: IPerson = {
-  firstLang: "JavaScript",
-  lastLang: "TypeScript",
-  age: 22
+  firstLang: 'JavaScript',
+  lastLang: 'TypeScript',
+  age: 22,
   sayHi: function(): string {
-    return "Hello";
-  }
+    return 'Hello';
+  },
 };
 
-// Indexable Types
-const arr = ["양배추", "순무", "무", "당근", "딸기", "바나나", "망고"];
+// Indexable Types 사용해서 달기
+const arr: IArray = ['양배추', '순무', '무', '당근', '딸기', '바나나', '망고'];
 
 // Function Types
-function Person() {
+function Person(): IFunction {
   this.age = 0;
 
   setInterval(() => {
@@ -21,14 +25,14 @@ function Person() {
 }
 
 // Class Types
-class Car { 
-  engine:string; 
+class Car {
+  engine: string;
 
-  constructor(engine:string) { 
-    this.engine = engine 
-  }  
+  constructor(engine: string) {
+    this.engine = engine;
+  }
 
-  disp():void { 
-    console.log("Engine is  :   "+this.engine) 
-  } 
+  disp(): void {
+    console.log('Engine is  :   ' + this.engine);
+  }
 }

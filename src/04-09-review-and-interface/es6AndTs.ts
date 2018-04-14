@@ -8,9 +8,9 @@ var double = function(value) {
 // 2. Default Parameters를 사용해주세요
 var greet = function(name) {
   if (name === undefined) {
-    name = "Max";
+    name = 'Max';
   }
-  console.log("Hello, " + name);
+  console.log('Hello, ' + name);
 };
 
 // 3. (Spread Operator)를 사용하여 minNumbers의 apply를 대체해주세요
@@ -21,9 +21,13 @@ var originArr = [55, 20];
 const newArray = (newArr: number[]): number => Array.prototype.push.apply(originArr, newArr);
 
 // 5. 더 짧게 만들어주세요 (Destructuring Arrays)
-const testResults = function(arr: number[]): number {
-  return arr[0], arr[1], arr[2];
-}
+const testResults = function(arr: number[]) {
+  var result1 = arr[0];
+  var result2 = arr[1];
+  var result3 = arr[2];
+
+  return result1 + ', ' + result2 + ', ' + result3;
+};
 
 // 6. 더 짧게 만들어주세요 (Destructuring Objects)
 const scientist = function(obj): Object {
@@ -31,13 +35,6 @@ const scientist = function(obj): Object {
   var experience = obj.experience;
 
   return { firstName, experience };
-}
+};
 
-export {
-  double,
-  greet,
-  minNumbers,
-  newArray,
-  testResults,
-  scientist,
-}
+export { double, greet, minNumbers, newArray, testResults, scientist };
