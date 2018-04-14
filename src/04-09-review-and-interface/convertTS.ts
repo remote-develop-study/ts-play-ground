@@ -5,7 +5,7 @@ let bankAccount = {
   deposit(value) {
     this.money += value;
   },
-  getBalance: function() {
+  getBalance: function () {
     return this.money;
   }
 };
@@ -18,9 +18,9 @@ export const mySelf = {
 };
 
 // 입금
-function insert(insertCoin:number){
- let result = bankAccount.money + insertCoin;
-return result;
+function insert(insertCoin: number) {
+  let result = bankAccount.money + insertCoin;
+  return result;
 }
 insert(3000);
 
