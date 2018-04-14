@@ -1,6 +1,4 @@
-/**
- * 인터페이스를 모두 달아주세요
- */
+import { IPerson, IArray, IFunction, IClass, Drivable } from './interfaceModules';
 
 // Optional Properties & Readonly properties & Excess Property Checks 사용해서 달기
 const employee: IPerson = {
@@ -25,7 +23,7 @@ function Person(): IFunction {
 }
 
 // Class Types
-class Car {
+class LegacyCar implements IClass {
   engine: string;
 
   constructor(engine: string) {
@@ -36,3 +34,9 @@ class Car {
     console.log('Engine is  :   ' + this.engine);
   }
 }
+
+/**
+ * 이번에는 반대로 인터페이스를 보고 구현을 해주세요
+ * 요구사항은 interfaceCar.spec.ts 에 있습니다!
+ */
+export default class Car implements Drivable {}
