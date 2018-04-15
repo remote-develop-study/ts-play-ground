@@ -4,16 +4,16 @@
 
 interface IPerson {
   firstLang: string;
-  lastLang: string;
-  age: number;
+  lastLang?: string;
+  readonly age: number;
   sayHi(): string;
+  [key: string]: any; // Excess property check가 자동으로 이루어지는데 어떤걸 처리하라는건지 애매함... 우선 Index signature 적용
 }
 interface IArray {
   [key: number]: string;
 }
 interface IFunction {
-  age: number;
-  (this: IFunction): void;
+  (a: number, b: number): boolean
 }
 interface IClass {
   engine: string;
