@@ -5,7 +5,7 @@ let bankAccount = {
   deposit(value:any) {
     this.money += value;
   },
-  getBalance: function () {
+  getBalance: function ():number {
     return this.money;
   }
 };
@@ -14,7 +14,7 @@ console.log(typeof bankAccount.money);
 export const mySelf = {
   name: "Max",
   bankAccount: bankAccount,
-  // hobbies: ["Sports", "Cooking"]
+  hobbies: ["Sports", "Cooking"]
 };
 
 // 입금

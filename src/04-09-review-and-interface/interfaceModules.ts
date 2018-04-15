@@ -8,17 +8,19 @@ interface IPerson {
   age: number;
   sayHi(): string;
 }
+
+// ???
 interface IArray {
-//  arr: string[];
+  [arr: string]: any;
 }
-interface IFunction { 
-  // age:number;
+interface IFunction {
+  age:number;
+  setInterval():number;
 }
-class name {
-    
-}
+
 interface IClass {
   engine:string;
+  disp():void;
  }
 
 interface Drivable {
