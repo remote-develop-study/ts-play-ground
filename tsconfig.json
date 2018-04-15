@@ -5,7 +5,7 @@
     "emitDecoratorMetadata": true,
     "locale": "ko",
     "lib": [ "dom", "es5", "es2015", "es2015.promise" ],
-    "module": "CommonJS",
+    "module": "es2015",
     "moduleResolution": "node",
     "noImplicitReturns": true,
     "outDir": "./built/",
@@ -14,6 +14,9 @@
     "strict": true,
     "target": "es5"
   },
+  "types": [
+    "jest"
+  ],
   "include": [
     "./src/**/*.ts"
   ],

@@ -1,6 +1,6 @@
 "use strict";
 exports.__esModule = true;
-var ArithmeticOperation = {
+var arithmetc = {
     plus: function (x, y) {
         return x + y;
     },
@@ -14,4 +14,4 @@ var ArithmeticOperation = {
         return x / y;
     }
 };
-exports["default"] = ArithmeticOperation;
+exports["default"] = arithmetc;

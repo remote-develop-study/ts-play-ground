@@ -6,7 +6,7 @@ interface ArithmeticOperation {
   division (x:number, y:number):number
 }
 
-const ArithmeticOperation = {
+const arithmetc:ArithmeticOperation = {
   plus (x:number, y:number):number {
     return x + y;
   },
@@ -21,4 +21,4 @@ const ArithmeticOperation = {
   }
 }
 
-export default ArithmeticOperation
+export default arithmetc
