@@ -12,7 +12,7 @@ interface IArray {
   [index: number]: string;
 }
 interface IFunction {
-  age: number
+  (a:number , b:number): boolean
 }
 interface IClass {
   disp():void
