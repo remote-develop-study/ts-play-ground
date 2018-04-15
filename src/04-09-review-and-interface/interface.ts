@@ -14,13 +14,7 @@ const employee: IPerson = {
 const arr: IArray = ['양배추', '순무', '무', '당근', '딸기', '바나나', '망고'];
 
 // Function Types
-function Person(): IFunction {
-  this.age = 0;
-
-  setInterval(() => {
-    this.age++;
-  }, 1000);
-}
+const sum: IFunction = (a, b) => typeof a === 'number' || typeof b === 'number';
 
 // Class Types
 class LegacyCar implements IClass {
