@@ -7,6 +7,7 @@ function rect(horizontal:number, vertical:number):number{
     const rectArea = horizontal * vertical;
     return rectArea; 
 }   
+
 function trapezoid(upperSide:number, lowerSide:number, height:number):number{
     const trapezoidArea = (upperSide + lowerSide) * height / 2 ;
     return trapezoidArea;
@@ -43,10 +44,14 @@ function getArea(figure:string, val1:number, val2:number = 0, val3:number = 0):s
     }else if(val1 <= 0 ){
         msg =  "숫자는 0 보다 커야합니다. "; 
     }else{
-
+//함수 재활용하기
         if(figure === 'circle'){
             msg = 'figure is \' '+ figure +'\', radius is ' + val1 +', area is ';
-            area = Math.pow(val1, 2) * Math.PI;
+             circle{
+
+             }
+            // area = Math.pow(val1, 2) * Math.PI;
+            //위에 함수를 불러오는게 좋다 
         }else if(figure === 'rect'){
             if(val2 <=0){
                 msg = "숫자는 2개 이상 양수로 입력해주세요.";
