@@ -15,7 +15,7 @@ const arr: IArray = ['양배추', '순무', '무', '당근', '딸기', '바나�
 
 // Function Types
 // !!!!
-const sum: IFunction = (a, b) => typeof a === 'number' || typeof b === 'number';
+// const sum: IFunction = (a, b) => typeof a === 'number' || typeof b === 'number';
 
 // Class Types
 class LegacyCar implements IClass {
