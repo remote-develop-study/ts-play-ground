@@ -6,7 +6,7 @@ describe('TS 스터디 4월 9일 ES6 리뷰', () => {
   });
 
   it('2. 기본 매개변수 반환 확인', () => {
-    const name: string = '이름을 넣어주세요';
+    const name: string = 'juyoung';
     expect(greet(name)).toBe(name);
   });
 
@@ -22,10 +22,13 @@ describe('TS 스터디 4월 9일 ES6 리뷰', () => {
     expect(testResults([3.89, 2.99, 1.38])).toBe('3.89, 2.99, 1.38');
   });
 
+  // it('5. 객체 분해 확인', () => {
+  //   expect(scientist({ firstName: 'Will', experience: 12 })).toEqual({
+  //     firstName: 'Will',
+  //     experience: 12,
+  //   });
+  // });
   it('5. 객체 분해 확인', () => {
-    expect(scientist({ firstName: 'Will', experience: 12 })).toEqual({
-      firstName: 'Will',
-      experience: 12,
-    });
+    expect(scientist({ firstName: 'Will', experience: 12 })).toBe({firstName: 'Will', experience: 12});
   });
 });

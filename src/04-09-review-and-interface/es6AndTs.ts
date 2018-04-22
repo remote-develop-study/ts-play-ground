@@ -6,7 +6,7 @@ let double = (value:number):number => {
 };
 
 // 2. Default Parameters를 사용해주세요 (기본 매개변수 반환 확인)
-let greet = (name:string = 'jung juyoung'):string => {
+let greet = (name:string):string => {
   if (name === undefined) {
     name = 'Max';
   }
@@ -28,11 +28,10 @@ const testResults = function(arr: number[] = [0,1,2]):string {
 };
 
 // 6. 더 짧게 만들어주세요 (Destructuring Objects)
-  const scientist = function(obj): Object {
+  const scientist = function(obj:object): Object {
   // var firstName = obj.firstName;
   // var experience = obj.experience;
-  {firstName, experience} = obj;
-  return { firstName, experience };
+  return { firstName, experience } = obj;
 };
 
 export { double, greet, minNumbers, newArray, testResults, scientist };
