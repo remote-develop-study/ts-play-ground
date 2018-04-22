@@ -7,6 +7,27 @@
 // tuple에 대해 직접 공부한 후 설명과 예제 코드를 만들어주세요
 
 // enum에 대해 직접 공부한 후 설명과 예제 코드를 만들어주세요
+/**
+ * 열거형 변수
+ * 기본 0 할당  +1 씩증가
+ * 지정값 12 +1 씩증가
+ * 전부다 지정할수있음
+ */
+
+export const enum defaultEnum {
+    zero,
+    one,
+    two
+}
+export const enum dayOfweek{
+    Sunday,
+    Monday = 12,
+    Tuesday,
+    Wednesday,
+    Thursday,
+    Friday,
+    Saturday
+}
 
 // any에 대해 직접 공부한 후 설명과 예제 코드를 만들어주세요
 
