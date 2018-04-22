@@ -12,6 +12,7 @@ interface IPerson {
 interface IArray {
   [key: number]: string;
 }
+
 interface IFunction {
   (a: number, b: number): boolean
 }
