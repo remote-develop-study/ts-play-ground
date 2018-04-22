@@ -6,7 +6,7 @@ describe('TS 스터디 4월 9일 ES6 리뷰', () => {
   });
 
   it('기본 매개변수 반환 확인', () => {
-    const name: string = '이름을 넣어주세요';
+    const name: string = 'Min';
 
     expect(greet(name)).toBe(name);
   });
