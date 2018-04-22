@@ -7,7 +7,7 @@ describe('TS 스터디 4월 9일 TS 전환', () => {
 
   it('입금 후 잔고를 확인합니다', () => {
     const { bankAccount: myBank } = mySelf;
-    myBank.deposit(3000);
+    myBank.desposit(3000);
 
     expect(myBank.getBalance()).toBe(5000);
   });

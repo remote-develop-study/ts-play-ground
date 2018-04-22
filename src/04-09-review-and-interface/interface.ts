@@ -15,13 +15,8 @@ const employee: IPerson = {
 const arr: IArray = ['양배추', '순무', '무', '당근', '딸기', '바나나', '망고'];
 
 // Function Types
-function Person(): IFunction {
-  this.age = 0;
+const sum: IFunction = (a, b) => typeof a === 'number' || typeof b === 'number';
 
-  setInterval(() => {
-    this.age++;
-  }, 1000);
-}
 
 // Class Types
 class LegacyCar implements IClass {
@@ -41,21 +36,21 @@ class LegacyCar implements IClass {
  * 요구사항은 interfaceCar.spec.ts 에 있습니다!
  */
 export default class Car implements Drivable {  
-  distance: number
+  private distance: number
   constructor(distanec: number) {
-    this.distance = distanec
+    this.distance = distanec || 0;
   }
 
-  start() {
+  public start() {
     console.log('주행을 시작합니다');
   }
-  drive(distance: number): boolean {
+  public drive(distance: number): boolean {
     if(this.distance > 0) {
       return true;
     }
     return false;
   }
-  getPosition(): number {
+  public getPosition(): number {
     return this.distance;
   }
 }

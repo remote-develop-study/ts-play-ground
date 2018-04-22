@@ -1,12 +1,12 @@
 // 100% TS & ES6로 전환 (타입도 빠짐없이 달아주세요)
 
 // 1. 화살표 함수로 바꿔주세요
-var double = (value: number) => {
+var double = (value: number): number => {
   return value * 2;
 }
 
 // 2. Default Parameters를 사용해주세요
-var greet = function(name = "android") {
+var greet = function(name:string = "android"): string {
   return 'Hello, ' + name;
 };
 
@@ -19,7 +19,8 @@ const newArray = (newArr: number[]): number => originArr.push(...newArr);
 
 // 5. 더 짧게 만들어주세요 (Destructuring Arrays)
 const testResults = function(arr: number[]) {
-  const [result1, result2, result3] = [...arr]
+  // const [result1, result2, result3] = [...arr]
+  const [result1, result2, result3] = arr;
 
   return result1 + ', ' + result2 + ', ' + result3;
 };
