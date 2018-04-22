@@ -5,20 +5,14 @@ x = ['hello', 10]; // OK
 
 // enum
 // 열거형. 숫자값 집합에 이름을 지정한 것
-enum Color1 { Red, Green, Blue };
-let c1: Color1 = Color1.Green;
+// enum Color1 { Red, Green, Blue };
+// let c1: Color1 = Color1.Green;
 
-console.log(c1); // 1
+// enum Color2 { Red = 1, Green, Blue };
+// let c2: Color2 = Color2.Green;
 
-enum Color2 { Red = 1, Green, Blue };
-let c2: Color2 = Color2.Green;
-
-console.log(c2); // 2
-
-enum Color3 { Red = 1, Green = 2, Blue = 4 };
-let c3: Color3 = Color3.Blue;
-
-console.log(c3); // 4
+// enum Color3 { Red = 1, Green = 2, Blue = 4 };
+// let c3: Color3 = Color3.Blue;
 
 // any
 // 타입 체크가 필요없는 변수는 any 타입으로 선언 = 아무거나 가능
@@ -34,7 +28,7 @@ val = "This is a string"
 console.log("string value of val " + val)
 
 // never
-// 결코 발생하지 않는 값
+// 결코 발생하지 않는 값?
 let foo: never; // Okay
 let bar: never = (() => { throw new Error('Throw my hands in the air like I just dont care') })();
 

@@ -2,7 +2,7 @@
 // interface Polygon {
 //   circle();  
 // }
-Object.defineProperty(exports, "__esModule", { value: true });
+exports.__esModule = true;
 // *---간단?
 var pi = 3.14;
 // 원
