@@ -22,14 +22,15 @@ describe('TS 스터디 4월 9일 ES6 리뷰', () => {
     expect(enumFunc('open')).toBe('openDoor');
   });
 
-  // any의 사용은 금하는게 좋다는 것정도..
+  // any의 사용은 금하는게 좋다는 것....
   it('any', () => {
     expect(noAny(str)).toBe(str);
     expect(noAny(num)).toBe(num);
     expect(noAny(['11', '22'])).toEqual(['11', '22']);
   });
 
-  // 두가지 이상의 타입을 지정해줘야할때 심플하ㅗ 유용하게 사용할 수 있다
+  // 두가지 이상의 타입을 지정해줘야할때 심플하고 유용하게 사용할 수 있다
+  // any 친구같다는 느낌이.. 든다..
   it('union', () => {
     expect(someUnion(str)).toBe(str);
     expect(someUnion(num)).toBe(num);
