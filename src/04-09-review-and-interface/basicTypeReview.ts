@@ -34,7 +34,11 @@ const voidFunc = function(msg: string): void {
 
 // never
 const neverFunc = function(errMsg: string): never {
-  throw new Error(errMsg);
+  // 케이스 1: 반환 불가
+  // return 'test';
+  // 케이스 2: 엔드포인트 없음
+  // voidMsg = 'zzzz';
+  // throw new Error(errMsg);
 };
 
 export { tupleFunc, enumFunc, noAny, voidMsg, someUnion, voidFunc, neverFunc };
