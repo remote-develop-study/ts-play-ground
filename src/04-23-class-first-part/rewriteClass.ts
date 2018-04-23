@@ -3,7 +3,7 @@
  */
 
 // Exercise 1 - Class
-function Car(name) {
+function Car() {
     this.name = name;
     this.acceleration = 0;
 
@@ -27,7 +27,6 @@ var Rectangle = Object.create(baseObject);
 Rectangle.calcSize = function() {
     return this.width * this.length;
 };
-console.log(Rectangle.calcSize());
 
 // Exercise 3 - Getter & Setter
 var Person = {
