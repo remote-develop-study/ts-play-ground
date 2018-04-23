@@ -42,6 +42,11 @@ export const enum dayOfweek{
     Friday,
     Saturday
 }
+export enum Abbreviations{
+    PS = "POST SCRIPT",
+    IE = "ID EST",
+    EG = "EXEMPLI GRATIA"
+}
 
 // any에 대해 직접 공부한 후 설명과 예제 코드를 만들어주세요
 /**
