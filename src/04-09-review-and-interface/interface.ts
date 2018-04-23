@@ -33,4 +33,23 @@ class LegacyCar implements IClass {
  * 이번에는 반대로 인터페이스를 보고 구현을 해주세요
  * 요구사항은 interfaceCar.spec.ts 에 있습니다!
  */
-export default class Car implements Drivable {}
+export default class Car implements Drivable {
+
+  constructor(private position:number = 0){
+    console.log('Car constructor position: ',this.position);
+  }
+
+  start():void {
+    console.log('Start');
+  }
+
+  drive(distance:number):boolean{
+    console.log('drive distance: ', distance);
+    return distance ? true : false;
+  }
+
+  getPosition():number {
+    console.log('getPosition: this.position: ',this.position);
+    return this.position;
+  }
+}
