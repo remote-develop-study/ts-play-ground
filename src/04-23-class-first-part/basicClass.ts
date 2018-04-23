@@ -8,7 +8,9 @@ interface IPassword {
 }
 
 // Exercise 1 - Class
-class BasicClass implements IBasic, IPassword { }
+class BasicClass implements IBasic, IPassword {
+  // TODO:
+}
 
 
 // Exercise 2 - Property Accessor
@@ -16,6 +18,8 @@ class PropertyAccessor {
   private _mySecret: string;
   protected onlyChild: string;
   // Getter & Setter 활용하여 외부에서 mySecret에 접근하기
+
+  // TODO:
 }
 
 interface IAccessor {
@@ -24,7 +28,9 @@ interface IAccessor {
 }
 
 // Exercise 2 - Property Accessor (protected)
-class ChildClass extends PropertyAccessor implements IAccessor { }
+class ChildClass extends PropertyAccessor implements IAccessor {
+  // TODO:
+}
 
 // Exercise 3 - Static
 class StaticProps {
@@ -33,6 +39,8 @@ class StaticProps {
    * 2. 해당 프로퍼티를 clac()를 활용하여 호출
    * 3. 객체 생성없이 바로 외부에서 StaticProperty.calc 로 접근하여 확인
   */
+
+  // TODO:
 }
   
 // Exercise 4 - Abstract Class
@@ -52,6 +60,7 @@ interface ITInterface {
 }
 
 class ITProject extends Project implements ITInterface {
+  // TODO:
 }
 
 export {
