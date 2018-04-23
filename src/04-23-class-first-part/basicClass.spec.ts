@@ -13,14 +13,14 @@ describe('Exercise 1 - Class', () => {
 describe('Exercise 2 - Property Accessor', () => {
   it('getter & setter를 활용한 private 멤버에 접근', () => {
     const props = new PropertyAccessor();
-    props.mySecret = '비밀';
+    props['mySecret'] = '비밀';
 
   /**
    * props._mySecret = '넌 왜 안될까?' <= 오류가 뜨는 이유를 알아보세요
    * props.onlyChild = '넌 또 왜 안될까?' <= 오류가 뜨는 이유를 알아보세요
   */
   
-    expect(props.mySecret).toBe('비밀');
+    expect(props["mySecret"]).toBe('비밀');
   });
   
   it('서브 클래스에서 기본 클래스의 protected 멤버 접근', () => {
