@@ -30,6 +30,7 @@ const testResults = function(arr: number[]) {
 };
 
 // 6. 더 짧게 만들어주세요 (Destructuring Objects) ?
+
 const scientist = function(obj:any): Object {
   let {firstName, experience} = obj;
   // var firstName = obj.firstName;4
