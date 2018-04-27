@@ -5,6 +5,11 @@
  */
 
 // tuple에 대해 직접 공부한 후 설명과 예제 코드를 만들어주세요
+type ITuple = [string, number]
+const tuple: ITuple = ['chris', 27]
+const printTuple = (tuple: ITuple): void => {
+	
+}
 
 // enum에 대해 직접 공부한 후 설명과 예제 코드를 만들어주세요
 
@@ -13,4 +18,3 @@
 // union에 대해 직접 공부한 후 설명과 예제 코드를 만들어주세요
 
 // never와 void에 대해 직접 공부한 후 비교 설명과 예제 코드를 만들어주세요
-d
