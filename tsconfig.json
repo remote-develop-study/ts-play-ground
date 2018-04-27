@@ -23,6 +23,9 @@
     "noImplicitAny": false,
     "alwaysStrict": true
   },
+  "types": [
+    "jest"
+  ],
   "include": [
     "./src/**/*.ts"
   ],
