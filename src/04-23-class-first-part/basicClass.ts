@@ -10,6 +10,13 @@ interface IPassword {
 // Exercise 1 - Class
 class BasicClass implements IBasic, IPassword {
   // TODO:
+  id: number;
+  name: string;
+  readonly password: string = '12345';
+  constructor(theId: number, theName: string) {
+    this.id = theId;
+    this.name = theName; 
+  }
 }
 
 
@@ -20,6 +27,17 @@ class PropertyAccessor {
   // Getter & Setter 활용하여 외부에서 mySecret에 접근하기
 
   // TODO:
+  constructor() {
+    this._mySecret = 'theMySecret';
+    this.onlyChild = 'theOnlyChild';
+  }
+
+  getSecret() {
+    return this._mySecret;
+  }
+  setSecret(val: string): string {
+    return this._mySecret = val;
+  }
 }
 
 interface IAccessor {
@@ -30,6 +48,16 @@ interface IAccessor {
 // Exercise 2 - Property Accessor (protected)
 class ChildClass extends PropertyAccessor implements IAccessor {
   // TODO:
+  constructor() {
+    super();
+  }
+
+  getOnlyChild() {
+    return this.onlyChild;
+  }
+  setOnlyChild(val: string): string {
+    return this.onlyChild = val;
+  }
 }
 
 // Exercise 3 - Static
@@ -41,7 +69,12 @@ class StaticProps {
   */
 
   // TODO:
+  static PI = 3.14;
+  static calc = (val: number) => StaticProps.PI * val;
+  constructor() {
+  }
 }
+
   
 // Exercise 4 - Abstract Class
 abstract class Project {
@@ -61,6 +94,15 @@ interface ITInterface {
 
 class ITProject extends Project implements ITInterface {
   // TODO:
+  constructor() {
+    super();
+  }
+  getName() {
+    return this.projectName;
+  }
+  changeName(theName: string): string {
+    return this.projectName = theName;
+  }
 }
 
 export {
