@@ -14,7 +14,7 @@ class BasicClass implements IBasic, IPassword {
   // TODO:
   id = 1;
   name ='이름';
-  password = '11';
+  password = '11';adsf
 }
 
 var user = new BasicClass();
