@@ -24,10 +24,24 @@ var user = new BasicClass();
 class PropertyAccessor {
   private _mySecret: string;
   protected onlyChild: string;
-  // Getter & Setter 활용하여 외부에서 mySecret에 접근하기
 
+  constructor(mySecret:string,onlyChild:string){
+    this._mySecret=mySecret;
+    this.onlyChild=onlyChild;
+  }
+  // Getter & Setter 활용하여 외부에서 mySecret에 접근하기
+  get mySecret(){
+    return this._mySecret;
+  }
+  // set
   // TODO:
 }
+
+const props:PropertyAccessor = new PropertyAccessor('비밀','ㅇㅇ');
+// props.set._mySecret = 'aa';
+// props.
+
+
 
 interface IAccessor {
   getOnlyChild(): string;
