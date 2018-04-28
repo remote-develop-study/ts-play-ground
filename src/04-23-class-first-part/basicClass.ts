@@ -12,7 +12,7 @@ class BasicClass implements IBasic, IPassword {
   constructor(public id: number, public name: string) {}
 
   get password(): string {
-    return this.password;
+    return '12345';
   }
 }
 
