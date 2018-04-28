@@ -1,3 +1,5 @@
+import { getUserId } from "../01-30-interfaces/interfaces";
+
 interface IBasic {
   id: number;
   name: string;
@@ -10,7 +12,12 @@ interface IPassword {
 // Exercise 1 - Class
 class BasicClass implements IBasic, IPassword {
   // TODO:
+  id = 1;
+  name ='이름';
+  password = '11';
 }
+
+var user = new BasicClass();
 
 
 // Exercise 2 - Property Accessor
