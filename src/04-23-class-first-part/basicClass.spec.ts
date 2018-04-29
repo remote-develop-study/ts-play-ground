@@ -1,12 +1,16 @@
 import { BasicClass, PropertyAccessor, StaticProps, ChildClass, Project, ITProject } from './basicClass';
 
 describe('Exercise 1 - Class', () => {
-  const id = 1;
-  const name = '이름';
+  const expectUser = {
+    id: 1,
+    name: '이름',
+    password: '1234'
+  }
+
   const user = new BasicClass(1, '이름');
 
   it('알맞은 객체가 생성되었는지 확인', () => {
-    expect(user).toEqual({ id, name });
+    expect(user).toEqual(expectUser);
   });
 });
 

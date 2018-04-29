@@ -4,18 +4,14 @@ interface IBasic {
 }
 
 interface IPassword {
-  readonly password: string;
+  readonly password: string; // <== 초기값은 1234로 할당해주세요
 }
 
 // Exercise 1 - Class
 class BasicClass implements IBasic, IPassword {
+  readonly password: string = '1234';
   constructor(public id: number, public name: string) {}
-
-  get password(): string {
-    return '12345';
-  }
 }
-
 // Exercise 2 - Property Accessor
 class PropertyAccessor {
   private _mySecret: string = 'secret';
@@ -26,7 +22,6 @@ class PropertyAccessor {
 
   // Mocha로 테스트 했을때는 아래와 같은 오류 내고 사망
   // TSError: x Unable to compile Typescript
-  // Property 'mySecret' does not exist on type 'PropertyAccessor'. Did you mean '_mySecret'?
   // Property 'mySecret' does not exist on type 'PropertyAccessor'. Did you mean '_mySecret'?
 
   get mySecret(): string {
