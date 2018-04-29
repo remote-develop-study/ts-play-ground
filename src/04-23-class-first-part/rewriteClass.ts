@@ -41,6 +41,7 @@ class baseObject {
   constructor(twidth: number = 5, tlength: number = 2) {
     this.width = twidth;
     this.length = tlength;
+    
   }
 }
 
