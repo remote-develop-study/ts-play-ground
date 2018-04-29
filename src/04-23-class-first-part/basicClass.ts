@@ -51,6 +51,13 @@ interface IAccessor {
 // Exercise 2 - Property Accessor (protected)
 class ChildClass extends PropertyAccessor implements IAccessor {
   // TODO:
+  getOnlyChild():string{
+    let a = '2';
+    return a;
+  }
+  setOnlyChild(value:string){
+    
+  }
 }
 
 // Exercise 3 - Static

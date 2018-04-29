@@ -1,4 +1,5 @@
 // import {} from 'jest'
+import {} from 'jest';
 import { BasicClass, PropertyAccessor, StaticProps, ChildClass, Project, ITProject } from './basicClass';
 
 describe('Exercise 1 - Class', () => {
