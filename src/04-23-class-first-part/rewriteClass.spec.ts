@@ -1,5 +1,6 @@
 import { Car, Rectangle, Person } from './rewriteClass';
 
+// 1번째
 describe('Exercise 1 - Class', () => {
   const car = new Car("BMW");
 
@@ -15,6 +16,7 @@ describe('Exercise 1 - Class', () => {
   });
 });
 
+// 2번째
 describe('Exercise 2 - Inheritance', () => {
   it('get Rectangle size', () => {
     const rectangle = new Rectangle();
@@ -26,6 +28,7 @@ describe('Exercise 2 - Inheritance', () => {
   });
 });
 
+// 3번째
 describe('Exercise 3 - Getter & Setter', () => {
   const person = new Person();
 
