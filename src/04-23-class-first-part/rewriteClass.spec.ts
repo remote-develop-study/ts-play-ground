@@ -33,16 +33,16 @@ describe('Exercise 2 - Inheritance', () => {
 describe('Exercise 3 - Getter & Setter', () => {
   const person = new Person();
 
-  it('화살표 함수 반환 확인', () => {
-    expect(person.firstName).toBeUndefined();
+  it('빈값 반환', () => {
+    expect(person.firstName).toBeFalsy();
   });
 
-  it('화살표 함수 반환 확인', () => {
+  it('빈값 반환', () => {
     person.firstName = "JY";
-    expect(person.firstName).toBeUndefined();
+    expect(person.firstName).toBeFalsy();
   });
 
-  it('화살표 함수 반환 확인', () => {
+  it('JYP 확인', () => {
     person.firstName = "JYP";
     expect(person.firstName).toBe('JYP');
   });

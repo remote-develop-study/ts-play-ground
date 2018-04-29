@@ -6,7 +6,7 @@ interface IBasic {
 }
 
 interface IPassword {
-  readonly password: string;
+  readonly password: string; // <== 초기값은 1234로 할당해주세요
 }
 
 // Exercise 1 - Class
