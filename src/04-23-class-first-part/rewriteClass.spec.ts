@@ -1,3 +1,4 @@
+import {} from 'jest';
 import { Car, Rectangle, Person } from './rewriteClass';
 
 // 1번째
