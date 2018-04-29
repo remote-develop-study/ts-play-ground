@@ -3,51 +3,46 @@
  */
 
 // Exercise 1 - Class
-function Car() {
-    this.name = name;
-    this.acceleration = 0;
+class Car {
+  acceleration: number = 0;
 
-    this.honk = function() {
-        return "빵빵!";
-    };
+  constructor(public name: string) { }
 
-    this.accelerate = function(speed) {
-        this.acceleration = this.acceleration + speed;
-    }
+  honk(): string {
+    return "빵빵!";
+  };
+
+  accelerate(speed: number): void {
+    this.acceleration = this.acceleration + speed;
+  }
 }
 
 // Exercise 2 - Inheritance
-var baseObject = {
-    width: 0,
-    length: 0
+class BaseObject {
+  width = 0;
+  length = 0;
 };
 
-var Rectangle = Object.create(baseObject);
-
-Rectangle.calcSize = function() {
+class Rectangle extends BaseObject{
+  calcSize(): number {
     return this.width * this.length;
-};
+  }
+}
 
 // Exercise 3 - Getter & Setter
-var Person = {
-    _firstName: ""
-};
+class Person {
+  private _firstName: string = '';
 
-Object.defineProperty(Person, "firstName", {
-    get: function () {
-        return this._firstName;
-    },
-    set: function (value) {
-        if (value.length >= 3) {
-            this._firstName = value;
-        }
-        else {
-            this._firstName = "";
-        }
-    },
-    enumerable: true,
-    configurable: true
-});
+  get firstName(): string {
+    return this._firstName;
+  }
+
+  set firstName(_firstName: string) {
+    this._firstName = _firstName.length >= 3
+                      ? _firstName
+                      : '';
+  }
+}
 
 export {
   Car,
