@@ -14,7 +14,8 @@ describe('Exercise 1 - Class', () => {
 
 describe('Exercise 2 - Property Accessor', () => {
   it('getter & setter를 활용한 private 멤버에 접근', () => {
-    const props = new PropertyAccessor();
+    // const props = new PropertyAccessor();
+    const props = new PropertyAccessor('비밀','oo');
     props.mySecret = '비밀';
 
   /**
@@ -26,7 +27,8 @@ describe('Exercise 2 - Property Accessor', () => {
   });
   
   it('서브 클래스에서 기본 클래스의 protected 멤버 접근', () => {
-    const child = new ChildClass();
+    // const child = new ChildClass();
+    const child = new ChildClass('비밀','oo');
     const mySecret = '비밀';
     
     child.setOnlyChild(mySecret);

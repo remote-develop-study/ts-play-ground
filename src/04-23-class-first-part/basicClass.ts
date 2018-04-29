@@ -12,12 +12,14 @@ interface IPassword {
 // Exercise 1 - Class
 class BasicClass implements IBasic, IPassword {
   // TODO:
-  id = 1;
-  name ='이름';
-  password = '11';
+  // readonly password:string;
+  readonly password:string = '111';
+  constructor(public id:number,public name:string){}
+
+  }
 }
 
-var user = new BasicClass();
+const user = new BasicClass(1,'이름')
 
 
 // Exercise 2 - Property Accessor
@@ -33,12 +35,13 @@ class PropertyAccessor {
   get mySecret(){
     return this._mySecret;
   }
-  // set
+  set mySecret(Secret :string){
+    this._mySecret  =Secret;
+  }
   // TODO:
 }
 
-const props:PropertyAccessor = new PropertyAccessor('비밀','ㅇㅇ');
-// props.set._mySecret = 'aa';
+// const props:PropertyAccessor = new PropertyAccessor('비밀','ㅇㅇ');
 // props.
 
 
@@ -52,11 +55,10 @@ interface IAccessor {
 class ChildClass extends PropertyAccessor implements IAccessor {
   // TODO:
   getOnlyChild():string{
-    let a = '2';
-    return a;
+    return this.mySecret;
   }
   setOnlyChild(value:string){
-    
+    this.onlyChild = value;
   }
 }
 
@@ -69,7 +71,11 @@ class StaticProps {
   */
 
   // TODO:
-}
+  static PI:number = 3.14;
+  static calc(num:number){
+    return StaticProps.PI * num;
+  }
+} 
   
 // Exercise 4 - Abstract Class
 abstract class Project {
@@ -89,6 +95,12 @@ interface ITInterface {
 
 class ITProject extends Project implements ITInterface {
   // TODO:
+  getName():string{
+    return this.projectName;
+  }
+  changeName(name:string):void{
+    this.projectName = name;
+  }
 }
 
 export {
