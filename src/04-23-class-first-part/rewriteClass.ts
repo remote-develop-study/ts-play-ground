@@ -35,21 +35,16 @@ class Car {
 // };
 
 class baseObject {
-  width: number;
-  length: number;
+  width: number = 0;
+  length: number = 0;
 
-  constructor(twidth: number = 5, tlength: number = 2) {
-    this.width = twidth;
-    this.length = tlength;
-    
-  }
 }
 
 class Rectangle extends baseObject {
-  constructor() {
-    super();
-  }
-  calcSize() {
+  // constructor() {
+  //   super;
+  // }
+  calcSize():number {
     return this.width * this.length;
   }
 }
@@ -71,12 +66,13 @@ class Person {
   //   this._firstName = firstname;
   // }
   // 언디파인드 하지않으면 오류?
-  private firstName: string | undefined;
+  private _firstName: string ='';
 
-  get():string | undefined {
+
+  get firstName():string {
     return this.firstName;
   }
-  set(value: string) {
+  set firstName(value: string) {
     if (value.length >= 3) {
       this.firstName = value;
     } else {
