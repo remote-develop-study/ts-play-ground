@@ -10,14 +10,32 @@ interface IPassword {
 // Exercise 1 - Class
 class BasicClass implements IBasic, IPassword {
   // TODO:
+  public id:number;
+  public name:string;
+  public password:string = '1234';
+  constructor(a:number,b:string){
+    this.id = a;
+    this.name = b;
+  }
 }
 
 // Exercise 2 - Property Accessor
 class PropertyAccessor {
   private _mySecret: string;
   protected onlyChild: string;
+  constructor(child:string){ this.onlyChild = child }
   // Getter & Setter 활용하여 외부에서 mySecret에 접근하기
+  get mySecret():string{
+    return this._mySecret;
+  }
 
+  set mySecret(password:string){
+    if(password){
+      this._mySecret = password;
+    }else{
+      this._mySecret = '오류:password가 없다';
+    }
+  }
   // TODO:
 }
 
@@ -29,6 +47,15 @@ interface IAccessor {
 // Exercise 2 - Property Accessor (protected)
 class ChildClass extends PropertyAccessor implements IAccessor {
   // TODO:
+  constructor(str:string){
+    super(str);
+  }
+  setOnlyChild(value:string){
+    this.onlyChild = value;
+  }
+  getOnlyChild():string{
+    return this.onlyChild;
+  }
 }
 
 // Exercise 3 - Static

@@ -9,6 +9,7 @@ interface IPerson {
   readonly age: number;
   [sayHi:string]:any;
   //sayHi:() => string
+  //sayHi():string
 }
 interface IArray {
   [index:number]:string;
