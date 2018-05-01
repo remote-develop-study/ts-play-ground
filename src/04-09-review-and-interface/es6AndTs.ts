@@ -36,6 +36,7 @@ const testResults = function(arr: number[]) {
   let [result1, result2, result3] = arr;
   return result1 + ', ' + result2 + ', ' + result3;
 };
+// const testResults = (arr:number[]):string => arr.join(', ')//진짜 짧당..
 
 // 6. 더 짧게 만들어주세요 (Destructuring Objects)
 const scientist = function(obj): Object {
@@ -44,5 +45,5 @@ const scientist = function(obj): Object {
   let firstName,experience;
   return ({firstName, experience} = { firstName: obj.firstName, experience: obj.experience});
 };
-
+//const scientist = (obj:{firstName:string, experience:number}):Object => obj //놀랍습니다..
 export { double, greet, minNumbers, newArray, testResults, scientist };
