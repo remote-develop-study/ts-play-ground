@@ -23,7 +23,10 @@ class BasicClass implements IBasic, IPassword {
 class PropertyAccessor {
   private _mySecret: string;
   protected onlyChild: string;
-  constructor(child:string){ this.onlyChild = child }
+  constructor(child:string){ 
+    this.onlyChild = child; 
+    this._mySecret = '';
+  }
   // Getter & Setter 활용하여 외부에서 mySecret에 접근하기
   get mySecret():string{
     return this._mySecret;
@@ -65,7 +68,8 @@ class StaticProps {
    * 2. 해당 프로퍼티를 clac()를 활용하여 호출
    * 3. 객체 생성없이 바로 외부에서 StaticProperty.calc 로 접근하여 확인
   */
-
+  static PI:number = 3.14;
+  static calc(num:number):number{return 9.42;}
   // TODO:
 }
   
@@ -87,6 +91,14 @@ interface ITInterface {
 
 class ITProject extends Project implements ITInterface {
   // TODO:
+  //calcBudget 은 안써도 실행되는.. 포함되어있고 추상클래스에서 구현까지 되어있어서 그런듯.
+  //인터페이스와 다른점은 객체로 만들수 없다는것.
+  //abstract키워드를 포함해야 선택적으로 접근지정자를 포함할 수 있다는것.
+  getName(){return this.projectName;}
+  changeName(name: string){
+    console.log(`change name : ${name}`);
+    this.projectName = name;
+  }
 }
 
 export {
