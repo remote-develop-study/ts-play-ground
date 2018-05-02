@@ -12,7 +12,7 @@ class BasicClass implements IBasic, IPassword {
   // TODO:
   public id:number;
   public name:string;
-  public password:string = '1234';
+  readonly password:string = '1234';
   constructor(a:number,b:string){
     this.id = a;
     this.name = b;
@@ -23,8 +23,8 @@ class BasicClass implements IBasic, IPassword {
 class PropertyAccessor {
   private _mySecret: string;
   protected onlyChild: string;
-  constructor(child:string){ 
-    this.onlyChild = child; 
+  constructor(){ 
+    this.onlyChild = ''; 
     this._mySecret = '';
   }
   // Getter & Setter 활용하여 외부에서 mySecret에 접근하기
@@ -50,9 +50,6 @@ interface IAccessor {
 // Exercise 2 - Property Accessor (protected)
 class ChildClass extends PropertyAccessor implements IAccessor {
   // TODO:
-  constructor(str:string){
-    super(str);
-  }
   setOnlyChild(value:string){
     this.onlyChild = value;
   }
@@ -70,6 +67,7 @@ class StaticProps {
   */
   static PI:number = 3.14;
   static calc(num:number):number{return 9.42;}
+  //static calc = (val:number) => StaticProps.PI*val;
   // TODO:
 }
   
