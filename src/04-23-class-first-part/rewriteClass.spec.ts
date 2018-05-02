@@ -4,7 +4,7 @@ describe('Exercise 1 - Class', () => {
   const car = new Car('BMW')
 
   it('car.honk() toBe 빵빵! ??', () => {
-    expect(car.honk()).toBe('빵빵!')
+    expect(car.honk()).toBe(3)
   })
 
   it('get car speed', () => {

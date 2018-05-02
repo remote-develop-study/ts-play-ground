@@ -20,8 +20,9 @@
     "target": "es5",
     "noUnusedLocals": true,
     "noImplicitThis": true,
-    "noImplicitAny": false,
-    "alwaysStrict": true
+    "noImplicitAny": true,
+    "alwaysStrict": true,
+    "strictNullChecks": true
   },
   "types": [
     "jest"

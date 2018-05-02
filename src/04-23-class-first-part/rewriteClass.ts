@@ -7,7 +7,7 @@ class Car {
   acceleration: number = 0
   constructor(public name: string) {}
 
-  honk(): string {
+  honk() {
     return '빵빵!'
   }
 

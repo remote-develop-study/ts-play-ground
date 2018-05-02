@@ -10,7 +10,7 @@ interface IPassword {
 // Exercise 1 - Class
 class BasicClass implements IBasic, IPassword {
   readonly password: string
-  constructor(public id: number, public name: string) {}
+  constructor(public id: number, public name: string) { }
 }
 
 // Exercise 2 - Property Accessor
