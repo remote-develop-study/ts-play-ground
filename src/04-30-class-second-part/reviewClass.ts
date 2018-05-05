@@ -29,7 +29,7 @@ class Child extends Parent {
  */
 interface IFoo {
   bar: {
-    (str: string): number;
+    (str: string): string;
     (num: number): string;
   };
 }

@@ -16,11 +16,11 @@ describe('Exercise 2 - overloading', () => {
   const foo = new Foo();
 
   it('string 반환', () => {
-    expect(foo.bar('1234')).toBe('문자열');
+    expect(foo.bar('1234')).toBe('string');
   });
 
   it('number 반환', () => {
-    expect(foo.bar(1234)).toBe('숫자형');
+    expect(foo.bar(1234)).toBe('number');
   });
 });
 
