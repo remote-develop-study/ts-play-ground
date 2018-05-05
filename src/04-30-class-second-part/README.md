@@ -12,8 +12,6 @@
 
 2.  reviewClass: 다양한 케이스의 클래스를 다시 만들며 `복습`합니다.
 
-3.  implClass: UML 다이어그램을 `분석` => 인터페이스 `설계` => 클래스 `구현` => `테스트` 케이스 직접 만들기
-
 ## 참고사항
 
 위와 같은 순서로 진행하는 게 낫다고 판단하여 순서를 정했고 편한 대로 진행하시면 됩니다.
@@ -27,5 +25,4 @@
 ```bash
 npm run test ./src/04-30-class-second-part/rewriteClass.spec.ts
 npm run test ./src/04-30-class-second-part/reviewClass.spec.ts
-npm run test ./src/04-30-class-second-part/implClass.spec.ts
 ```
