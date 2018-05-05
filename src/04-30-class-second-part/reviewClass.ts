@@ -1,8 +1,8 @@
 /**
- * Exercise 1 - overloading
+ * Exercise 1 - override
  * 1. super 키워드를 사용
- * 2. 함수 오버로딩을 사용하여 Child 클래스에서 Parent 클래스의
- * getProp() 메서드를 오버로딩해주세요
+ * 2. 오버라이드을 사용하여 Child 클래스에서 Parent 클래스의
+ * getProp() 메서드를 오버라이딩해주세요
  */
 class Parent {
   private id: number;
@@ -23,7 +23,7 @@ class Child extends Parent {
 }
 
 /**
- * Exercise 2 - override
+ * Exercise 2 - overloading
  * 타입 가드와 오버로딩을 사용하여
  * Foo 인터페이스를 구현해주세요
  */
