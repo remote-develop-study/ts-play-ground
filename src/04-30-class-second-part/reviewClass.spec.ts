@@ -1,26 +1,26 @@
 import { Child, Foo, NewEmployee, NewManager } from './reviewClass';
 
-describe('Exercise 1 - overloading', () => {
+describe('Exercise 1 - override', () => {
   // TODO: 직접 할당해주세요
   const id = 0;
   // TODO: 직접 할당해주세요
   const name = '';
   const child = new Child(id, name);
 
-  it('오버로딩된 메서드의 반환값 확인', () => {
+  it('오바라이딩된 메서드의 반환값 확인', () => {
     expect(child.getProp()).toBe(`id: ${id} name: ${name}`);
   });
 });
 
-describe('Exercise 2 - override', () => {
+describe('Exercise 2 - overloading', () => {
   const foo = new Foo();
 
   it('string 반환', () => {
-    expect(foo.bar('1234')).toBe('문자열');
+    expect(foo.bar('1234')).toBe('string');
   });
 
   it('number 반환', () => {
-    expect(foo.bar(1234)).toBe('숫자형');
+    expect(foo.bar(1234)).toBe('number');
   });
 });
 
