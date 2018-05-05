@@ -51,6 +51,7 @@ describe('Exercise 4 - Abstract Class', () => {
 
   it('use method from Project to ITProject', () => {
     // const project = new Project(); <= 오류가 뜨는 이유를 알아보세요
+    //추상 클래스는 객체를 만들수 없습니다!
     expect(itProject.calcBudget()).toBe(2000);
   });
   
