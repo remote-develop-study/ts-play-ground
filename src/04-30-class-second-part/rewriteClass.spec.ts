@@ -1,9 +1,11 @@
-import { Person, Rectangle, Square, parent, child } from './rewriteClass'; 
+import { Person, Rectangle, Square, parent, child } from './rewriteClass';
 
 describe('Exercise 1 - Class', () => {
+  const person = new Person(name);
+
   it('새로운 인스턴스 프로퍼티 확인', () => {
-    const name = '이름을 넣어주세요';
-    const person = new Person(name);
+    // TODO: 이름을 직접 할당해주세요
+    const name = '';
 
     expect(person.greeting()).toBe(`My name is ${name}`);
   });
@@ -42,4 +44,3 @@ describe('Exercise 3 - Object Inheritance', () => {
     expect(child.sayName()).toBe('Child');
   });
 });
-
