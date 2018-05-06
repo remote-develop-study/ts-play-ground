@@ -24,12 +24,28 @@ class Person{
   }
   greeting(){return `My name is ${this.name}`}
 }
+
 /**
  * Exercise 2 - Inheritance
  * 
  * @param length 
  * @param width 
  */
+// 기본 클래스
+// function Rectangle(length, width) {
+//   this.length = length;
+//   this.width = width;
+// }
+
+// Rectangle.prototype.getArea = function() {
+//   return this.length * this.width;
+// }
+
+// // 서브 클래스
+// function Square(size) {
+//   this.length = size;
+//   this.width = size;
+// }
 class Rectangle{
   length:number;
   width:number;
@@ -44,50 +60,40 @@ class Square extends Rectangle{
     super(size,size);
   }
 }
-// 기본 클래스
-// function Rectangle(length, width) {
-//   this.length = length;
-//   this.width = width;
-// }
-
-// Rectangle.prototype.getArea = function() {
-//   return this.length * this.width;
-// }
-
-// 서브 클래스
-// function Square(size) {
-//   this.length = size;
-//   this.width = size;
-// }
 
 /**
  * Exercise 3 - Object Inheritance
  */
-class Parent {
-  // name: 'Parent',
-  // sayName: function() {
-  //   return this.name;
-  // }
+// var parent = {
+//   name: 'Parent',
+//   sayName: function() {
+//     return this.name;
+//   }
+// };
+
+// var child = Object.create(parent, {
+//   name: {
+//     configurable: true,
+//     enumerable: true,
+//     value: 'Child',
+//     writable: true
+//   }
+// });
+
+class Parent{
   name:string;
   constructor(newName:string = "Parent"){
     this.name = newName;
   }
   sayName = () => this.name;
-};
+}
 
 class Child extends Parent{
-// var child = Object.create(parent, {
-  // name: {
-  //   configurable: true,
-  //   enumerable: true,
-  //   value: 'Child',
-  //   writable: true
-  // }
-// });
   constructor(){
     super("Child");
   }
 }
+
 let parent = new Parent();
 let child = new Child();
 
