@@ -20,6 +20,14 @@ class Child extends Parent {
   private name: string;
 
   // TODO:
+  constructor(_id: number, name: string) {
+    super(_id);
+    this.name = name
+  }
+
+  getProp(): string {
+    return `id: ${id} name: ${name}`;
+  }
 }
 
 /**
@@ -36,6 +44,18 @@ interface IFoo {
 
 class Foo implements IFoo {
   // TODO:
+  constructor() {}
+
+  bar (params: string | number) {
+    let result = 'string'
+    if(typeof params === 'string') {
+       result = 'string';
+    }      
+    if(typeof params === 'number') {
+      result = 'number';
+    }
+    return result;
+  }
 }
 
 /**
@@ -72,14 +92,36 @@ interface IEmployee {
 
 abstract class AbstractEmployee implements IEmployee {
   // TODO:
+  id: number = 1;
+  name: string = 'employee';
+
+  constructor (id: number, name: string) {
+      this.id = id;
+      this.name = name;
+  }
+
+  abstract getDetail(): string;
+
+  printDetail(): string {
+    return `id: ${this.id} name: ${this.name}`;
+  }
 }
 
 class NewEmployee extends AbstractEmployee {
   // TODO:
+  constructor(id: number = 1, name: string = `employee`) {
+    super(id, name);
+  }
+  getDetail(): string {
+    return `id: ${this.id} name: ${this.name} count: 0`;
+  }
 }
 
 class NewManager extends NewEmployee {
   // TODO:
+  constructor() {
+    super();
+  }
 }
 
 export { Child, Foo, NewEmployee, NewManager };

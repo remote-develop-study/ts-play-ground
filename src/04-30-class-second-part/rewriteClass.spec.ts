@@ -1,11 +1,11 @@
-import { Person, Rectangle, Square, parent, child } from './rewriteClass';
+import { Person, Rectangle, Square, Parent, Child } from './rewriteClass';
 
 describe('Exercise 1 - Class', () => {
   const person = new Person(name);
 
   it('새로운 인스턴스 프로퍼티 확인', () => {
     // TODO: 이름을 직접 할당해주세요
-    const name = '';
+    const name = 'nodejs';
 
     expect(person.greeting()).toBe(`My name is ${name}`);
   });
@@ -17,8 +17,8 @@ describe('Exercise 1 - Class', () => {
 
 describe('Exercise 2 - Inheritance', () => {
   // 밑의 프로토타입 연결은 TS 전환 후 제거해야합니다.
-  Square.prototype = new Rectangle();
-  Square.prototype.constructor = Square;
+  // Square.prototype = new Rectangle();
+  // Square.prototype.constructor = Square;
 
   const rect = new Rectangle(5, 10);
   const square = new Square(6);
@@ -33,8 +33,8 @@ describe('Exercise 2 - Inheritance', () => {
 });
 
 describe('Exercise 3 - Object Inheritance', () => {
-  const rect = new Rectangle(5, 10);
-  const square = new Square(6);
+  const parent = new Parent('Parent');
+  const child = new Child('Child');
 
   it('parent.sayName()', () => {
     expect(parent.sayName()).toBe('Parent');
