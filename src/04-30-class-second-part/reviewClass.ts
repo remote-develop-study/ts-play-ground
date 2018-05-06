@@ -18,8 +18,14 @@ class Parent {
 
 class Child extends Parent {
   private name: string;
-
   // TODO:
+  constructor(id: number, name: string) {
+    super(id);
+    this.name = name;
+  }
+  getProp() {
+    return `id: ${this.id} name: ${this.name}`
+  }
 }
 
 /**
@@ -28,14 +34,27 @@ class Child extends Parent {
  * Foo 인터페이스를 구현해주세요
  */
 interface IFoo {
-  bar: {
-    (str: string): string;
-    (num: number): string;
-  };
-}
+bar: {
+  (str: string): string;
+  (num: number): string;
+};
+// interface IFoo {
+//   bar(s: string): number;
+//   bar(n: number): string;
+// }
 
 class Foo implements IFoo {
   // TODO:
+  constructor() { }
+  bar(s: string | number) {
+    if (typeof s == 'string') {
+      return 'string';
+    }
+    if (typeof s == 'number') {
+      return 'number'
+    }
+    return 'string 또는 number타입이 아니다'
+  }
 }
 
 /**
@@ -72,10 +91,17 @@ interface IEmployee {
 
 abstract class AbstractEmployee implements IEmployee {
   // TODO:
+  id: number = 1;
+  name: string = 'employee';
+
+  // abstract printDetail(){
+  //   return `id: ${this.id} name: ${name}`
+  // }
 }
 
 class NewEmployee extends AbstractEmployee {
   // TODO:
+  // abstract constructor
 }
 
 class NewManager extends NewEmployee {
