@@ -4,11 +4,11 @@ describe('Exercise 1 - override', () => {
   // TODO: 직접 할당해주세요
   const id = 0;
   // TODO: 직접 할당해주세요
-  const name = '';
+  const name = 'kong';
   const child = new Child(id, name);
 
   it('오바라이딩된 메서드의 반환값 확인', () => {
-    expect(child.getProp()).toBe(`id: ${id} name: ${name}`);
+    expect(child.getProp()).toBe(`id: 0 name: kong`);
   });
 });
 
@@ -32,14 +32,14 @@ describe('Exercise 3 - abstract', () => {
     employee.id = 1;
     employee.name = 'employee';
 
-    expect(employee.printDetail(1)).toBe(`id: 1 name: employee`);
+    expect(employee.printDetail()).toBe(`id: 1 name: employee`);
   });
 
   it('manager 인스턴스 생성 후 반환', () => {
     manager.id = 2;
     manager.name = 'manager';
-    manager.Employees = new Array();
+    // manager.Employees = new Array();
 
-    expect(manager.getDetail(2)).toBe(`id: 2 name: manager count: 0`);
+    expect(manager.getDetail()).toBe(`id: 2 name: manager count: 0`);
   });
 });

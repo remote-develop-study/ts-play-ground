@@ -20,13 +20,13 @@ class Child extends Parent {
   private name: string;
 
   // TODO:
-  constructor(_id: number, name: string) {
-    super(_id);
+  constructor(id: number, name: string) {
+    super(id);
     this.name = name
   }
 
   getProp(): string {
-    return `id: ${id} name: ${name}`;
+    return `id: ${this.id} name: ${this.name}`;
   }
 }
 
