@@ -7,7 +7,7 @@ describe('Exercise 1 - Class', () => {
   const user = new BasicClass(1, '이름');
 
   it('알맞은 객체가 생성되었는지 확인', () => {
-    expect(user).toEqual({ id, name, password });
+    expect(user).toEqual({ id, name, password});
   });
 });
 

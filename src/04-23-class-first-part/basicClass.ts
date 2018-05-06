@@ -13,6 +13,7 @@ class BasicClass implements IBasic, IPassword {
   id: number;
   name: string;
   readonly password: string = '12345';
+
   constructor(theId: number, theName: string) {
     this.id = theId;
     this.name = theName; 

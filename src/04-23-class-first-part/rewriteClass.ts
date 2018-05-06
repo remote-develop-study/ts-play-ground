@@ -25,7 +25,7 @@ class Car {
   }
 
   honk() {
-    return '삥삥!';
+    return '빵빵!';
   }
   accelerate(speed: number) {
     this.acceleration = this.acceleration + speed;
@@ -82,13 +82,16 @@ class Rectangle extends baseObject {
 // });
 
 class Person {
-  private _firstName = 'JYP';
+  private _firstName: string | undefined = 'JYP';
 
   constructor() {
   }
 
-  get() {
+  get firstName(): string | undefined {
     return this._firstName;
+  }
+  set firstName(theName: string | undefined) {
+    this._firstName = theName && theName.length >= 3 ? theName : undefined
   }
 }
 
