@@ -40,16 +40,26 @@ interface IFoo {
     (num: number): string;
   };
 }
-
+/* 
+interface Foo {
+  bar(s: string): number;
+  bar(n: number): string;
+}
+*/
+//How to implement 'bar'..
 class Foo implements IFoo {
   // TODO:
+  thing:any;
   constructor(something:any){
-    if(typeof something === 'number'){
-      this.bar;
-    }else if(typeof something === 'string'){
-
+    this.thing = something;
+    if(typeof this.thing === 'number'){
+      // bar(this.thing){return 'number';}
+    }else if(typeof this.thing === 'string'){
+      // bar(this.thing){return 'string';}  
     }
   }
+
+  
 }
 
 /**
@@ -88,18 +98,28 @@ abstract class AbstractEmployee implements IEmployee {
   // TODO:
   id: number;
   name: string;
-  printDetail(): string;
+  Employees?: Employee[];
+  
+  constructor(_id:number, _name:string){
+    this.id = _id;
+    this.name = _name;
+  }
+  abstract printDetail(): string;
   abstract getDetail():string;
 }
 
-class NewEmployee extends AbstractEmployee {
+class NewEmployee extends AbstractEmployee{
   // TODO:
-  printDetail()
+  printDetail(){ 
+    return `id: ${this.id} name: ${this.name}`;    
+  }
 }
 
 class NewManager extends NewEmployee {
   // TODO:
-  getDetail()
+  getDetail(){
+    return `id: ${this.id} name: ${this.name} count: ${this.Employees.length}`;    
+  }
 }
 
 export { Child, Foo, NewEmployee, NewManager };
