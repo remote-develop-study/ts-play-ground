@@ -1,3 +1,5 @@
+import { Child } from "./reviewClass";
+
 /**
  * Exercise 1 - Class
  * 
@@ -15,7 +17,7 @@
 
 class Person {
   age: number = 30
-  constructor(public name: string) { }
+  constructor(public name: string) {}
   greeting() {
     return 'My name is ' + this.name
   }
@@ -71,15 +73,18 @@ class Square extends Rectangle {
 // };
 
 
-class parent {
-  public name: string = 'Parent';
-  constructor(name: string) {
+class Parent {
+  name: string;
+  // 생성자에서 초기화 해주지 않으면 인수가 필요하다고 104번에서 에러뜸
+  constructor(name: string = 'Parent';) {
     this.name = name;
   }
   sayName() {
     return this.name;
   }
 }
+
+
 
 // var child = Object.create(parent, {
 //   name: {
@@ -89,11 +94,15 @@ class parent {
 //     writable: true
 //   }
 // });
-class child extends parent {
+class Child extends Parent {
   constructor() {
     super("child");
   }
 }
+
+
+let parent = new Parent();
+let child = new Child();
 
 export {
   Person,

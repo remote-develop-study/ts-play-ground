@@ -34,8 +34,8 @@ describe('Exercise 2 - Inheritance', () => {
 });
 
 describe('Exercise 3 - Object Inheritance', () => {
-  const rect = new Rectangle(5, 10);
-  const square = new Square(6);
+  // const rect = new Rectangle(5, 10);
+  // const square = new Square(6);
 
   it('parent.sayName()', () => {
     expect(parent.sayName()).toBe('Parent');

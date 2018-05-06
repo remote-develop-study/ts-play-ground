@@ -33,27 +33,31 @@ class Child extends Parent {
  * 타입 가드와 오버로딩을 사용하여
  * Foo 인터페이스를 구현해주세요
  */
-interface IFoo {
-bar: {
-  (str: string): string;
-  (num: number): string;
-};
 // interface IFoo {
-//   bar(s: string): number;
-//   bar(n: number): string;
-// }
+  // bar: {
+  //   (str: string): string;
+  //   (num: number): string;
+  // };
+interface IFoo {
+  bar(s: string): number;
+  bar(n: number): string;
+}
 
 class Foo implements IFoo {
   // TODO:
-  constructor() { }
+  // constructor() {}
   bar(s: string | number) {
-    if (typeof s == 'string') {
-      return 'string';
+    let result:any;
+    if (typeof s === 'string') {
+      // return 'string';
+      result = 'string';
     }
-    if (typeof s == 'number') {
-      return 'number'
+    else{
+      result = 'string';
+      // return 'number'
     }
-    return 'string 또는 number타입이 아니다'
+    return result;
+      // return 'string 또는 number타입이 아니다'
   }
 }
 
@@ -94,14 +98,15 @@ abstract class AbstractEmployee implements IEmployee {
   id: number = 1;
   name: string = 'employee';
 
-  // abstract printDetail(){
-  //   return `id: ${this.id} name: ${name}`
-  // }
+  printDetail(): string {
+    return `id: ${this.id} name: ${name}`
+  }
+  abstract getDetail():string;
 }
 
 class NewEmployee extends AbstractEmployee {
   // TODO:
-  // abstract constructor
+
 }
 
 class NewManager extends NewEmployee {
