@@ -1,11 +1,12 @@
 import { Person, Rectangle, Square, parent, child } from './rewriteClass';
 
 describe('Exercise 1 - Class', () => {
+  const name = 'kimyeaseul';
   const person = new Person(name);
 
   it('새로운 인스턴스 프로퍼티 확인', () => {
     // TODO: 이름을 직접 할당해주세요
-    const name = '';
+    // const name = 'kimyeaseul';// nodejs?
 
     expect(person.greeting()).toBe(`My name is ${name}`);
   });
