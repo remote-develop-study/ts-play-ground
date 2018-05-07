@@ -18,8 +18,16 @@ class Parent {
 
 class Child extends Parent {
   private name: string;
+  
+  constructor(_id: number, _name: string) {
+    super(_id);
 
-  // TODO:
+    this.name = _name;
+  }
+
+  getProp() {
+    return `${super.getProp()} name: ${this.name}`
+  }
 }
 
 /**
@@ -35,7 +43,13 @@ interface IFoo {
 }
 
 class Foo implements IFoo {
-  // TODO:
+  bar(str: string): string;
+  bar(num: number): string;
+  bar(arg: any): string {
+    return typeof arg === 'string'
+      ? 'string'
+      : 'number';
+  }
 }
 
 /**
@@ -43,7 +57,6 @@ class Foo implements IFoo {
  * 다음의 에제에 대한 중복 코드를 추상 클래스와 상속을
  * 활용하여 리팩토링합니다
  */
-
 class Employee {
   public id: number;
   public name: string;
@@ -71,15 +84,28 @@ interface IEmployee {
 }
 
 abstract class AbstractEmployee implements IEmployee {
-  // TODO:
+  public id: number;
+  public name: string;
+
+  abstract getDetail(): string;
+
+  printDetail(): string {
+    return `id: ${this.id} name: ${this.name}`;
+  }
 }
 
 class NewEmployee extends AbstractEmployee {
-  // TODO:
+  getDetail(): string {
+    return `id: ${this.id} name: ${this.name}`
+  }
 }
 
 class NewManager extends NewEmployee {
-  // TODO:
+  public Employees: Employee[];
+
+  getDetail(): string {
+    return `${super.getDetail()} count: ${this.Employees.length}`
+  }
 }
 
 export { Child, Foo, NewEmployee, NewManager };

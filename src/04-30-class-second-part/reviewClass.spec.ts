@@ -1,10 +1,8 @@
 import { Child, Foo, NewEmployee, NewManager } from './reviewClass';
 
 describe('Exercise 1 - override', () => {
-  // TODO: 직접 할당해주세요
   const id = 0;
-  // TODO: 직접 할당해주세요
-  const name = '';
+  const name = 'Thanos';
   const child = new Child(id, name);
 
   it('오바라이딩된 메서드의 반환값 확인', () => {
