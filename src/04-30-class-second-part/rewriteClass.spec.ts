@@ -1,4 +1,4 @@
-import { Person, Rectangle, Square, parent, child } from './rewriteClass';
+import { Person, Rectangle, Square, Parent, Child } from './rewriteClass';
 
 describe('Exercise 1 - Class', () => {
   // TODO: 이름을 직접 할당해주세요
@@ -33,8 +33,8 @@ describe('Exercise 2 - Inheritance', () => {
 });
 
 describe('Exercise 3 - Object Inheritance', () => {
-  const rect = new Rectangle(5, 10);
-  const square = new Square(6);
+  const parent = new Parent();
+  const child = new Child();
 
   it('parent.sayName()', () => {
     expect(parent.sayName()).toBe('Parent');

@@ -95,4 +95,10 @@ class Child extends Parent {
   }
 }
 
-export { Person, Rectangle, Square, parent, child };
+export {
+  Person,
+  Rectangle,
+  Square,
+  Parent,
+  Child
+}

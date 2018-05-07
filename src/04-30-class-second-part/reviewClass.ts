@@ -84,8 +84,11 @@ interface IEmployee {
 }
 
 abstract class AbstractEmployee implements IEmployee {
-  constructor(protected id: number, protected name: string) {}
-
+  public id: number;
+  public name: string;
+  printDetail(): string {
+    return `id: ${this.id} name: ${this.name}`;
+  }
   abstract getDetail(): string;
 }
 
@@ -93,19 +96,18 @@ class NewEmployee extends AbstractEmployee {
   constructor() {
     super();
   }
-
-  public getDetail(): string {
-    return `id: ${this.id} name: ${this.name}`;
+  getDetail(): string {
+    return super.printDetail();
   }
 }
 
 class NewManager extends NewEmployee {
-  public Employees: NewEmployee[] = [];
-  constructor(id: number, name: string) {
-    super(id, name);
+  public Employees: NewEmployee[];
+  constructor() {
+    super();
   }
   getDetail(): string {
-    return super.getDetail() + ` count: ${this.Employees}`;
+    return super.printDetail() + ` count: ${this.Employees.length}`;
   }
 }
 
