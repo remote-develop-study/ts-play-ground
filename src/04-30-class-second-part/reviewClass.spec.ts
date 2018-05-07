@@ -32,7 +32,7 @@ describe('Exercise 3 - abstract', () => {
     employee.id = 1;
     employee.name = 'employee';
 
-    expect(employee.printDetail(1)).toBe(`id: 1 name: employee`);
+    expect(employee.printDetail()).toBe(`id: 1 name: employee`);
   });
 
   it('manager 인스턴스 생성 후 반환', () => {
@@ -40,6 +40,6 @@ describe('Exercise 3 - abstract', () => {
     manager.name = 'manager';
     manager.Employees = new Array();
 
-    expect(manager.getDetail(2)).toBe(`id: 2 name: manager count: 0`);
+    expect(manager.getDetail()).toBe(`id: 2 name: manager count: 0`);
   });
 });

@@ -62,6 +62,6 @@ export {
   Person,
   Rectangle,
   Square,
-  parent,
-  child
+  Parent,
+  Child
 }
