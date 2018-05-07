@@ -17,9 +17,14 @@ class Parent {
 }
 
 class Child extends Parent {
-  private name: string;
+  constructor(_id: number, public name: string) {
+    super(_id);
+  }
 
-  // TODO:
+  // Override
+  getProp(): string {
+    return `${super.getProp()} name: ${this.name}`;
+  }
 }
 
 /**
@@ -35,7 +40,15 @@ interface IFoo {
 }
 
 class Foo implements IFoo {
-  // TODO:
+  public bar(str: string): string;
+  public bar(num: number): string;
+  public bar(args: any): any {
+    if (typeof args === 'string') {
+      return 'string';
+    } else if (typeof args === 'number') {
+      return 'number';
+    }
+  }
 }
 
 /**
@@ -44,24 +57,24 @@ class Foo implements IFoo {
  * 활용하여 리팩토링합니다
  */
 
-class Employee {
-  public id: number;
-  public name: string;
+// class Employee {
+//   public id: number;
+//   public name: string;
 
-  printDetail(): string {
-    return `id: ${this.id} name: ${this.name}`;
-  }
-}
+//   printDetail(): string {
+//     return `id: ${this.id} name: ${this.name}`;
+//   }
+// }
 
-class Manager {
-  public id: number;
-  public name: string;
-  public Employees: Employee[];
+// class Manager {
+//   public id: number;
+//   public name: string;
+//   public Employees: Employee[];
 
-  printDetail() {
-    return `id: ${this.id} name: ${this.name} count: ${this.Employees.length}`;
-  }
-}
+//   printDetail() {
+//     return `id: ${this.id} name: ${this.name} count: ${this.Employees.length}`;
+//   }
+// }
 
 interface IEmployee {
   id: number;
@@ -71,15 +84,29 @@ interface IEmployee {
 }
 
 abstract class AbstractEmployee implements IEmployee {
-  // TODO:
+  constructor(protected id: number, protected name: string) {}
+
+  abstract getDetail(): string;
 }
 
 class NewEmployee extends AbstractEmployee {
-  // TODO:
+  constructor() {
+    super();
+  }
+
+  public getDetail(): string {
+    return `id: ${this.id} name: ${this.name}`;
+  }
 }
 
 class NewManager extends NewEmployee {
-  // TODO:
+  public Employees: NewEmployee[] = [];
+  constructor(id: number, name: string) {
+    super(id, name);
+  }
+  getDetail(): string {
+    return super.getDetail() + ` count: ${this.Employees}`;
+  }
 }
 
 export { Child, Foo, NewEmployee, NewManager };

@@ -25,6 +25,7 @@
     "jest-cli": "^22.4.3",
     "ts-jest": "^22.4.4",
     "ts-loader": "^4.2.0",
+    "tslint": "^5.10.0",
     "typescript": "latest"
   }
 }
