@@ -104,6 +104,7 @@ abstract class AbstractEmployee implements IEmployee {
 
 class NewEmployee extends AbstractEmployee {
   // TODO:
+  
 }
 
 class NewManager extends NewEmployee {
