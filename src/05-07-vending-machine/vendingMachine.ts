@@ -1,20 +1,42 @@
-import { drinks } from './drinks';
+import CoinMachine from './CoinMachine';
+import * as type from './Types';
 
-export class VendingMachine {
-  public drink: Object = {};
+export default class VendingMachine extends CoinMachine implements type.VendingMachine {
+  drinks: type.Drink[];
 
-  public getDrinkByName(name: string): any {
-    this.drink = drinks[name];
-
-    return this.drink.name;
+  constructor(drinks: type.Drink[]) {
+    super();
+    this.drinks = [...drinks];
   }
 
-  public getChangeCoin = (coin: number): number => coin - this.drink.price;
-}
+  showDrinks() {
+    let drinkList: string = '';
+  
+    this.drinks.map((drink, i) => {
+      const length = this.drinks.length;
+  
+      drinkList += (`이름: ${drink.name}, 가격: ${drink.price}`);
+      drinkList += (i >= length) ? '\n' : '';
+    });
+  
+    return drinkList;
+  }
 
-export function test(v: VendingMachine, chosenDrink: string, inputCoin: number) {
-  const drink = v.getDrinkByName(chosenDrink),
-        coin = v.getChangeCoin(inputCoin);
+  insertMoney(money: number) {
+    this.inputMoney = money;
+  }
+  
+  getItem() {
+    return '';
+  }
 
-  return `${drink}의 잔돈은 ${coin}원입니다`
+  // TODO: validation
+  chooseDrinks(drink: type.Drink['name']) {
+    return this.getItem();
+  }
+
+  // TODO: 받은 금액 - 총 구매 음료수 금액
+  getBalance() {
+    return this.inputMoney;
+  }
 }
