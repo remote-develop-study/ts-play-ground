@@ -9,7 +9,7 @@ describe('자판기 만들기', () => {
   });
 
   it('돈을 제공한다', () => {
-    expect(vm.insertMoney(2000)).toBe(0);
+    expect(vm.insertMoney(2000)).toBe(vm.inputMoney);
   });
   
   it('음료수를 고른다', () => {

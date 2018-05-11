@@ -23,16 +23,27 @@ export default class VendingMachine extends CoinMachine implements type.VendingM
   }
 
   insertMoney(money: number) {
-    this.inputMoney = money;
+    this.inputMoney += money;
   }
   
-  getItem() {
-    return '';
+  getItem(drinkName: type.Drink['name']) {
+    const findDrink = (drink: type.Drink) => drink.name === drinkName;
+
+    return this.drinks.find(findDrink);
   }
 
-  // TODO: validation
-  chooseDrinks(drink: type.Drink['name']) {
-    return this.getItem();
+  /**
+   * TODO:
+   * 1. 금액 확인
+   * 2. 재고 검사
+   * 3. 재고 차감
+   * 4. 남은 돈 => 잔돈 통
+   * 5. 음료수 반환
+   * 
+   * 조건 불충분시 에러 던지고 메세지남김
+   */
+  chooseDrinks(drinkName: type.Drink['name']) {
+    return drinkName ? this.getItem(drinkName) : 'throw error';
   }
 
   // TODO: 받은 금액 - 총 구매 음료수 금액
