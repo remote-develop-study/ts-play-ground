@@ -4,10 +4,7 @@
 const double = (value:number):number => value * 2;
 
 // 2. Default Parameters를 사용해주세요
-const greet = (name:string = 'taekyun'):string  => {
-  if (name === undefined) {
-    name = 'Max';
-  }
+const greet = (name:string = 'Max'):string  => {
   return name;
 };
 
@@ -26,8 +23,13 @@ const testResults = (arr: number[]) => {
 };
 
 // 6. 더 짧게 만들어주세요 (Destructuring Objects)
-const scientist = (obj:object): Object => {
-  let {firstName, experience} = obj
+interface Interface {
+    firstName: string,
+    experience: string
+}
+const scientist = (obj:Interface): Interface => {
+
+let {firstName, experience} = obj;
   // firstName = obj.firstName;
   // experience = obj.experience;
 

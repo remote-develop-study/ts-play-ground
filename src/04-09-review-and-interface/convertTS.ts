@@ -1,5 +1,13 @@
 // Type Aliase를 사용해서 빠짐없이 타입을 달아주세요
-let bankAccount = {
+
+type Deposit = (value: number) => void;
+type GetBalance = () => number;
+type BankAcount = {
+    money: number,
+    deposit: Deposit,
+    getBalance: GetBalance
+}
+let bankAccount: BankAcount = {
   money: 2000,
   deposit(value) {
     this.money += value;
@@ -8,8 +16,12 @@ let bankAccount = {
     return this.money;
   }
 };
-
-export const mySelf:object = {
+type MySelf = {
+    name: string,
+    bankAccount: BankAcount,
+    hobbies: [string, string]
+}
+export const mySelf: MySelf = {
   name: "Max",
   bankAccount: bankAccount,
   hobbies: ["Sports", "Cooking"]

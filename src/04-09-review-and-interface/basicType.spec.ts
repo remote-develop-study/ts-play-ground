@@ -1,4 +1,4 @@
-import { tupleFn, EnumFn, anyFn1, anyFn2, unionFn, voidFn } from './basicType';
+import { tupleFn, enumFn, anyFn1, anyFn2, unionFn, voidFn } from './basicType';
 
 describe('총정리 1편 기본타입', function () {
     it('tuple 정리 인자의 인덱스와 타입을 넣어 맞는지 확인', function () {
@@ -6,7 +6,7 @@ describe('총정리 1편 기본타입', function () {
     });
     enum Color { Red = 1, Green, Blue }
     it('enum 테스트', function () {
-        expect(EnumFn(Color.Green)).toBe(2);
+        expect(enumFn(Color.Green)).toBe(2);
     });
     it('any 테스트: any 타입 값 출력', function () {
         expect(anyFn1(1)).toBe('string');
