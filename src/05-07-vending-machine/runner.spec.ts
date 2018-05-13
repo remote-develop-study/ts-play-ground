@@ -1,5 +1,5 @@
 import drinks from './model/Drink';
-import VendingMachine from './VendingMachine';
+import VendingMachine from './class/VendingMachine';
 
 describe('자판기 만들기', () => {
   const vm = new VendingMachine(drinks);

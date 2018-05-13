@@ -1,4 +1,4 @@
-import { Drinks } from '../Types';
+import { Drinks } from '../typings/Types';
 
 const drinks: Drinks = {
   cola: {
