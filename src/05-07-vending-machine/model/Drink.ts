@@ -1,4 +1,4 @@
-import { Drinks } from '../typings/Types';
+import { Drinks } from '../types/index';
 
 const drinks: Drinks = {
   cola: {

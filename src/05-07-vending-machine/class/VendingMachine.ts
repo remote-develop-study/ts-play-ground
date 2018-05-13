@@ -1,5 +1,5 @@
 import CoinMachine from './CoinMachine';
-import * as type from '../Typings/Types';
+import * as type from '../types/index';
 
 // TODO: 클래스내에서 하는 일이 너무 많아 리팩토링 필요
 export default class VendingMachine extends CoinMachine implements type.VendingMachine {
