@@ -1,0 +1,24 @@
+{
+  "name": "05-07-vending-machine",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "private": true,
+  "devDependencies": {
+    "ts-loader": "^4.3.0",
+    "ts-node": "^6.0.3",
+    "tslint": "^5.10.0",
+    "webpack": "^4.8.3",
+    "webpack-cli": "^2.1.3"
+  },
+  "dependencies": {
+    "@types/inquirer": "^0.0.41",
+    "inquirer": "^5.2.0",
+    "typescript": "^2.9.0-dev.20180512"
+  },
+  "scripts": {
+    "dev": "yarn webpack --watch",
+    "build": "yarn build",
+    "test": "yarn webpack ./index.ts && yarn ts-node ./dist/bundle.js"
+  }
+}
