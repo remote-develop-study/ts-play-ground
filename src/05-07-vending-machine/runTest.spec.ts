@@ -3,32 +3,23 @@ import VendingMachine from './VendingMachine';
 
 describe('자판기 만들기', () => {
   const vm = new VendingMachine(drinks);
+  const iNeedDrink: string = 'cider';
+  const iHaveMoney: number = 3000;
 
   it('음료수 리스트 확인', () => {
-    expect(vm.showDrinks()).toBe('dsdad');
-  });
-
-  it('돈을 제공한다', () => {
-    expect(vm.insertMoney(2000)).toBe(vm.inputMoney);
-  });
-  
-  it('음료수를 고른다', () => {
-    expect(vm.chooseDrinks('cider')).toBe(0);
-  });
-
-  it('음료수를 받는다', () => {
-
-  });
-
-  it('잔액을 받는다', () => {
-    expect(vm.getBalance()).toBe(0);
+    expect(vm.showDrinks()).toHaveProperty('cola');
+    expect(vm.showDrinks()).toHaveProperty('cider');
+    expect(vm.showDrinks()).toHaveProperty('coffee');
   });
 
   it('음료수 반환', () => {
+    // 돈 투입
+    vm.insertMoney(iHaveMoney);
 
+    expect(vm.chooseDrinks(iNeedDrink)).toMatch(iNeedDrink);
   });
 
   it('잔액 반환', () => {
-
+    expect(vm.getBalance()).toBe(1500);
   });
 });

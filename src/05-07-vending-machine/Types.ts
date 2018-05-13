@@ -1,10 +1,14 @@
 export interface VendingMachine {
-  showDrinks(): string;
-  chooseDrinks(drink: Drink['name']): string;
+  drinks: Drinks;
+  showDrinks(): Drinks;
+  chooseDrinks(drinkName: string): string;
+}
+
+export interface Drinks {
+  [name: string]: Drink;
 }
 
 export interface Drink {
-  name: string;
   price: number;
-  stock: number;
+  quantity: number;
 }
