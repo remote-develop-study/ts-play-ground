@@ -5,21 +5,24 @@
  * getProp() 메서드를 오버로딩해주세요
  */
 class Parent {
-  private id: number;
+  protected id: number
 
   constructor(_id: number) {
-    this.id = _id;
+    this.id = _id
   }
 
   getProp(): string {
-    return `id: ${this.id}`;
+    return `id: ${this.id}`
   }
 }
 
 class Child extends Parent {
-  private name: string;
-
-  // TODO:
+  constructor(id: number, private name: string) {
+    super(id)
+  }
+  getProp(): string {
+    return `id: ${this.id} name: ${this.name}`
+  }
 }
 
 /**
@@ -29,13 +32,21 @@ class Child extends Parent {
  */
 interface IFoo {
   bar: {
-    (str: string): number;
-    (num: number): string;
-  };
+    (str: string): number
+    (num: number): string
+  }
 }
 
 class Foo implements IFoo {
-  // TODO:
+  bar(str: string): number
+  bar(num: number): string
+  bar(val: string | number): any {
+    if (typeof val === 'string') {
+      return 1
+    } else if (typeof val === 'number') {
+      return ''
+    }
+  }
 }
 
 /**
@@ -44,42 +55,53 @@ class Foo implements IFoo {
  * 활용하여 리팩토링합니다
  */
 
-class Employee {
-  public id: number;
-  public name: string;
+// class Employee {
+//   public id: number
+//   public name: string
 
-  printDetail(): string {
-    return `id: ${this.id} name: ${this.name}`;
-  }
-}
+//   printDetail(): string {
+//     return `id: ${this.id} name: ${this.name}`
+//   }
+// }
 
-class Manager {
-  public id: number;
-  public name: string;
-  public Employees: Employee[];
+// class Manager {
+//   public id: number
+//   public name: string
+//   public Employees: Employee[]
 
-  printDetail() {
-    return `id: ${this.id} name: ${this.name} count: ${this.Employees.length}`;
-  }
-}
+//   printDetail() {
+//     return `id: ${this.id} name: ${this.name} count: ${this.Employees.length}`
+//   }
+// }
 
 interface IEmployee {
-  id: number;
-  name: string;
-  printDetail(): string;
-  getDetail(): string; // <== abstract 메서드
+  id: number
+  name: string
+  printDetail(): string
+  getDetail(): string // <== abstract 메서드
 }
 
 abstract class AbstractEmployee implements IEmployee {
-  // TODO:
+  public id: number = 0
+  public name: string = ''
+  constructor() {}
+  printDetail(): string {
+    return `id: ${this.id} name: ${this.name}`
+  }
+  abstract getDetail(): string
 }
 
 class NewEmployee extends AbstractEmployee {
-  // TODO:
+  getDetail() {
+    return super.printDetail()
+  }
 }
 
 class NewManager extends NewEmployee {
-  // TODO:
+  public Employees: NewEmployee[] = []
+  getDetail() {
+    return `${super.getDetail()} count: ${this.Employees.length}`
+  }
 }
 
-export { Child, Foo, NewEmployee, NewManager };
+export { Child, Foo, NewEmployee, NewManager }

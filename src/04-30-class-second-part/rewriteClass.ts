@@ -40,12 +40,11 @@ class Rectangle {
   }
 }
 
-class Square extends Rectangle{
+class Square extends Rectangle {
   constructor(public size: number) {
-    super(size,size)
+    super(size, size)
   }
 }
-
 
 // function Rectangle(length, width) {
 //   this.length = length
@@ -65,6 +64,18 @@ class Square extends Rectangle{
 /**
  * Exercise 3 - Object Inheritance
  */
+
+class Parent {
+  name = 'Parent'
+  sayName() {
+    return this.name
+  }
+}
+
+class Child extends Parent {
+  name = 'Child'
+}
+
 var parent = {
   name: 'Parent',
   sayName: function() {
