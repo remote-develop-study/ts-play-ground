@@ -26,7 +26,7 @@ class Child extends Parent {
   }
 
   getProp(): string {
-    return `id: ${this.id} name: ${this.name}`;
+    return `${super.getProp()} name: ${this.name}`;
   }
 }
 
@@ -49,7 +49,7 @@ class Foo implements IFoo {
   bar (params: string | number) {
     let result = 'string'
     if(typeof params === 'string') {
-       result = 'string';
+      result = 'string';
     }      
     if(typeof params === 'number') {
       result = 'number';
