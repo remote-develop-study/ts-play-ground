@@ -1,5 +1,9 @@
+<<<<<<< HEAD
 import { Person, Rectangle, Square, parent, child } from './rewriteClass';
 import {} from 'jest';
+=======
+import { Person, Rectangle, Square, Parent, Child } from './rewriteClass';
+>>>>>>> 07229a7f30565f8dbbd395d1379ff9fddbb04bdf
 
 describe('Exercise 1 - Class', () => {
   const person = new Person(name);
@@ -34,8 +38,13 @@ describe('Exercise 2 - Inheritance', () => {
 });
 
 describe('Exercise 3 - Object Inheritance', () => {
+<<<<<<< HEAD
   // const rect = new Rectangle(5, 10);
   // const square = new Square(6);
+=======
+  const parent = new Parent();
+  const child = new Child();
+>>>>>>> 07229a7f30565f8dbbd395d1379ff9fddbb04bdf
 
   it('parent.sayName()', () => {
     expect(parent.sayName()).toBe('Parent');
