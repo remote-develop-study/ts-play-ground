@@ -1,4 +1,4 @@
-import { Child } from "./reviewClass";
+// import { Child } from "./reviewClass";
 
 /**
  * Exercise 1 - Class
@@ -76,7 +76,7 @@ class Square extends Rectangle {
 class Parent {
   name: string;
   // 생성자에서 초기화 해주지 않으면 인수가 필요하다고 104번에서 에러뜸
-  constructor(name: string = 'Parent';) {
+  constructor(name: string = 'Parent') {
     this.name = name;
   }
   sayName() {
