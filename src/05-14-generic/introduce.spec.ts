@@ -1,4 +1,5 @@
 import { simple, sumAll, sumAllArrow, strConcatNum } from './introduce';
+import {} from 'jest';
 
 describe('Generic 1 - simple', () => {
   it('간단한 제네릭 함수 작성', () => {
