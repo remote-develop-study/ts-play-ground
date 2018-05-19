@@ -1,3 +1,5 @@
+import { userInfo } from "os";
+
 interface IDrink {
     name: string;
     price: number;
@@ -49,7 +51,7 @@ interface IVendingMachine {
 }
 
 class VendingMachine implements IVendingMachine {
-    constructor(public drinks: IDrink[], public balance = 0, public insertedMoney = 0) { }
+    constructor(public drinks: IDrink[], public balance = 0, public insertedMoney = 0) {}
 
     public showDrinkList(): void {
         this.drinks.map(drink => console.log(drink.name))
@@ -64,7 +66,7 @@ class VendingMachine implements IVendingMachine {
                 this.printSelectedDrink(found.name)
                 this.deductMoney(found.price)
             } else {
-                console.log("선택하신 음료가 매진되었습니다.")
+                this.printNotEnoughQuantity()
             }
         }
     }
@@ -84,7 +86,13 @@ class VendingMachine implements IVendingMachine {
     }
 
     public returnMoney(): void {
-        console.log()
+        this.insertedMoney = 0;
+        this.balance = 0;
+        console.log(`잔액 ${this.insertedMoney}원을 반환합니다.`)
+    }
+    
+    private printNotEnoughQuantity(): void {
+        console.log("선택하신 음료가 매진되었습니다.")
     }
 
     private printWhenInsertMoney(money: number): void {
@@ -116,3 +124,4 @@ vm.selectDrink('Dr. Pepper')
 vm.insertMoney(1000)
 vm.selectDrink('Dr. Pepper')
 vm.returnMoney()
+
