@@ -40,7 +40,7 @@ function selectProduct(name: string):void {
     }
   });
   if(selectedProduct === '') {
-    return console.log('선택할수 없는 제품입니다. 다시 확인해 주세요.');
+    console.log('선택할수 없는 제품입니다. 다시 확인해 주세요.');
   }
   if(inputedMoney >= selectedPrice) {
     inputedMoney = inputedMoney - selectedPrice;

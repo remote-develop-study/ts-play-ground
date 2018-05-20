@@ -33,8 +33,13 @@ describe('Exercise 2 - Inheritance', () => {
 });
 
 describe('Exercise 3 - Object Inheritance', () => {
+<<<<<<< HEAD
   const parent = new Parent('Parent');
   const child = new Child('Child');
+=======
+  const parent = new Parent();
+  const child = new Child();
+>>>>>>> 07229a7f30565f8dbbd395d1379ff9fddbb04bdf
 
   it('parent.sayName()', () => {
     expect(parent.sayName()).toBe('Parent');
