@@ -5,9 +5,9 @@ describe('Exercise 1 - Class', () => {
 
   it('새로운 인스턴스 프로퍼티 확인', () => {
     // TODO: 이름을 직접 할당해주세요
-    const name = '';
+    const name = 'juyoung';
 
-    expect(person.greeting()).toBe(`My name is ${name}`);
+    expect(person.getting()).toBe(`My name is ${name}`);
   });
 
   it('비공개 멤버 변수 접근권한 확인', () => {
