@@ -9,17 +9,27 @@ class Parent {
 
   constructor(_id: number) {
     this.id = _id;
+    // console.log('@@ inside the Parent Class construcor _id: ',_id);
   }
 
   getProp(): string {
+    // console.log('@@ inside the Parnet Class getProp this.id: ',this.id);
     return `id: ${this.id}`;
   }
 }
 
 class Child extends Parent {
-  private name: string;
+  // private name: string;
 
   // TODO:
+  constructor(private _id: number, private _name: string){
+    super(_id);
+    // console.log('@@ inside the Child Class constructor,  pass "_id" from Child Class to Parent Class constructor: ', _id);
+  }
+  getProp():string{
+    // console.log('@@ inside the Child Class getProp this._id:',this._id,' this._name:',this._name);
+    return `id: ${this._id} name: ${this._name}`;
+  }
 }
 
 /**
@@ -36,6 +46,11 @@ interface IFoo {
 
 class Foo implements IFoo {
   // TODO:
+  bar(str:string): string;
+  bar(num:number): string;
+  bar(arg:any): string{
+    return typeof arg === 'string' ? 'string' : 'number';
+  }
 }
 
 /**
@@ -44,24 +59,24 @@ class Foo implements IFoo {
  * 활용하여 리팩토링합니다
  */
 
-class Employee {
-  public id: number;
-  public name: string;
+// class Employee {
+//   public id: number;
+//   public name: string;
 
-  printDetail(): string {
-    return `id: ${this.id} name: ${this.name}`;
-  }
-}
+//   printDetail(): string {
+//     return `id: ${this.id} name: ${this.name}`;
+//   }
+// }
 
-class Manager {
-  public id: number;
-  public name: string;
-  public Employees: Employee[];
+// class Manager {
+//   public id: number;
+//   public name: string;
+//   public Employees: Employee[];
 
-  printDetail() {
-    return `id: ${this.id} name: ${this.name} count: ${this.Employees.length}`;
-  }
-}
+//   printDetail() {
+//     return `id: ${this.id} name: ${this.name} count: ${this.Employees.length}`;
+//   }
+// }
 
 interface IEmployee {
   id: number;
@@ -72,14 +87,41 @@ interface IEmployee {
 
 abstract class AbstractEmployee implements IEmployee {
   // TODO:
+  public id: number;
+  public name: string;
+  constructor(){
+    // console.log('class AbstractEmployee constructor id: ',this.id,', name: ',this.name);
+  }
+  printDetail():string{
+    return `id: ${this.id} name: ${this.name}`;
+  }
+  abstract getDetail():string;
 }
 
 class NewEmployee extends AbstractEmployee {
   // TODO:
+  constructor(){
+    super();
+    // console.log('NewEmployee constructor super(): ',super());//NewEmployee{}
+  }
+  getDetail():string{
+    // console.log('class NewEmployee getDetail super.printDetail: ',super.printDetail())
+    return super.printDetail();
+  }
 }
 
 class NewManager extends NewEmployee {
   // TODO:
+  public Employees: NewEmployee[];
+  constructor(){
+    super();
+    // console.log('NewManager constructor super(): ',super());//NewManager{}
+  }
+  getDetail():string{
+    // console.log('class NewManager getDetail super.printDetail: ',super.printDetail())
+    return `${super.getDetail()} count: ${this.Employees.length}`;
+  }
+  
 }
 
 export { Child, Foo, NewEmployee, NewManager };

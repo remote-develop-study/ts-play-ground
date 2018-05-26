@@ -4,9 +4,8 @@ describe('Exercise 1 - override', () => {
   // TODO: 직접 할당해주세요
   const id = 0;
   // TODO: 직접 할당해주세요
-  const name = '';
+  const name = 'aaa';
   const child = new Child(id, name);
-
   it('오바라이딩된 메서드의 반환값 확인', () => {
     expect(child.getProp()).toBe(`id: ${id} name: ${name}`);
   });
