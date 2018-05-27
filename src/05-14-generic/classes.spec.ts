@@ -18,7 +18,7 @@ describe('Generic class 2 - 컴파일시점에 오류잡기', () => {
   it('workers[2] 컴파일 오류 해결하기', () => {
     workers[0] = new Person('CDK');
     workers[1] = new Manager('JUK', 23);
-    workers[2] = new Employee('TGK', 99)
+    workers[2] = new Employee('TGK', 99);
 
     expect(workers[2]).toEqual(tuhbm);
   });
