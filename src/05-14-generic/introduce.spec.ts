@@ -10,7 +10,7 @@ describe('Generic 1 - simple', () => {
 
 describe('Generic 2 - array', () => {
   it('매개변수 배열의 값을 모두 더하여 반환', () => {
-    expect(sumAll<number>([1,2,3,4,5])).toBe(15);
+    expect(sumAll<number>([1, 2, 3, 4, 5])).toBe(15);
   });
 
   it('매개변수 배열의 값을 모두 더하여 반환', () => {
