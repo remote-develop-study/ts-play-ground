@@ -1,4 +1,5 @@
 import { UniqueFilter, Person, Employee, Manager } from './classes';
+import {} from 'jest';
 
 describe('Generic class 1 - 유니크 필터 만들기', () => {
   const uniqueFilter = new UniqueFilter<string>();

@@ -7,8 +7,8 @@
 //   return typeof data;
 // }
 
-function simple<T>(message:T):T{
-  return message;
+function simple<T>(data:T):string{
+  return typeof data;
 }
 
 
@@ -19,8 +19,8 @@ function simple<T>(message:T):T{
 // function sumAll(data: any) {
 //   return data.reduce((prev, curr) => prev + curr, 0);
 // }
-function sumAll<T>(messages:T[]):T{
- return messages[0];
+function sumAll<T>(data:T[]):number{
+ return data.reduce((prev, curr) => prev + curr, 0);
 }
 
 /**
@@ -30,9 +30,9 @@ function sumAll<T>(messages:T[]):T{
 // function sumAllArrow(data: any) {
 // }
   // TODO:
-  type sumAll = <T>(messages: T[])=>T[];
-  const sumAllArrow : sumAll = <T>(message:T):T=>{
-    return message;
+  type sumAll = <T>(data: T[])=>T[];
+  const sumAllArrow : sumAll = <T>(data:T):T=>{
+    return data;
   }
 /**
  * TODO:
@@ -41,8 +41,8 @@ function sumAll<T>(messages:T[]):T{
 // function strConcatNum(str: any, num: any) {
 //   return str + num;
 // }
-function strConcatNum<T extends string | number>(message:string | number):T{
-  // return message;
+function strConcatNum<T extends string | number>(str:T, num:T):T{
+  return str + num;
 }
 
 export {
