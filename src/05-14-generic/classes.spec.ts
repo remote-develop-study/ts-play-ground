@@ -13,7 +13,7 @@ describe('Generic class 1 - 유니크 필터 만들기', () => {
 describe('Generic class 2 - 컴파일시점에 오류잡기', () => {
   const tuhbm = { name: 'TGK', department: 99 }
   // TODO: 제네릭 타입을 지정해주세요
-  let workers: Array<> = [];
+  let workers: Array<Person> = [];
 
   it('workers[2] 컴파일 오류 해결하기', () => {
     workers[0] = new Person('CDK');

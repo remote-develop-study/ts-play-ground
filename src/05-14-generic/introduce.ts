@@ -3,7 +3,7 @@
  * 제네릭을 사용하여 런타임시에 결정되는 값의
  * 타입을 반환하는 함수로 재작성해주세요
  */
-function simple<T>(data:T):T {
+function simple<T>(data:T):string {
   return typeof data;
 }
 
@@ -21,7 +21,7 @@ function sumAll<T>(data:T[]):T[] {
  */
 const sumAllArrow: sumAll = <T>(data: T[]): T => {
   // TODO:
-  return data.reduce((prev,curr) => prev + curr,0);
+  return data.reduce((prev:T,curr:T) => prev + curr,0);
 }
 
 /**

@@ -1,14 +1,14 @@
 interface Filter<T> {
-  unique(array: Array<T>): Array<T>;
+  unique(array:T[]): T[];
 }
 
-interface Person {
-  name: string;
-  getName(): string;
+interface Person<T> {
+  name: T;
+  getName(): T;
 }
 
-interface Manager extends Person {
-  department: number;
+interface Manager<T, N> extends Person<T> {
+  department: N;
 }
 
 export {
