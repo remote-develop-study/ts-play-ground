@@ -29,9 +29,11 @@ class Person implements I.Person {
 
 class Manager extends Person implements I.Manager {
   department:number;
-  // constructor(depart)
+  constructor(){
+    super(name);
+    
+  }
 
-    super(department);
     
  }
 

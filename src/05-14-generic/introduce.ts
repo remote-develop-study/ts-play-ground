@@ -14,12 +14,12 @@ function simple<T>(data:T):string{
 
 /**
  * TODO:
- * 제네릭을 사용하여 sumAll 함수를 만들어주세요
+ * 제네릭을 사용하여 sumAll 함수를 만 들어주세요
  */
 // function sumAll(data: any) {
 //   return data.reduce((prev, curr) => prev + curr, 0);
 // }
-function sumAll<T>(data:T[]):number{
+function sumAll<T extends number>(data:T[]):number{
  return data.reduce((prev, curr) => prev + curr, 0);
 }
 
@@ -31,7 +31,7 @@ function sumAll<T>(data:T[]):number{
 // }
   // TODO:
   type sumAll = <T>(data: T[])=>T[];
-  const sumAllArrow : sumAll = <T>(data:T):T=>{
+  const sumAllArrow = <T>(data:T):T=>{
     return data;
   }
 /**
@@ -41,9 +41,11 @@ function sumAll<T>(data:T[]):number{
 // function strConcatNum(str: any, num: any) {
 //   return str + num;
 // }
-function strConcatNum<T extends string | number>(str:T, num:T):T{
-  return str + num;
+function strConcatNum<T extends string | number>(str:T, num:T):number{
+  return str as number+ num;
 }
+// 타입어셜션
+
 
 export {
   simple,
