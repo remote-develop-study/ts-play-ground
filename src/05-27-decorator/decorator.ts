@@ -1,23 +1,14 @@
-// Class Decorator
-//Method Decorator
-//Property Decorator
-//Parameter Decorator
-
-function hello13_2(constructorFn: Function) {
+// 1. 클래스 데코레이터
+function hello(constructorFn: Function) {
   console.log(constructorFn);
 }
-function helloFactory13_2(show: boolean) {
-  if (show) {
-      return hello13_2;
-  } else {
-      return null;
-  }
+
+
+@hello
+class Person {
+
 }
 
-@helloFactory13_2(true)
-class Person13_2 {
-  constructor() {
-      console.log('new Person13_2()');
-  }
-}
-new Person13_2();
+// 클래스에 대하여 데코레이터 선언 방식인 @를 사용.
+
+
