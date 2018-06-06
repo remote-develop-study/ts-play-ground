@@ -4,7 +4,7 @@
  * 타입을 반환하는 함수로 재작성해주세요
  */
 // function simple(data: any) {
-function simple<T>(data: T):T {
+function simple<T>(data: T):string {
   // let val:string = typeof data;
   // if(typeof data === 'string'){
   //   val = 'string';
@@ -21,7 +21,7 @@ function simple<T>(data: T):T {
  * TODO:
  * 제네릭을 사용하여 sumAll 함수를 만들어주세요
  */
-function sumAll<T>(data: T[]):T {
+function sumAll<T extends number>(data: T[]):number{
   return data.reduce((prev, curr) => prev + curr, 0);
 }
 
@@ -33,13 +33,13 @@ function sumAll<T>(data: T[]):T {
 //   // TODO:
 // }
 
-let sumAllArrow:<T>(data:T[]) => T= sumAll;
+let sumAllArrow = <T extends number>(data:T[]) => sumAll;
 /**
  * TODO:
  * 유니온 타입과 extends를 사용하여 제네릭을 함께 사용해주세요
  */
-function strConcatNum<T extends string | number>(str: T, num: T):T {
-  return str+num;
+function strConcatNum<T extends string | number)>(str: T, num: T):string|number{
+  return str as string + num as number;
 }
 
 export {

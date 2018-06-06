@@ -7,7 +7,7 @@ import * as I from './types';
  * 인터페이스와 테스트 케이스를 보고 구현해주세요
  */
 // TODO: 로직과 제네릭 타입을 추가해주세요
-class UniqueFilter implements I.Filter {
+class UniqueFilter implements I.Filter<string> {
   
   unique(arr:Array<string>):Array<string>{
     let tempArr:Array<string> = [];
