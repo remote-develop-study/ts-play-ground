@@ -1,5 +1,21 @@
 // import '../06-04-undefined/data.js';
 // import { getUserId } from '../01-30-interfaces/interfaces.js';
+var movie = {
+    ListData: [
+        {
+            name: '영화제목1',
+            date: '날짜',
+            time: '23:00'
+        },
+        {
+            name: '상품문의',
+            date: '1제목이 출력되겠지요 한줄일때는 이렇게',
+            time: '다람쥐 헌 쳇바퀴에 돌고파 다람쥐 헌 쳇바퀴에 돌고파 다람쥐 헌 쳇바퀴에 돌고파 다람쥐 헌 쳇바퀴에 돌고파'
+        }
+    ]
+};
+var a = movie.ListData[0].name;
+console.log(a);
 var id = '';
 var pw = null;
 var id_ = [];
