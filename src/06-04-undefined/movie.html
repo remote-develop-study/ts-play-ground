@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,25 +10,44 @@
 
 
 </head>
+
 <body>
   <p>
-    <span id="presentID"></span>
+    <span id="presentID">로그인 해주세요</span>
   </p>
   <!-- 회원가입 로그인 -->
-  <input type="text" name="" id="id">
-  <input type="password" name="" id="pw">
-  <button onclick="log();">로그인</button>
-  <button onclick="resgist()">회원가입</button>
+  <div class="login">
+    <input type="text" name="" id="id">
+    <input type="password" name="" id="pw">
+    <button onclick="log();">로그인</button>
+    <button onclick="resgist()">회원가입</button>
+  </div>
 
-  <!-- 영화 선택 -->
-  <div>
-  <input type="radio" name="movie" id="movie1"><label for="movie1">영화이름1</label>
-  <input type="radio" name="movie" id="movie2"><label for="movie2">영화이름2</label>
-  <input type="radio" name="movie" id="movie3"><label for="movie3">영화이름3</label>
-</div>
-  <!-- 날짜 선택 -->
+  <!-- admin용 권한 -->
+  <div class="admin">
+    <input type="text" placeholder="영화제목">
+    <input type="date">
+    <label for="">날짜</label>
+    <input type="time">
+    <label for="">시간</label>
+    <button>추가</button>
+  </div>
 
-  <!-- 시간 선택 -->
+  <div class="select">
+    <div class="movieList">
+      <input type="radio" name="movie" id="">
+    </div>
+    <div class="dateList">
+      <input type="text" name="" id="">
+    </div>
+    <div class="timeList">
+      <input type="text">
+    </div>
+  </div>
+
+
+
   <script src="./ReserveMovie.js"></script>
 </body>
+
 </html>
