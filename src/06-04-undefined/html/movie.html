@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 
 <head>
   <meta charset="UTF-8">
@@ -7,6 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="../assets/css/index.css">
 </head>
 
 
@@ -23,11 +24,12 @@
     <input type="text" name="" id="id">
     <input type="password" name="" id="pw">
     <button onclick="log();">로그인</button>
-    <button onclick="resgist()">회원가입</button>
+    <button onclick="resgist();">회원가입</button>
+    <button onclick="nonMember();">비회원</button>
   </div>
 
   <!-- admin용 권한 -->
-  <div class="admin">
+  <div class="admin none">
     <input type="text" placeholder="영화제목">
     <input type="date">
     <label for="">날짜</label>
@@ -36,7 +38,8 @@
     <button>추가</button>
   </div>
 
-  <div class="select">
+  <!-- 선택 -->
+  <div class="select none">
     <div class="movieList">
       <!-- <input type="radio" name="movie" id=""> -->
     </div>
@@ -48,9 +51,11 @@
     </div>
   </div>
 
+  <!-- 예약확인 -->
 
+  <!-- 남은 시간 -->
 
-  <script src="./ReserveMovie.js"></script>
+  <script src="../assets/ReserveMovie.js"></script>
 </body>
 
 </html>

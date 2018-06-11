@@ -1,4 +1,4 @@
-"use strict";
+// import  { movie } from './js/data.js';
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -9,10 +9,6 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
-exports.__esModule = true;
-from;
-"./data.js";
-// import { getUserId } from '../01-30-interfaces/interfaces.js';
 var movie = {
     ListData: [
         {
@@ -27,14 +23,14 @@ var movie = {
         }
     ]
 };
-var a = movie.ListData[0].name;
+var a = movie.ListData[1].name;
 console.log(a);
 var id = '';
 var pw = null;
 var id_ = [];
 var pw_ = [];
 // 로그인시 로그인된거 표기
-function loginAlert() {
+function loginAlert(id) {
     document.getElementById('presentID').innerHTML = id + '님 환영합니다.';
 }
 //회원가입부분
@@ -49,6 +45,10 @@ function resgist() {
     id_.push(id);
     pw_.push(pw);
 }
+// 비회원
+function nonMember() {
+    // 랜덤으로 숫자 생성.
+}
 // 로그인
 function log(id, pw) {
     id = document.getElementById('id').value;
@@ -56,7 +56,9 @@ function log(id, pw) {
     // @1111이 아닌 0000으로 했을 시 오류뜸
     if (id == 'admin' && pw == 1111) {
         //관리자가 영화데이터를 생성할수 있는 함수 넣기
-        loginAlert();
+        loginAlert(id);
+        document.getElementById('id').value = '';
+        document.getElementById('pw').value = '';
     }
     // 회원 로그인하기
     else if ((id != 'admin' || pw != 1111)) {

@@ -1,5 +1,5 @@
-import * as movie.movie from "./data.js";
-// import { getUserId } from '../01-30-interfaces/interfaces.js';
+// import  { movie } from './js/data.js';
+
 let movie = {
   ListData: [
     {
@@ -15,8 +15,7 @@ let movie = {
   ]
 }
 
-let a = movie.ListData[0].name;
-
+let a = movie.ListData[1].name;
 console.log(a);
 
 let id: string = '';
@@ -25,7 +24,7 @@ let id_: any[] = [];
 let pw_: any[] = [];
 
 // 로그인시 로그인된거 표기
-function loginAlert() {
+function loginAlert(id:string) {
   (<HTMLInputElement>document.getElementById('presentID')).innerHTML = id + '님 환영합니다.';
 }
 
@@ -42,6 +41,11 @@ function resgist(): void {
   pw_.push(pw);
 }
 
+// 비회원
+function nonMember(){
+  // 랜덤으로 숫자 생성.
+
+}
 
 // 로그인
 function log(id: string, pw: number | string): void {
@@ -50,7 +54,9 @@ function log(id: string, pw: number | string): void {
   // @1111이 아닌 0000으로 했을 시 오류뜸
   if (id == 'admin' && pw == 1111){
     //관리자가 영화데이터를 생성할수 있는 함수 넣기
-    loginAlert();
+    loginAlert(id);
+    (<HTMLInputElement>document.getElementById('id')).value = '';
+    (<HTMLInputElement>document.getElementById('pw')).value = '';
   }
 
   // 회원 로그인하기
