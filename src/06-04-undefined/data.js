@@ -13,5 +13,4 @@ var movie = {
   ]
 }
 
-
-module.exports  = movie;
+export {movie};

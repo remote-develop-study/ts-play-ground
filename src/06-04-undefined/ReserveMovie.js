@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -8,7 +9,9 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
-// import * as movie from "./data.js";
+exports.__esModule = true;
+from;
+"./data.js";
 // import { getUserId } from '../01-30-interfaces/interfaces.js';
 var movie = {
     ListData: [
@@ -34,6 +37,18 @@ var pw_ = [];
 function loginAlert() {
     document.getElementById('presentID').innerHTML = id + '님 환영합니다.';
 }
+//회원가입부분
+// 1. 계정이 있는지 없는지 판별하기. 없다면 만들고, 있다면 있다고 알림.
+function resgist() {
+    var id_length = id_.length;
+    for (var i = 0; i < id_length; i++) {
+        console.log(id_length);
+    }
+    id = document.getElementById('id').value;
+    pw = parseInt(document.getElementById('pw').value);
+    id_.push(id);
+    pw_.push(pw);
+}
 // 로그인
 function log(id, pw) {
     id = document.getElementById('id').value;
@@ -45,24 +60,10 @@ function log(id, pw) {
     }
     // 회원 로그인하기
     else if ((id != 'admin' || pw != 1111)) {
-        console.log('계정 로그인' + id);
-        loginAlert();
+        for (var i = 0; i < id_.length; i++) {
+            // 배열의 갯수만큼 조회하여 같을시에 pop
+        }
     }
-    else {
-        console.log('가입정보가 없습니다');
-    }
-}
-//회원가입부분
-// 1. 계정이 있는지 없는지 판별하기. 없다면 만들고, 있다면 있다고 알림.
-function resgist() {
-    var id_length = id_.length;
-    for (var i = 0; i < id_length; i++) {
-        console.log(id_length);
-    }
-    id = document.getElementById('id').value;
-    pw = parseInt(document.getElementById('pw').value);
-    id_.push(id);
-    console.log(id);
 }
 // 예약부분
 // 영화 정보 기본값0

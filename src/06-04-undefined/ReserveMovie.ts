@@ -1,4 +1,4 @@
-// import * as movie from "./data.js";
+import * as movie.movie from "./data.js";
 // import { getUserId } from '../01-30-interfaces/interfaces.js';
 let movie = {
   ListData: [
@@ -29,27 +29,6 @@ function loginAlert() {
   (<HTMLInputElement>document.getElementById('presentID')).innerHTML = id + '님 환영합니다.';
 }
 
-// 로그인
-function log(id: string, pw: number | string): void {
-  id = (<HTMLInputElement>document.getElementById('id')).value;
-  pw = parseInt((<HTMLInputElement>document.getElementById('pw')).value);
-  // @1111이 아닌 0000으로 했을 시 오류뜸
-  if (id == 'admin' && pw == 1111){
-    //관리자가 영화데이터를 생성할수 있는 함수 넣기
-    loginAlert();
-    
-  }
-  // 회원 로그인하기
-
-  else if ((id != 'admin' || pw != 1111)) {
-    console.log('계정 로그인' + id);
-    loginAlert();
-  }
-  else {
-    console.log('가입정보가 없습니다');
-  }
-}
-
 //회원가입부분
 // 1. 계정이 있는지 없는지 판별하기. 없다면 만들고, 있다면 있다고 알림.
 function resgist(): void {
@@ -60,7 +39,27 @@ function resgist(): void {
   id = (<HTMLInputElement>document.getElementById('id')).value;
   pw = parseInt((<HTMLInputElement>document.getElementById('pw')).value);
   id_.push(id);
-  console.log(id);
+  pw_.push(pw);
+}
+
+
+// 로그인
+function log(id: string, pw: number | string): void {
+  id = (<HTMLInputElement>document.getElementById('id')).value;
+  pw = parseInt((<HTMLInputElement>document.getElementById('pw')).value);
+  // @1111이 아닌 0000으로 했을 시 오류뜸
+  if (id == 'admin' && pw == 1111){
+    //관리자가 영화데이터를 생성할수 있는 함수 넣기
+    loginAlert();
+  }
+
+  // 회원 로그인하기
+  else if ((id != 'admin' || pw != 1111)) {
+    for(let i=0; i<id_.length; i++){
+      // 배열의 갯수만큼 조회하여 같을시에 pop
+   }
+  }
+  
 }
 
 // 예약부분
