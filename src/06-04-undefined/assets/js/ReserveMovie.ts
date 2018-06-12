@@ -38,7 +38,7 @@ function resgist(): void {
   let id_length = id_.length;
   id = (<HTMLInputElement>document.getElementById('id')).value;
   pw = parseInt((<HTMLInputElement>document.getElementById('pw')).value);
-  if(id_length == 0){
+  if (id_length == 0) {
     id_.push(id);
     alert('가입되었습니다');
   }
@@ -58,14 +58,14 @@ function resgist(): void {
 
 
 // 로그인
-function log(id: string, pw: number | string): void {
+function login(id: string, pw: number | string): void {
   id = (<HTMLInputElement>document.getElementById('id')).value;
   pw = parseInt((<HTMLInputElement>document.getElementById('pw')).value);
   // @1111이 아닌 0000으로 했을 시 오류뜸
   // 관리자 계정 로그인 - 완
-  
+
   if (id == 'admin' && pw == 1111) {
-    loginAlert(id);
+    // loginAlert(id);
     let authority = (<HTMLDivElement>document.getElementById('admin'));
     let className = 'none'
     if (authority.classList) {
@@ -79,22 +79,45 @@ function log(id: string, pw: number | string): void {
   else if ((id != 'admin' && pw != 1111)) {
     id = (<HTMLInputElement>document.getElementById('id')).value;
     pw = parseInt((<HTMLInputElement>document.getElementById('pw')).value);
-    for(let i = 0; i< id_.length; i++){
+    for (let i = 0; i < id_.length; i++) {
       id_[i] == id;
-      loginAlert(id);
-      // 영화선택할수있게하기
+      console.log('아이디' + id)
+      // 로그인하는 곳에 addClass none하고 로그아웃은 none없애기
+      let edit_id = <HTMLInputElement>document.getElementById('id');
+      let edit_pw = <HTMLInputElement>document.getElementById('pw');
+      let Btn_login = <HTMLButtonElement>document.getElementById('Btn_login');
+      let Btn_logout = <HTMLButtonElement>document.getElementById('Btn_logout');
+      let none = 'none'
+      // let block = 'block'
+      if (edit_id.classList && edit_pw.classList) {
+        edit_id.classList.add(none);
+        edit_pw.classList.add(none);
+        Btn_login.classList.add(none);
+      }
+      else
+        edit_id.className += ' ' + none;
+      edit_pw.className += ' ' + none;
+      Btn_login.className += ' ' + none;
+      if (Btn_logout.classList) {
+        Btn_logout.classList.remove(none);
+      }
+      else
+        Btn_logout.className = Btn_logout.className.replace(new RegExp('(^|\\b)' + none.split(' ').join('|') + '(\\b|$)', 'gi'), ' ');
     }
+    // 영화선택할수있게하기
+    alert(id + ' 님 환영합니다');
+    loginAlert(id);
   }
 
 }
 
-interface MovieItem{
+interface MovieItem {
 
 }
 
 // 예약부분
 // 영화 정보 기본값0
-class Reserve implements MovieItem{
+class Reserve implements MovieItem {
   movieName: string;
   date: string | number;
   time: string | number;

@@ -59,13 +59,13 @@ function resgist() {
     }
 }
 // 로그인
-function log(id, pw) {
+function login(id, pw) {
     id = document.getElementById('id').value;
     pw = parseInt(document.getElementById('pw').value);
     // @1111이 아닌 0000으로 했을 시 오류뜸
     // 관리자 계정 로그인 - 완
     if (id == 'admin' && pw == 1111) {
-        loginAlert(id);
+        // loginAlert(id);
         var authority = document.getElementById('admin');
         var className = 'none';
         if (authority.classList) {
@@ -79,9 +79,32 @@ function log(id, pw) {
         pw = parseInt(document.getElementById('pw').value);
         for (var i = 0; i < id_.length; i++) {
             id_[i] == id;
-            loginAlert(id);
-            // 영화선택할수있게하기
+            console.log('아이디' + id);
+            // 로그인하는 곳에 addClass none하고 로그아웃은 none없애기
+            var edit_id = document.getElementById('id');
+            var edit_pw = document.getElementById('pw');
+            var Btn_login = document.getElementById('Btn_login');
+            var Btn_logout = document.getElementById('Btn_logout');
+            var none = 'none';
+            // let block = 'block'
+            if (edit_id.classList && edit_pw.classList) {
+                edit_id.classList.add(none);
+                edit_pw.classList.add(none);
+                Btn_login.classList.add(none);
+            }
+            else
+                edit_id.className += ' ' + none;
+            edit_pw.className += ' ' + none;
+            Btn_login.className += ' ' + none;
+            if (Btn_logout.classList) {
+                Btn_logout.classList.remove(none);
+            }
+            else
+                Btn_logout.className = Btn_logout.className.replace(new RegExp('(^|\\b)' + none.split(' ').join('|') + '(\\b|$)', 'gi'), ' ');
         }
+        // 영화선택할수있게하기
+        alert(id + ' 님 환영합니다');
+        loginAlert(id);
     }
 }
 // 예약부분
