@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 
 <head>
   <meta charset="UTF-8">
@@ -7,6 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="../assets/css/index.css">
 </head>
 
 
@@ -27,7 +28,7 @@
   </div>
 
   <!-- admin용 권한 -->
-  <div class="admin">
+  <div class="none" id="admin">
     <input type="text" placeholder="영화제목">
     <input type="date">
     <label for="">날짜</label>
@@ -36,7 +37,7 @@
     <button>추가</button>
   </div>
 
-  <div class="select">
+  <div class="none" id="select">
     <div class="movieList">
       <!-- <input type="radio" name="movie" id=""> -->
     </div>
@@ -50,7 +51,7 @@
 
 
 
-  <script src="./ReserveMovie.js"></script>
+  <script src="../assets/js/ReserveMovie.js"></script>
 </body>
 
 </html>

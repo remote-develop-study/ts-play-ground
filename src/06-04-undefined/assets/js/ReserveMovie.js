@@ -1,4 +1,5 @@
-"use strict";
+// import * as movie from "./data.js";
+// import { $ } from './jquery-2.2.4.min.js';
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -9,10 +10,6 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
-exports.__esModule = true;
-from;
-"./data.js";
-// import { getUserId } from '../01-30-interfaces/interfaces.js';
 var movie = {
     ListData: [
         {
@@ -33,35 +30,57 @@ var id = '';
 var pw = null;
 var id_ = [];
 var pw_ = [];
-// 로그인시 로그인된거 표기
-function loginAlert() {
-    document.getElementById('presentID').innerHTML = id + '님 환영합니다.';
+var id_length = id_.length;
+// 로그인시 로그인된거 표기 - 완
+function loginAlert(id) {
+    document.getElementById('presentID').innerHTML = id + ' 님 환영합니다.';
 }
 //회원가입부분
 // 1. 계정이 있는지 없는지 판별하기. 없다면 만들고, 있다면 있다고 알림.
 function resgist() {
     var id_length = id_.length;
-    for (var i = 0; i < id_length; i++) {
-        console.log(id_length);
-    }
     id = document.getElementById('id').value;
     pw = parseInt(document.getElementById('pw').value);
-    id_.push(id);
-    pw_.push(pw);
+    if (id_length == 0) {
+        id_.push(id);
+        alert('가입되었습니다');
+    }
+    for (var i = 0; i < id_length; i++) {
+        if (id_[i] == id) {
+            alert('이미있는 아이디입니다');
+            id == '';
+            pw == null;
+        }
+        else {
+            id_.push(id);
+            pw_.push(pw);
+        }
+        console.log('등록된 아이디: ' + id_[i] + pw_[i]);
+    }
 }
 // 로그인
 function log(id, pw) {
     id = document.getElementById('id').value;
     pw = parseInt(document.getElementById('pw').value);
     // @1111이 아닌 0000으로 했을 시 오류뜸
+    // 관리자 계정 로그인 - 완
     if (id == 'admin' && pw == 1111) {
-        //관리자가 영화데이터를 생성할수 있는 함수 넣기
-        loginAlert();
+        loginAlert(id);
+        var authority = document.getElementById('admin');
+        var className = 'none';
+        if (authority.classList) {
+            authority.classList.remove(className);
+        }
+        else
+            authority.className = authority.className.replace(new RegExp('(^|\\b)' + className.split(' ').join('|') + '(\\b|$)', 'gi'), ' ');
     }
-    // 회원 로그인하기
-    else if ((id != 'admin' || pw != 1111)) {
+    else if ((id != 'admin' && pw != 1111)) {
+        id = document.getElementById('id').value;
+        pw = parseInt(document.getElementById('pw').value);
         for (var i = 0; i < id_.length; i++) {
-            // 배열의 갯수만큼 조회하여 같을시에 pop
+            id_[i] == id;
+            loginAlert(id);
+            // 영화선택할수있게하기
         }
     }
 }

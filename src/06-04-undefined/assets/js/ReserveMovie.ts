@@ -1,5 +1,7 @@
-import * as movie.movie from "./data.js";
-// import { getUserId } from '../01-30-interfaces/interfaces.js';
+// import * as movie from "./data.js";
+// import { $ } from './jquery-2.2.4.min.js';
+
+
 let movie = {
   ListData: [
     {
@@ -23,23 +25,35 @@ let id: string = '';
 let pw: number | null = null;
 let id_: any[] = [];
 let pw_: any[] = [];
+let id_length = id_.length;
 
-// 로그인시 로그인된거 표기
-function loginAlert() {
-  (<HTMLInputElement>document.getElementById('presentID')).innerHTML = id + '님 환영합니다.';
+// 로그인시 로그인된거 표기 - 완
+function loginAlert(id: string) {
+  (<HTMLInputElement>document.getElementById('presentID')).innerHTML = id + ' 님 환영합니다.';
 }
 
 //회원가입부분
 // 1. 계정이 있는지 없는지 판별하기. 없다면 만들고, 있다면 있다고 알림.
 function resgist(): void {
   let id_length = id_.length;
-  for (let i = 0; i < id_length; i++) {
-    console.log(id_length);
-  }
   id = (<HTMLInputElement>document.getElementById('id')).value;
   pw = parseInt((<HTMLInputElement>document.getElementById('pw')).value);
-  id_.push(id);
-  pw_.push(pw);
+  if(id_length == 0){
+    id_.push(id);
+    alert('가입되었습니다');
+  }
+  for (let i = 0; i < id_length; i++) {
+    if (id_[i] == id) {
+      alert('이미있는 아이디입니다');
+      id == '';
+      pw == null;
+    }
+    else {
+      id_.push(id);
+      pw_.push(pw);
+    }
+    console.log('등록된 아이디: ' + id_[i] + pw_[i]);
+  }
 }
 
 
@@ -48,23 +62,39 @@ function log(id: string, pw: number | string): void {
   id = (<HTMLInputElement>document.getElementById('id')).value;
   pw = parseInt((<HTMLInputElement>document.getElementById('pw')).value);
   // @1111이 아닌 0000으로 했을 시 오류뜸
-  if (id == 'admin' && pw == 1111){
-    //관리자가 영화데이터를 생성할수 있는 함수 넣기
-    loginAlert();
+  // 관리자 계정 로그인 - 완
+  
+  if (id == 'admin' && pw == 1111) {
+    loginAlert(id);
+    let authority = (<HTMLDivElement>document.getElementById('admin'));
+    let className = 'none'
+    if (authority.classList) {
+      authority.classList.remove(className);
+    }
+    else
+      authority.className = authority.className.replace(new RegExp('(^|\\b)' + className.split(' ').join('|') + '(\\b|$)', 'gi'), ' ');
   }
 
   // 회원 로그인하기
-  else if ((id != 'admin' || pw != 1111)) {
-    for(let i=0; i<id_.length; i++){
-      // 배열의 갯수만큼 조회하여 같을시에 pop
-   }
+  else if ((id != 'admin' && pw != 1111)) {
+    id = (<HTMLInputElement>document.getElementById('id')).value;
+    pw = parseInt((<HTMLInputElement>document.getElementById('pw')).value);
+    for(let i = 0; i< id_.length; i++){
+      id_[i] == id;
+      loginAlert(id);
+      // 영화선택할수있게하기
+    }
   }
-  
+
+}
+
+interface MovieItem{
+
 }
 
 // 예약부분
 // 영화 정보 기본값0
-class Reserve {
+class Reserve implements MovieItem{
   movieName: string;
   date: string | number;
   time: string | number;
