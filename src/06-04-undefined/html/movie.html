@@ -23,6 +23,13 @@
   <div class="login">
     <input type="text" name="" id="id">
     <input type="password" name="" id="pw">
+    <button onclick="log();">로그인</button>
+    <button onclick="resgist();">회원가입</button>
+    <button onclick="nonMember();">비회원</button>
+  </div>
+
+  <!-- admin용 권한 -->
+  <div class="admin none">
     <button onclick="login();" id="Btn_login">로그인</button>
     <button onclick="logout();" class="none" id="Btn_logout">로그아웃 </button>
     <button onclick="resgist()">회원가입</button>
@@ -38,6 +45,8 @@
     <button>추가</button>
   </div>
 
+  <!-- 선택 -->
+  <div class="select none">
   <div class="none" id="select">
     <div class="movieList">
       <!-- <input type="radio" name="movie" id=""> -->
@@ -50,7 +59,9 @@
     </div>
   </div>
 
+  <!-- 예약확인 -->
 
+  <!-- 남은 시간 -->
 
   <script src="../assets/js/ReserveMovie.js"></script>
 </body>
