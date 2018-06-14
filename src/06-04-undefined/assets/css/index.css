@@ -1,6 +1,13 @@
+<<<<<<< HEAD
 @import url('./base/basic.css');
 @import url('./component/_admin.scss');
 @import url('./component/_login.scss');
 @import url('./component/_loginAlert.scss');
 @import url('./component/_select.scss');
 
+=======
+@import url('./base/normalize.css');
+@import url('./base/reset.css');
+@import url('./base/base.css');
+@import url('./component/index.css');
+>>>>>>> 79fafbe5425ef06bd5e70727fea64080352ec529
