@@ -67,12 +67,7 @@ function login(id: string, pw: number | string): void {
   if (id == 'admin' && pw == 1111) {
     // loginAlert(id);
     let authority = (<HTMLDivElement>document.getElementById('admin'));
-    let className = 'none'
-    if (authority.classList) {
-      authority.classList.remove(className);
-    }
-    else
-      authority.className = authority.className.replace(new RegExp('(^|\\b)' + className.split(' ').join('|') + '(\\b|$)', 'gi'), ' ');
+    authority.classList.remove( 'none' );
   }
 
   // 회원 로그인하기
@@ -87,28 +82,16 @@ function login(id: string, pw: number | string): void {
       let edit_pw = <HTMLInputElement>document.getElementById('pw');
       let Btn_login = <HTMLButtonElement>document.getElementById('Btn_login');
       let Btn_logout = <HTMLButtonElement>document.getElementById('Btn_logout');
-      let none = 'none'
       // let block = 'block'
-      if (edit_id.classList && edit_pw.classList) {
-        edit_id.classList.add(none);
-        edit_pw.classList.add(none);
-        Btn_login.classList.add(none);
-      }
-      else
-        edit_id.className += ' ' + none;
-      edit_pw.className += ' ' + none;
-      Btn_login.className += ' ' + none;
-      if (Btn_logout.classList) {
-        Btn_logout.classList.remove(none);
-      }
-      else
-        Btn_logout.className = Btn_logout.className.replace(new RegExp('(^|\\b)' + none.split(' ').join('|') + '(\\b|$)', 'gi'), ' ');
+      edit_id.classList.add('none');
+      edit_pw.classList.add('none');
+      Btn_login.classList.add('none');
+      Btn_logout.classList.remove('none');
     }
     // 영화선택할수있게하기
     alert(id + ' 님 환영합니다');
     loginAlert(id);
   }
-
 }
 
 interface MovieItem {
